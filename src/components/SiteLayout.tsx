@@ -6,9 +6,6 @@ import {
   FaGlobe,
   FaLinkedinIn,
   FaMagnifyingGlass,
-  FaPhone,
-  FaRegBuilding,
-  FaRegEnvelope,
   FaXmark,
 } from 'react-icons/fa6';
 import { translations } from '../i18n';
@@ -25,6 +22,7 @@ type NavItem = {
 const SiteLayout = () => {
   const { lang, setLang } = useLanguage();
   const t = translations[lang];
+  const isAr = lang === 'ar';
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
@@ -46,7 +44,7 @@ const SiteLayout = () => {
 
   return (
     <div
-      className={`min-h-screen bg-white text-nacs-ink antialiased ${lang === 'ar' ? 'font-arabic' : 'font-sans'}`}
+      className={`min-h-screen bg-white text-nacs-ink antialiased ${isAr ? 'font-arabic' : 'font-sans'}`}
     >
       <header
         className={`sticky top-0 z-50 border-b border-gray-100 bg-white transition-shadow ${scrolled ? 'shadow-md' : 'shadow-sm'}`}
@@ -56,7 +54,7 @@ const SiteLayout = () => {
             <button
               type="button"
               onClick={() => setLang(lang === 'en' ? 'ar' : 'en')}
-              className="flex items-center gap-1.5 text-nacs-green transition-colors hover:text-slate-600"
+              className="flex items-center gap-1.5 text-[#08563D] transition-colors hover:text-slate-600"
             >
               <FaGlobe size={10} /> {t.nav.language}
             </button>
@@ -76,7 +74,7 @@ const SiteLayout = () => {
                   <a
                     key={item.label}
                     href={item.to}
-                    className="group flex h-full items-center gap-1.5 text-sm font-bold uppercase tracking-wider text-slate-800 transition-colors hover:text-nacs-green"
+                    className="group flex h-full items-center gap-1.5 text-sm font-bold uppercase tracking-wider text-slate-800 transition-colors hover:text-[#08563D]"
                   >
                     {item.label}
                     <FaChevronDown
@@ -90,7 +88,7 @@ const SiteLayout = () => {
                     href={item.to}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-bold uppercase tracking-wider text-nacs-green transition-colors hover:opacity-80"
+                    className="text-sm font-bold uppercase tracking-wider text-[#08563D] transition-colors hover:opacity-80"
                   >
                     {item.label}
                   </a>
@@ -99,7 +97,7 @@ const SiteLayout = () => {
                     key={item.label}
                     to={item.to}
                     className={({ isActive }) =>
-                      `text-sm font-bold uppercase tracking-wider transition-colors ${item.highlighted || isActive ? 'text-nacs-green hover:opacity-80' : 'text-slate-800 hover:text-nacs-green'}`
+                      `text-sm font-bold uppercase tracking-wider transition-colors ${item.highlighted || isActive ? 'text-[#08563D] hover:opacity-80' : 'text-slate-800 hover:text-[#08563D]'}`
                     }
                   >
                     {item.label}
@@ -111,19 +109,19 @@ const SiteLayout = () => {
               <button
                 type="button"
                 aria-label={t.nav.searchAria}
-                className="hidden text-slate-400 transition-colors hover:text-nacs-green md:block"
+                className="hidden text-slate-400 transition-colors hover:text-[#08563D] md:block"
               >
                 <FaMagnifyingGlass size={16} />
               </button>
               <Link
                 to="/contact"
-                className="hidden rounded-sm bg-nacs-green px-8 py-3 text-xs font-bold uppercase tracking-widest text-white transition-all hover:bg-nacs-greenHover md:inline-block"
+                className="hidden rounded-sm bg-[#08563D] px-8 py-3 text-xs font-bold uppercase tracking-widest text-white transition-all hover:bg-[#064531] md:inline-block"
               >
                 {t.nav.contact}
               </Link>
               <button
                 type="button"
-                className="p-2 text-slate-800 hover:text-nacs-green lg:hidden"
+                className="p-2 text-slate-800 hover:text-[#08563D] lg:hidden"
                 aria-label={t.nav.menuToggleAria}
                 onClick={() => setMobileOpen((v) => !v)}
               >
@@ -143,7 +141,7 @@ const SiteLayout = () => {
                   href={item.to}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block rounded-md px-3 py-2 text-base font-bold text-slate-800 transition-colors hover:bg-gray-50 hover:text-nacs-green"
+                  className="block rounded-md px-3 py-2 text-base font-bold text-slate-800 transition-colors hover:bg-gray-50 hover:text-[#08563D]"
                 >
                   {item.label}
                 </a>
@@ -151,7 +149,7 @@ const SiteLayout = () => {
                 <Link
                   key={item.label}
                   to={item.to}
-                  className="block rounded-md px-3 py-2 text-base font-bold text-slate-800 transition-colors hover:bg-gray-50 hover:text-nacs-green"
+                  className="block rounded-md px-3 py-2 text-base font-bold text-slate-800 transition-colors hover:bg-gray-50 hover:text-[#08563D]"
                 >
                   {item.label}
                 </Link>
@@ -167,7 +165,7 @@ const SiteLayout = () => {
               </button>
               <Link
                 to="/contact"
-                className="flex-1 rounded-sm bg-nacs-green px-4 py-3 text-center text-xs font-bold uppercase tracking-widest text-white"
+                className="flex-1 rounded-sm bg-[#08563D] px-4 py-3 text-center text-xs font-bold uppercase tracking-widest text-white"
               >
                 {t.nav.contact}
               </Link>
@@ -175,112 +173,124 @@ const SiteLayout = () => {
           </nav>
         </div>
       </header>
+
       <main>
         <Outlet />
       </main>
-      <footer className="bg-nacs-green py-12 text-white md:py-16">
+
+      {/* NEW KPMG-STYLE FOOTER WITH AUTO-ARABIC */}
+      <footer className="bg-[#08563D] py-16 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-12 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mb-16">
+            <img
+              src="/images/northernacs/logo.png"
+              alt={t.nav.logoAlt}
+              className="h-10 w-auto brightness-0 invert"
+              loading="lazy"
+            />
+          </div>
+
+          <div className="mb-20 grid grid-cols-1 gap-12 text-sm md:grid-cols-3">
             <div>
-              <img
-                src="/images/northernacs/logo.png"
-                alt={t.nav.logoAlt}
-                className="mb-5 h-10 w-auto brightness-0 invert"
-                loading="lazy"
-              />
-              <p className="mb-6 text-sm leading-relaxed text-white/80">{t.footer.tagline}</p>
-              <a
-                href="https://www.linkedin.com/company/northern-analytic"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={t.footer.linkedinAria}
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-nacs-green transition-colors hover:bg-nacs-accent hover:text-white"
-              >
-                <FaLinkedinIn size={14} />
-              </a>
-            </div>
-            <div>
-              <h3 className="mb-5 text-sm font-bold uppercase tracking-widest">
-                {t.footer.services}
-              </h3>
-              <ul className="space-y-3">
-                {t.footer.serviceLinks.map((label) => (
-                  <li key={label}>
-                    <a
-                      href="/#services"
-                      className="text-sm text-white/80 transition-colors hover:text-white"
-                    >
-                      {label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="mb-5 text-sm font-bold uppercase tracking-widest">
-                {t.footer.industries}
-              </h3>
-              <ul className="space-y-3">
-                {t.footer.industryLinks.map((label) => (
-                  <li key={label}>
-                    <a
-                      href="/#industries"
-                      className="text-sm text-white/80 transition-colors hover:text-white"
-                    >
-                      {label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="mb-5 text-sm font-bold uppercase tracking-widest">
-                {t.footer.contact}
-              </h3>
-              <ul className="space-y-4 text-sm text-white/80">
-                <li className="flex items-start gap-3">
-                  <FaRegBuilding className="mt-0.5 shrink-0 text-white/70" size={14} />
-                  <span>
-                    {t.footer.address.map((line) => (
-                      <span key={line} className="block">
-                        {line}
-                      </span>
-                    ))}
-                  </span>
+              <h3 className="mb-6 text-lg font-bold">{isAr ? 'تواصل معنا' : 'Contact'}</h3>
+              <ul className="space-y-4 text-white/80">
+                <li>
+                  <p className="mb-1 font-bold text-white">
+                    {isAr ? 'جدة، المملكة العربية السعودية' : 'Jeddah, Kingdom of Saudi Arabia'}
+                  </p>
+                  <p>
+                    {isAr ? 'رقم المبنى: 3096، شارع الهدا' : 'Building No.: 3096, Street: Al Hada'}
+                  </p>
+                  <p>{isAr ? 'حي الفيصلية' : 'District: Al Faisaliyah District'}</p>
+                  <p>
+                    {isAr
+                      ? 'الرقم الفرعي: 7756، الرمز البريدي: 23442'
+                      : 'Secondary No.: 7756, Postal Code: 23442'}
+                  </p>
                 </li>
-                <li className="flex items-center gap-3">
-                  <FaRegEnvelope className="text-white/70" size={14} />
-                  <a href="mailto:contact@northernacs.com" className="hover:text-white">
+                <li className="pt-2">
+                  <a
+                    href="mailto:contact@northernacs.com"
+                    className="transition-all hover:underline"
+                  >
                     contact@northernacs.com
                   </a>
                 </li>
-                <li className="flex items-center gap-3">
-                  <FaPhone className="text-white/70" size={13} />
-                  <a href="tel:+966558188632" className="hover:text-white">
-                    +966 55 818 8632
+                <li className="pt-2">
+                  <Link
+                    to="/contact"
+                    className="font-medium text-white transition-all hover:underline"
+                  >
+                    {isAr ? 'تواصل مع خبرائنا' : 'Contact Our Experts'}
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="mb-6 text-lg font-bold">{isAr ? 'المركز الإعلامي' : 'Media'}</h3>
+              <ul className="space-y-4 text-white/80">
+                <li>
+                  <Link to="/blogs" className="transition-all hover:underline">
+                    {isAr ? 'الرؤى والمدونات' : 'Insights & Blogs'}
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="mb-6 text-lg font-bold">{isAr ? 'الشركة' : 'Company'}</h3>
+              <ul className="space-y-4 text-white/80">
+                <li>
+                  <Link to="/about" className="transition-all hover:underline">
+                    {isAr ? 'من نحن' : 'About Us'}
+                  </Link>
+                </li>
+                <li>
+                  <a
+                    href="https://s-locator.northernacs.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="transition-all hover:underline"
+                  >
+                    {isAr ? 'منصة إس لوكيتر' : 'S-Locator Platform'}
                   </a>
                 </li>
               </ul>
-              <Link
-                to="/contact"
-                className="mt-6 inline-block rounded-sm bg-white px-6 py-2.5 text-xs font-bold uppercase tracking-widest text-nacs-green transition-colors hover:bg-nacs-accent hover:text-white"
-              >
-                {t.footer.experts}
-              </Link>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-between gap-4 border-t border-white/20 pt-8 md:flex-row">
-            <p className="text-xs font-medium text-white/60">
-              © 2026 <strong>Northern Analytics | Data & AI Division · s-locator.com</strong>.{' '}
-              {t.footer.rights}
-            </p>
-            <div className="flex flex-wrap justify-center gap-6 text-xs">
-              {t.footer.legal.map((label) => (
-                <a key={label} href="#legal" className="text-white/60 hover:text-white">
-                  {label}
-                </a>
-              ))}
-            </div>
+
+          <div className="mb-12 flex justify-center">
+            <a
+              href="https://www.linkedin.com/company/northern-analytic"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={t.footer.linkedinAria}
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-white text-white transition-colors hover:bg-white hover:text-[#08563D]"
+            >
+              <FaLinkedinIn size={16} />
+            </a>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-6 text-[13px] font-medium text-white/80">
+            <Link to="/accessibility" className="hover:underline">
+              {isAr ? 'إمكانية الوصول' : 'Accessibility'}
+            </Link>
+            <Link to="/privacy" className="hover:underline">
+              {isAr ? 'الخصوصية' : 'Privacy'}
+            </Link>
+            <Link to="/terms" className="hover:underline">
+              {isAr ? 'شروط الاستخدام' : 'Terms of use'}
+            </Link>
+            <Link to="/cookies" className="hover:underline">
+              {isAr ? 'إدارة ملفات الارتباط' : 'Cookie Management'}
+            </Link>
+          </div>
+
+          <div className="mt-8 text-center text-[10px] text-white/40">
+            {isAr
+              ? '© 2026 تم التصميم والتطوير كمنتج لشركة نورثرن أناليتكس. جميع الحقوق محفوظة.'
+              : '© 2026 Designed and developed as a product of Northern Analytics Consulting Services. All rights reserved.'}
           </div>
         </div>
       </footer>
