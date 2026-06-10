@@ -11,7 +11,6 @@ import {
   FaServer,
   FaCloud,
   FaDatabase,
-  FaPlay,
   FaCheck,
   FaChevronRight,
   FaCubes,
@@ -415,73 +414,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* 7. COMMITMENT TO SAUDI VISION 2030 */}
-      <section className="bg-white py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-[32px] font-bold text-slate-900 mb-12">
-            {isAr ? 'الالتزام برؤية السعودية 2030' : 'Commitment to Saudi Vision 2030'}
-          </h2>
-
-          <div
-            className={`flex flex-col lg:flex-row bg-white overflow-hidden border border-gray-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] ${isAr ? 'rounded-tr-[40px] rounded-bl-[40px]' : 'rounded-tl-[40px] rounded-br-[40px]'}`}
-          >
-            <div className="lg:w-1/2 p-10 md:p-14 flex flex-col justify-center">
-              <div className="flex items-center gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-8">
-                <span className="bg-[#08563D] text-white px-3 py-1 rounded">
-                  {isAr ? 'نورثرن أناليتكس' : 'NACS'}
-                </span>
-                <span className="tracking-[0.2em]">
-                  {isAr
-                    ? 'المملكة العربية السعودية • رؤية السعودية 2030'
-                    : 'SAUDI ARABIA • SAUDI VISION 2030'}
-                </span>
-              </div>
-              <h3 className="text-[34px] md:text-[40px] font-black text-slate-900 leading-[1.1] mb-8">
-                {isAr ? 'الالتزام برؤية السعودية 2030:' : 'Commitment to Saudi Vision 2030:'}
-                <br />
-                <span className="text-[#08563D]">
-                  {isAr
-                    ? 'نقل المعرفة التقنية الأمريكية الشمالية عالية المستوى مباشرة إلى المملكة العربية السعودية.'
-                    : 'Transferring top-tier North American technological know-how directly to the Kingdom of Saudi Arabia.'}
-                </span>
-              </h3>
-              <p className="text-slate-500 text-sm font-semibold mb-10">
-                {isAr ? 'حضور محلي، بمعايير عالمية.' : 'Local Presence, Global Standards.'}
-              </p>
-              <div className="flex items-center gap-4 text-[11px] font-bold text-slate-400 uppercase tracking-[0.2em] cursor-pointer hover:text-[#08563D] transition-colors w-max">
-                <div className="w-12 h-[2px] bg-[#08563D]"></div>
-                {isAr ? 'شاهد الفيلم' : 'WATCH THE FILM'}
-              </div>
-            </div>
-
-            <div className="lg:w-1/2 relative group cursor-pointer min-h-[400px]">
-              <img
-                src="/images/northernacs/vision-building.jpg"
-                alt="Saudi Vision 2030"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors"></div>
-
-              <div
-                className={`absolute top-1/2 -translate-y-1/2 w-[80px] h-[56px] bg-[#ff0000] rounded-[14px] flex items-center justify-center shadow-2xl group-hover:scale-105 transition-transform z-10 ${isAr ? 'right-0 translate-x-1/2 lg:right-0 lg:translate-x-1/2' : 'left-0 -translate-x-1/2 lg:left-0 lg:-translate-x-1/2'}`}
-              >
-                <FaPlay className={`text-white ${isAr ? 'mr-1' : 'ml-1'}`} size={24} />
-              </div>
-
-              <div className="absolute bottom-4 left-0 right-0 text-center text-[10px] text-white/70 px-4">
-                {isAr
-                  ? 'لتشغيل هذا الفيديو، يرجى تفعيل ملفات تعريف الارتباط. قد تقوم جوجل/يوتيوب بمعالجة بياناتك —'
-                  : 'To play this video, enable Statistics cookies. Google/YouTube may process your data —'}{' '}
-                <span className="underline cursor-pointer text-white hover:text-gray-200">
-                  {isAr ? 'اعرف المزيد.' : 'Learn more.'}
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 8. CONTACT / CTA SECTION */}
+      {/* 7. CONTACT / CTA SECTION */}
       <section id="contact" className="bg-white py-20">
         <div className="mx-auto max-w-4xl px-4 text-center">
           <h2 className="mb-6 text-3xl font-black text-slate-900 md:text-4xl">{t.home.ctaTitle}</h2>
