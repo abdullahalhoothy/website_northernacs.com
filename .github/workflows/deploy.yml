@@ -38,6 +38,10 @@ jobs:
           printf '%s\n' "${{ secrets.SSH_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
           chmod 644 ~/.ssh/known_hosts
 
+      - name: Test SSH connection
+        run: |
+          echo "Testing SSH..."
+          ssh -vvv -i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes -T root@178.105.69.252 "true"
       - name: Deploy dist/ to VPS
         run: |
           rsync -avz --delete \
