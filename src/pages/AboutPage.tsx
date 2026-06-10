@@ -1,18 +1,6 @@
 import { Link } from 'react-router-dom';
-import {
-  FaArrowRightLong,
-  FaBolt,
-  FaBuildingColumns,
-  FaCheck,
-  FaChessKnight,
-  FaCode,
-  FaRegEye,
-  FaGlobe,
-  FaRocket,
-  FaScaleBalanced,
-  FaTowerCell,
-  FaUserTie,
-} from 'react-icons/fa6';
+import { FaCode, FaRegEye, FaGlobe, FaRocket, FaScaleBalanced, FaUserTie } from 'react-icons/fa6';
+
 import type { IconType } from 'react-icons';
 import { useState } from 'react';
 import { useLanguage } from '../components/LanguageProvider';
@@ -27,13 +15,6 @@ const valueIcons: Record<string, IconType> = {
   globe: FaGlobe,
   code: FaCode,
   scale: FaScaleBalanced,
-};
-
-const storyIcons: Record<string, IconType> = {
-  bank: FaBuildingColumns,
-  strategy: FaChessKnight,
-  telecom: FaTowerCell,
-  energy: FaBolt,
 };
 
 const HERO_IMAGE = '/images/northernacs/about-us-northernacs-scaled.jpg';
@@ -114,26 +95,6 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="border-t border-gray-100 bg-white py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-16 text-center">
-            <h2 className="mb-4 text-3xl font-bold text-slate-900">{t.storiesTitle}</h2>
-            <p className="text-slate-500">{t.storiesIntro}</p>
-          </div>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {t.stories.map((story) => (
-              <StoryCard
-                key={story.title}
-                Icon={storyIcons[story.icon] ?? FaBuildingColumns}
-                challengeLabel={t.challengeLabel}
-                resultLabel={t.resultLabel}
-                {...story}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="bg-gray-50 py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
@@ -209,54 +170,6 @@ const ValueCard = ({ Icon, title, text }: { Icon: IconType; title: string; text:
     <h3 className="mb-3 text-xl font-bold text-slate-900">{title}</h3>
     <p className="text-sm leading-relaxed text-slate-600">{text}</p>
   </article>
-);
-
-const StoryCard = ({
-  Icon,
-  sector,
-  title,
-  challenge,
-  challengeLabel,
-  result,
-  resultLabel,
-  cta,
-}: {
-  Icon: IconType;
-  sector: string;
-  title: string;
-  challenge: string;
-  challengeLabel: string;
-  result: string;
-  resultLabel: string;
-  cta: string;
-}) => (
-  <a
-    href="#"
-    className="group relative flex h-full flex-col rounded-xl border border-gray-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-nacs-green hover:shadow-xl"
-  >
-    <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-gray-50 text-nacs-green transition-colors group-hover:bg-nacs-green group-hover:text-white">
-      <Icon size={20} />
-    </div>
-    <div className="mb-2 text-[10px] font-bold uppercase tracking-widest text-slate-400">
-      {sector}
-    </div>
-    <h3 className="mb-3 text-lg font-bold text-slate-900 transition-colors group-hover:text-nacs-green">
-      {title}
-    </h3>
-    <p className="mb-4 text-sm text-slate-600">
-      <strong>{challengeLabel}:</strong> {challenge}
-    </p>
-    <div className="mb-6 flex items-start gap-2 rounded bg-green-50 p-3 text-xs font-bold text-green-800">
-      <FaCheck className="mt-0.5 shrink-0" />
-      <span>
-        {resultLabel}: {result}
-      </span>
-    </div>
-    <span className="mt-auto flex items-center text-xs font-bold uppercase tracking-wider text-slate-900 transition-colors group-hover:text-nacs-green">
-      {cta}
-      <FaArrowRightLong className="ms-2 transition-transform group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1" />
-    </span>
-  </a>
 );
 
 const StepCard = ({ number, title, text }: { number: number; title: string; text: string }) => (
