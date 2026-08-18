@@ -14,8 +14,6 @@ import {
   FaCheck,
   FaChevronRight,
   FaCubes,
-  FaNetworkWired,
-  FaChartPie,
   FaArrowUpRightFromSquare,
 } from 'react-icons/fa6';
 import type { IconType } from 'react-icons';
@@ -23,9 +21,9 @@ import { translations } from '../i18n';
 import { useLanguage } from '../components/LanguageProvider';
 
 const serviceIcons: Record<string, IconType> = {
-  architecture: FaCubes,
-  engineering: FaNetworkWired,
-  analytics: FaChartPie,
+  strategy: FaLightbulb,
+  dataAi: FaGears,
+  integration: FaPuzzlePiece,
 };
 
 const HomePage = () => {
@@ -71,16 +69,22 @@ const HomePage = () => {
               <span className="text-[#08563D]">{t.home.accent}</span>
             </h1>
 
-            <div className="mb-8 inline-flex flex-wrap items-center gap-4 rounded-2xl border border-gray-200 bg-white/90 backdrop-blur-md px-6 py-3 shadow-md sm:px-8 sm:py-4">
-              <span className="border-e border-gray-300 pe-4 text-sm font-bold text-slate-700 md:text-base sm:pe-6">
+            <a
+              href="https://www.s-locator.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-8 inline-flex flex-wrap items-center gap-4 rounded-2xl border border-gray-200 bg-white/90 px-6 py-3 shadow-md backdrop-blur-md sm:px-8 sm:py-4 cursor-pointer"
+            >
+              <span className="border-e border-gray-300 pe-4 text-sm font-bold text-slate-700 sm:pe-6 md:text-base">
                 {isAr ? 'مع منتجنا الرئيسي:' : 'Featuring our flagship product:'}
               </span>
+
               <img
                 src="/images/northernacs/s-locator-logo.png"
                 alt="S-Locator Logo"
-                className="h-8 object-contain md:h-12 drop-shadow-sm"
+                className="h-8 object-contain drop-shadow-sm md:h-12"
               />
-            </div>
+            </a>
 
             <p className="mb-8 text-base font-light leading-relaxed text-slate-600 md:text-lg">
               {t.home.intro}
@@ -121,7 +125,7 @@ const HomePage = () => {
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-3">
-            {t.home.serviceCards.map(({ id, title, description }) => {
+            {t.home.serviceCards.map(({ id, title, description, details }) => {
               const Icon = serviceIcons[id] ?? FaCubes;
               return (
                 <article
@@ -138,7 +142,10 @@ const HomePage = () => {
                   <h3 className="mb-3 text-xl font-bold text-slate-900 transition-colors group-hover:text-[#08563D]">
                     {title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-slate-600">{description}</p>
+                  <p className="mb-4 text-sm font-medium leading-relaxed text-slate-600 whitespace-pre-line">
+                    {description}
+                  </p>
+                  <p className="text-sm leading-relaxed text-slate-500">{details}</p>
                 </article>
               );
             })}
@@ -146,69 +153,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* 3. STRATEGIC OFFERINGS SECTION */}
-      <section className="bg-white py-24 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
-            <div>
-              <div className="flex items-center gap-3 text-[#08563D] mb-6">
-                <FaLightbulb size={28} />
-                <h3 className="text-2xl font-bold text-slate-900">
-                  {isAr ? 'الإدارة الاستراتيجية' : 'Strategic Management'}
-                </h3>
-              </div>
-              <p className="text-slate-500 leading-relaxed mb-6 font-medium whitespace-pre-line">
-                {isAr
-                  ? 'تحديد الأهداف الديناميكية، تخصيص الموارد، ومواءمة المواهب لدفع خلق القيمة.'
-                  : 'Dynamic Goal Setting, Resource Allocation, and Talent Alignment to drive value creation.'}
-              </p>
-              <p className="text-slate-500 leading-relaxed text-sm whitespace-pre-line">
-                {isAr
-                  ? 'نساعدك في تصميم استراتيجية متماسكة توحد بين الأعمال وتكنولوجيا المعلومات، وتحويل رؤيتك وأهدافك إلى خارطة طريق عالية التأثير. يضمن نهجنا المواءمة المثالية بين مواردك المالية والبشرية لسد الفجوة بين التخطيط والتنفيذ.'
-                  : 'We help you design a cohesive strategy that unites Business and IT, transforming your vision and CAPEX goals into a high-impact roadmap. Our approach ensures that your financial and human resources are perfectly aligned to close the gap between planning and execution.'}
-              </p>
-            </div>
-            <div>
-              <div className="flex items-center gap-3 text-[#08563D] mb-6">
-                <FaGears size={28} />
-                <h3 className="text-2xl font-bold text-slate-900">
-                  {isAr ? 'بنية البيانات والذكاء الاصطناعي' : 'Data & AI Architecture'}
-                </h3>
-              </div>
-              <p className="text-slate-500 leading-relaxed mb-6 font-medium whitespace-pre-line">
-                {isAr
-                  ? 'محرك الذكاء: التحليلات التنبؤية، اتخاذ القرار الآلي، وإنشاء مصدر واحد للحقيقة.'
-                  : 'The Intelligence Engine: Predictive Analytics, Automated Decisioning, and establishing a Single Source of Truth.'}
-              </p>
-              <p className="text-slate-500 leading-relaxed text-sm whitespace-pre-line">
-                {isAr
-                  ? 'نبني محرك ذكاء قوي يحول البيانات المعقدة إلى مصدر واحد للحقيقة. نطبق التحليلات التنبؤية والقرارات الآلية بالذكاء الاصطناعي لضمان تحرك أعمالك بسرعة بياناتك.'
-                  : 'Build a robust intelligence engine that converts complex data into a single source of truth. We implement predictive analytics and AI automated decisioning to ensure your business moves at the speed of your data.'}
-              </p>
-            </div>
-            <div>
-              <div className="flex items-center gap-3 text-[#08563D] mb-6">
-                <FaPuzzlePiece size={28} />
-                <h3 className="text-2xl font-bold text-slate-900">
-                  {isAr ? 'تكامل المؤسسات' : 'Enterprise Integration'}
-                </h3>
-              </div>
-              <p className="text-slate-500 leading-relaxed mb-6 font-medium whitespace-pre-line">
-                {isAr
-                  ? 'أتمتة العمليات ورؤية سلسلة التوريد.\nإطلاق القيمة الكامنة من أنظمة SAP/Oracle.'
-                  : 'Process Automation & Supply Chain Visibility.\nUnlocking legacy value from SAP/Oracle systems.'}
-              </p>
-              <p className="text-slate-500 leading-relaxed text-sm whitespace-pre-line">
-                {isAr
-                  ? 'سد الفجوة بين أنظمتك القديمة والسوق الحديث من خلال إطلاق القيمة المحاصرة داخل الحلول القديمة. نحن نبسط عملياتك من خلال الأتمتة والتكامل الشامل.'
-                  : 'Bridge the gap between your legacy systems and the modern market by unlocking trapped value within outdated solution. We streamline your operations through process automation and end-to-end integration.'}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. DEEP DATABRICKS SPECIALIZATION */}
+      {/* 3. DEEP DATABRICKS SPECIALIZATION */}
       <section className="bg-slate-50 py-24 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
