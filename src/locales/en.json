@@ -63,19 +63,22 @@
     "partnerLogoAlt": "Databricks partner logo",
     "serviceCards": [
       {
-        "id": "architecture",
-        "title": "Databricks Architecture",
-        "description": "Design and deploy secure, high-performance Lakehouse architectures engineered for enterprise scale."
+        "id": "strategy",
+        "title": "Strategic Management",
+        "description": "Dynamic Goal Setting, Resource Allocation, and Talent Alignment to drive value creation.",
+        "details": "We help you design a cohesive strategy that unites Business and IT, transforming your vision and CAPEX goals into a high-impact roadmap. Our approach ensures that your financial and human resources are perfectly aligned to close the gap between planning and execution."
       },
       {
-        "id": "engineering",
-        "title": "Data Engineering",
-        "description": "Build resilient, automated pipelines that transform complex data into reliable strategic assets."
+        "id": "dataAi",
+        "title": "Data & AI Architecture",
+        "description": "The Intelligence Engine: Predictive Analytics, Automated Decisioning, and establishing a Single Source of Truth.",
+        "details": "Build a robust intelligence engine that converts complex data into a single source of truth. We implement predictive analytics and AI automated decisioning to ensure your business moves at the speed of your data."
       },
       {
-        "id": "analytics",
-        "title": "Analytics Modernisation",
-        "description": "Upgrade legacy systems to agile, AI-ready analytical environments for faster decisions."
+        "id": "integration",
+        "title": "Enterprise Integration",
+        "description": "Process Automation & Supply Chain Visibility.\nUnlocking legacy value from SAP/Oracle systems.",
+        "details": "Bridge the gap between your legacy systems and the modern market by unlocking trapped value within outdated solution. We streamline your operations through process automation and end-to-end integration."
       }
     ],
     "strategyTitle": "Strategy Connected to Execution",

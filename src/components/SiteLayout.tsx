@@ -38,7 +38,6 @@ const SiteLayout = () => {
 
   const navItems: NavItem[] = [
     { label: t.nav.about, to: '/about' },
-    { label: t.nav.projects, to: '/projects' },
     { label: t.nav.locator, to: 'https://www.s-locator.com/', external: true, highlighted: true },
   ];
 
@@ -196,16 +195,9 @@ const SiteLayout = () => {
               <ul className="space-y-4 text-white/80">
                 <li>
                   <p className="mb-1 font-bold text-white">
-                    {isAr ? 'جدة، المملكة العربية السعودية' : 'Jeddah, Kingdom of Saudi Arabia'}
-                  </p>
-                  <p>
-                    {isAr ? 'رقم المبنى: 3096، شارع الهدا' : 'Building No.: 3096, Street: Al Hada'}
-                  </p>
-                  <p>{isAr ? 'حي الفيصلية' : 'District: Al Faisaliyah District'}</p>
-                  <p>
                     {isAr
-                      ? 'الرقم الفرعي: 7756، الرمز البريدي: 23442'
-                      : 'Secondary No.: 7756, Postal Code: 23442'}
+                      ? 'JABA7682, حلب البغدادية، جدة، المملكة العربية السعودية'
+                      : 'JABA7682, Halab albaghdadiyah, Jeddah, KSA'}
                   </p>
                 </li>
                 <li className="pt-2">
@@ -222,17 +214,6 @@ const SiteLayout = () => {
                     className="font-medium text-white transition-all hover:underline"
                   >
                     {isAr ? 'تواصل مع خبرائنا' : 'Contact Our Experts'}
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="mb-6 text-lg font-bold">{isAr ? 'المركز الإعلامي' : 'Media'}</h3>
-              <ul className="space-y-4 text-white/80">
-                <li>
-                  <Link to="/blogs" className="transition-all hover:underline">
-                    {isAr ? 'الرؤى والمدونات' : 'Insights & Blogs'}
                   </Link>
                 </li>
               </ul>
@@ -270,21 +251,6 @@ const SiteLayout = () => {
             >
               <FaLinkedinIn size={16} />
             </a>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-6 text-[13px] font-medium text-white/80">
-            <Link to="/accessibility" className="hover:underline">
-              {isAr ? 'إمكانية الوصول' : 'Accessibility'}
-            </Link>
-            <Link to="/privacy" className="hover:underline">
-              {isAr ? 'الخصوصية' : 'Privacy'}
-            </Link>
-            <Link to="/terms" className="hover:underline">
-              {isAr ? 'شروط الاستخدام' : 'Terms of use'}
-            </Link>
-            <Link to="/cookies" className="hover:underline">
-              {isAr ? 'إدارة ملفات الارتباط' : 'Cookie Management'}
-            </Link>
           </div>
 
           <div className="mt-8 text-center text-[10px] text-white/40">
