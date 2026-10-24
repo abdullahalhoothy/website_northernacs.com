@@ -3,8 +3,10 @@ import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
 import {
   FaBars,
   FaChevronDown,
+  FaEnvelope,
   FaGlobe,
   FaLinkedinIn,
+  FaLocationDot,
   FaMoon,
   FaSun,
   FaXmark,
@@ -257,41 +259,105 @@ const SiteLayout = () => {
         <Outlet />
       </main>
 
-      {/* NEW KPMG-STYLE FOOTER WITH AUTO-ARABIC */}
-      <footer className="bg-[#08563D] py-16 text-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-16">
-            <img
-              src="/images/northernacs/logo.png"
-              alt={t.nav.logoAlt}
-              className="h-10 w-auto brightness-0 invert"
-              loading="lazy"
-            />
-          </div>
+      {/* Modern, Compact, High-Value Footer */}
+      <footer className="border-t border-slate-200 bg-slate-50 text-slate-600 transition-colors duration-200 dark:border-slate-800/80 dark:bg-[#070b14] dark:text-slate-400">
+        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-5">
+            {/* Col 1: Brand & Bio (2 cols wide on large screens) */}
+            <div className="lg:col-span-2 space-y-4">
+              <Link to="/" className="inline-block">
+                <img
+                  src="/images/northernacs/logo.png"
+                  alt={t.nav.logoAlt}
+                  className="h-10 w-auto opacity-95 dark:brightness-0 dark:invert"
+                  loading="lazy"
+                />
+              </Link>
+              <p className="max-w-sm text-sm leading-relaxed text-slate-500 dark:text-slate-400">
+                {t.footer.tagline}
+              </p>
+              <div className="flex items-center gap-3 pt-2">
+                <a
+                  href="https://www.linkedin.com/company/northern-analytic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={t.footer.linkedinAria}
+                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-600 shadow-sm transition-colors hover:border-[#08563D] hover:bg-[#08563D] hover:text-white dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:border-emerald-600 dark:hover:bg-emerald-600"
+                >
+                  <FaLinkedinIn size={14} />
+                </a>
+              </div>
+            </div>
 
-          <div className="mb-20 grid grid-cols-1 gap-12 text-sm md:grid-cols-3">
+            {/* Col 2: Solutions */}
             <div>
-              <h3 className="mb-6 text-lg font-bold">{isAr ? 'تواصل معنا' : 'Contact'}</h3>
-              <ul className="space-y-4 text-white/80">
+              <h4 className="mb-4 text-sm font-bold  tracking-wider text-slate-900 dark:text-slate-200">
+                {t.nav.solution}
+              </h4>
+              <ul className="space-y-2.5 text-sm">
                 <li>
-                  <p className="mb-1 font-bold text-white">
-                    {isAr
-                      ? 'JABA7682, حلب البغدادية، جدة، المملكة العربية السعودية'
-                      : 'JABA7682, Halab albaghdadiyah, Jeddah, KSA'}
-                  </p>
-                </li>
-                <li className="pt-2">
-                  <a
-                    href="mailto:contact@northernacs.com"
-                    className="transition-all hover:underline"
+                  <Link
+                    to="/solutions/consulting-databricks"
+                    className="transition-colors hover:text-[#08563D] hover:underline dark:hover:text-emerald-400"
                   >
-                    contact@northernacs.com
+                    Databricks / Data & AI
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/solutions/s-route"
+                    className="transition-colors hover:text-[#08563D] hover:underline dark:hover:text-emerald-400"
+                  >
+                    S-route
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/solutions/s-locator"
+                    className="transition-colors hover:text-[#08563D] hover:underline dark:hover:text-emerald-400"
+                  >
+                    S-locator
+                  </Link>
+                </li>
+                <li>
+                  <a
+                    href="https://www.s-locator.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-colors hover:text-[#08563D] hover:underline dark:hover:text-emerald-400"
+                  >
+                    S-Locator Live Platform ↗
                   </a>
                 </li>
-                <li className="pt-2">
+              </ul>
+            </div>
+
+            {/* Col 3: Company */}
+            <div>
+              <h4 className="mb-4 text-sm font-bold tracking-wider text-slate-900 dark:text-slate-200">
+                {isAr ? 'الشركة' : 'Company'}
+              </h4>
+              <ul className="space-y-2.5 text-sm">
+                <li>
+                  <Link
+                    to="/about"
+                    className="transition-colors hover:text-[#08563D] hover:underline dark:hover:text-emerald-400"
+                  >
+                    {t.nav.about}
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/blogs"
+                    className="transition-colors hover:text-[#08563D] hover:underline dark:hover:text-emerald-400"
+                  >
+                    {t.nav.blog}
+                  </Link>
+                </li>
+                <li>
                   <Link
                     to="/contact"
-                    className="font-medium text-white transition-all hover:underline"
+                    className="transition-colors hover:text-[#08563D] hover:underline dark:hover:text-emerald-400"
                   >
                     {isAr ? 'تواصل مع خبرائنا' : 'Contact Our Experts'}
                   </Link>
@@ -299,44 +365,54 @@ const SiteLayout = () => {
               </ul>
             </div>
 
+            {/* Col 4: Contact & Office */}
             <div>
-              <h3 className="mb-6 text-lg font-bold">{isAr ? 'الشركة' : 'Company'}</h3>
-              <ul className="space-y-4 text-white/80">
-                <li>
-                  <Link to="/about" className="transition-all hover:underline">
-                    {isAr ? 'من نحن' : 'About Us'}
-                  </Link>
+              <h4 className="mb-4 text-sm font-bold tracking-wider text-slate-900 dark:text-slate-200">
+                {isAr ? 'تواصل معنا' : 'Contact'}
+              </h4>
+              <ul className="space-y-2.5 text-xs text-slate-600 dark:text-slate-400">
+                <li className="flex items-start gap-2">
+                  <FaLocationDot
+                    size={16}
+                    className="mt-0.5 shrink-0 text-[#08563D] dark:text-emerald-500"
+                  />
+                  <span className="text-[12px]">
+                    {isAr
+                      ? 'جدة، حي الفيصلية، شارع الهدا، المملكة العربية السعودية'
+                      : 'Halab Al-Baghdadiyah, Jeddah, Kingdom of Saudi Arabia'}
+                  </span>
                 </li>
-                <li>
+                <li className="flex items-center gap-2 pt-1">
+                  <FaEnvelope size={16} className="shrink-0 text-[#08563D] dark:text-emerald-500" />
                   <a
-                    href="https://s-locator.northernacs.com"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="transition-all hover:underline"
+                    href="mailto:contact@northernacs.com"
+                    className="text-slate-700 text-sm transition-colors hover:text-[#08563D] hover:underline dark:text-slate-400 dark:hover:text-emerald-400"
                   >
-                    {isAr ? 'منصة إس لوكيتر' : 'S-Locator Platform'}
+                    contact@northernacs.com
                   </a>
                 </li>
               </ul>
             </div>
           </div>
 
-          <div className="mb-12 flex justify-center">
-            <a
-              href="https://www.linkedin.com/company/northern-analytic"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={t.footer.linkedinAria}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-white text-white transition-colors hover:bg-white hover:text-[#08563D]"
-            >
-              <FaLinkedinIn size={16} />
-            </a>
-          </div>
-
-          <div className="mt-8 text-center text-[10px] text-white/40">
-            {isAr
-              ? '© 2026 تم التصميم والتطوير كمنتج لشركة نورثرن أناليتكس. جميع الحقوق محفوظة.'
-              : '© 2026 Designed and developed as a product of Northern Analytics Consulting Services. All rights reserved.'}
+          {/* Bottom Bar: Copyright & Legal */}
+          <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-slate-200/80 pt-6 text-[11px] text-slate-500 sm:flex-row dark:border-slate-800/60 dark:text-slate-500">
+            <p>
+              {isAr
+                ? '© 2026 نورثرن أناليتكس للخدمات الاستشارية. جميع الحقوق محفوظة.'
+                : '© 2026 Northern Analytics Consulting Services. All rights reserved.'}
+            </p>
+            <div className="flex flex-wrap gap-5 text-slate-500 dark:text-slate-500">
+              <span className="cursor-default hover:text-slate-700 dark:hover:text-slate-300">
+                {isAr ? 'الخصوصية' : 'Privacy'}
+              </span>
+              <span className="cursor-default hover:text-slate-700 dark:hover:text-slate-300">
+                {isAr ? 'شروط الاستخدام' : 'Terms of Use'}
+              </span>
+              <span className="cursor-default hover:text-slate-700 dark:hover:text-slate-300">
+                {isAr ? 'إمكانية الوصول' : 'Accessibility'}
+              </span>
+            </div>
           </div>
         </div>
       </footer>
