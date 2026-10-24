@@ -85,7 +85,7 @@ const SiteLayout = () => {
                       type="button"
                       className={`group flex h-full items-center gap-1.5 text-sm font-bold tracking-wider transition-colors ${
                         item.children.some((child) => location.pathname === child.to)
-                          ? 'text-[#08563D] dark:text-[#2dd4bf]'
+                          ? 'text-[#08563D] dark:text-[#2dd4bf]/60'
                           : 'text-slate-800 hover:text-[#08563D] dark:text-slate-200 dark:hover:text-[#2dd4bf]'
                       }`}
                     >
@@ -105,7 +105,7 @@ const SiteLayout = () => {
                             className={({ isActive }) =>
                               `block rounded-md px-4 py-2.5 text-xs font-bold tracking-wider transition-colors ${
                                 isActive
-                                  ? 'bg-slate-50 text-[#08563D] dark:bg-slate-800/80 dark:text-[#2dd4bf]'
+                                  ? 'bg-slate-50 text-[#08563D] dark:bg-[#2dd4bf]/10 dark:text-[#2dd4bf]/60'
                                   : 'text-slate-700 hover:bg-[#08563D]/5 hover:text-[#08563D] dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white'
                               }`
                             }
@@ -130,10 +130,11 @@ const SiteLayout = () => {
                   <NavLink
                     key={item.label}
                     to={item.to!}
+                    end={item.to === '/'}
                     className={({ isActive }) =>
                       `text-sm font-bold tracking-wider transition-colors ${
                         item.highlighted || isActive
-                          ? 'text-[#08563D] hover:opacity-80 dark:text-[#2dd4bf]'
+                          ? 'text-[#08563D] hover:opacity-80 dark:text-[#2dd4bf]/60'
                           : 'text-slate-800 hover:text-[#08563D] dark:text-slate-200 dark:hover:text-[#2dd4bf]'
                       }`
                     }
@@ -195,7 +196,11 @@ const SiteLayout = () => {
                       <Link
                         key={child.to}
                         to={child.to}
-                        className="block rounded-md px-3 py-2 text-sm font-semibold text-slate-700 transition-colors hover:bg-gray-50 hover:text-[#08563D] dark:text-slate-300 dark:hover:bg-slate-900 dark:hover:text-[#2dd4bf]"
+                        className={`block rounded-md px-3 py-2 text-sm font-semibold transition-colors ${
+                          location.pathname === child.to
+                            ? 'bg-slate-50 text-[#08563D] dark:bg-[#2dd4bf]/10 dark:text-[#2dd4bf]/60'
+                            : 'text-slate-700 hover:bg-gray-50 hover:text-[#08563D] dark:text-slate-300 dark:hover:bg-slate-900 dark:hover:text-[#2dd4bf]'
+                        }`}
                       >
                         {child.label}
                       </Link>
@@ -216,7 +221,11 @@ const SiteLayout = () => {
                 <Link
                   key={item.label}
                   to={item.to!}
-                  className="block rounded-md px-3 py-2 text-base font-bold text-slate-800 transition-colors hover:bg-gray-50 hover:text-[#08563D] dark:text-slate-200 dark:hover:bg-slate-900 dark:hover:text-[#2dd4bf]"
+                  className={`block rounded-md px-3 py-2 text-base font-bold transition-colors ${
+                    location.pathname === item.to
+                      ? 'text-[#08563D] dark:text-[#2dd4bf]/60'
+                      : 'text-slate-800 hover:bg-gray-50 hover:text-[#08563D] dark:text-slate-200 dark:hover:bg-slate-900 dark:hover:text-[#2dd4bf]'
+                  }`}
                 >
                   {item.label}
                 </Link>
