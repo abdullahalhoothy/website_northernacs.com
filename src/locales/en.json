@@ -58,6 +58,74 @@
     "partner": "Official Partner",
     "title": "Databricks / Data & AI",
     "accent": "Consulting",
+    "learnMore": "Learn more",
+    "spotlightEyebrow": "Beyond Expectations",
+    "spotlightTitle": "Data & Location",
+    "spotlightTitleLine": "Intelligence Experts",
+    "spotlightBody": "Northern Analytics, headquartered in Jeddah, helps organizations across Saudi Arabia turn complex data into clear decisions. Through Databricks consulting and the S-Locator platform, we deliver data and AI architecture, market and location intelligence, and practical execution. We help clients not only understand their market, but move on it with clarity and speed.",
+    "spotlightImageAlt": "Abstract glass form representing data and location intelligence",
+    "solutionsTitle": "Solutions",
+    "solutionItems": [
+      {
+        "title": "Consulting",
+        "text": "Databricks and Data & AI consulting, from architecture and migration to enablement, so teams adopt a secure and scalable lakehouse."
+      },
+      {
+        "title": "S-route",
+        "text": "Route planning that organizes how field teams reach the right locations, with less time on the road and clearer daily execution."
+      },
+      {
+        "title": "S-locator",
+        "text": "A location intelligence platform for market planning, site selection, territory design, and data-driven expansion."
+      }
+    ],
+    "offerTitle": "Data and location intelligence, ready for Saudi Arabia",
+    "offerText": "Northern Analytics brings Databricks consulting, S-route, and S-locator to organizations across the Kingdom. From lakehouse architecture to field routes and location decisions, we help teams move from data to action.",
+    "techTitle": "Turning {data} into {decisions} to drive growth and success across the Kingdom.",
+    "projectShots": [
+      {
+        "src": "/images/northernacs/s-locator-map-mockup.png",
+        "alt": "S-Locator map of Riyadh",
+        "label": "S-Locator"
+      },
+      {
+        "src": "/images/northernacs/riyadh-skyline.jpg",
+        "alt": "Riyadh skyline",
+        "label": "Saudi market"
+      },
+      {
+        "src": "/images/northernacs/vision-building.jpg",
+        "alt": "Architecture aligned with Saudi Vision 2030",
+        "label": "Vision 2030"
+      },
+      {
+        "src": "/images/northernacs/about-us-northernacs-scaled.jpg",
+        "alt": "Northern Analytics team",
+        "label": "Our team"
+      },
+      {
+        "src": "/images/northernacs/contact.jpeg",
+        "alt": "Northern Analytics workspace",
+        "label": "Consulting"
+      },
+      {
+        "src": "/images/northernacs/hero-skyline.png",
+        "alt": "City skyline for location intelligence",
+        "label": "Locations"
+      }
+    ],
+    "offerStats": [
+      { "value": "3+", "label": "Solutions" },
+      { "value": "2+", "label": "Products" },
+      { "value": "3+", "label": "Practices" },
+      { "value": "1+", "label": "Market" },
+      { "value": "2+", "label": "Languages" },
+      { "value": "4+", "label": "Insights" },
+      { "value": "5+", "label": "Coverage" },
+      { "value": "6+", "label": "Programs" },
+      { "value": "7+", "label": "Teams" },
+      { "value": "8+", "label": "Locations" }
+    ],
     "subtitle": "Featuring our flagship product:",
     "intro": "Northern Analytics bridges the gap between strategy and execution. We bring world-class North American data consulting and powerful location intelligence products directly to the Kingdom of Saudi Arabia.",
     "servicesEyebrow": "Databricks & Data Expertise",
