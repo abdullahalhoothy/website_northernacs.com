@@ -11,6 +11,7 @@ export default {
         arabic: ['"Noto Kufi Arabic"', 'sans-serif'],
       },
       colors: {
+        darkBg: '#343433',
         nacs: {
           green: '#08563D',
           greenDark: '#064531',

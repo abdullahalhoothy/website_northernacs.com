@@ -64,10 +64,10 @@ const SiteLayout = () => {
 
   return (
     <div
-      className={`min-h-screen bg-white text-nacs-ink antialiased transition-colors duration-200 dark:bg-slate-950 dark:text-slate-100 ${isAr ? 'font-arabic' : 'font-sans'}`}
+      className={`min-h-screen bg-white text-nacs-ink antialiased transition-colors duration-200 dark:bg-[#343433] dark:text-slate-100 ${isAr ? 'font-arabic' : 'font-sans'}`}
     >
       <header
-        className={`sticky top-0 z-50 border-b border-gray-100 bg-white transition-all duration-200 dark:border-slate-800 dark:bg-slate-950/95 dark:backdrop-blur ${scrolled ? 'shadow-md dark:shadow-slate-900/50' : 'shadow-sm'}`}
+        className={`sticky top-0 z-50 border-b border-gray-100 bg-white transition-all duration-200 dark:border-[#484846] dark:bg-[#343433]/95 dark:backdrop-blur ${scrolled ? 'shadow-md dark:shadow-black/20' : 'shadow-sm'}`}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-0">
           <div className="flex h-20 items-center justify-between">
@@ -99,7 +99,7 @@ const SiteLayout = () => {
                     </button>
                     {/* Pop-up dropdown menu on hover */}
                     <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 invisible opacity-0 translate-y-1 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 z-50">
-                      <div className="w-64 rounded-lg bg-white p-2 shadow-xl border border-gray-100 ring-1 ring-black/5 dark:bg-slate-900 dark:border-slate-800 dark:ring-white/10">
+                      <div className="w-64 rounded-lg bg-white p-2 shadow-xl border border-gray-100 ring-1 ring-black/5 dark:bg-[#2b2b2a] dark:border-[#484846] dark:ring-white/10">
                         {item.children.map((child) => (
                           <NavLink
                             key={child.to}
@@ -107,8 +107,8 @@ const SiteLayout = () => {
                             className={({ isActive }) =>
                               `block rounded-md px-4 py-2.5 text-xs font-bold tracking-wider transition-colors ${
                                 isActive
-                                  ? 'bg-slate-50 text-[#08563D] dark:bg-slate-800/80 dark:text-[#2dd4bf]'
-                                  : 'text-slate-700 hover:bg-[#08563D]/5 hover:text-[#08563D] dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white'
+                                  ? 'bg-slate-50 text-[#08563D] dark:bg-[#343433] dark:text-[#2dd4bf]'
+                                  : 'text-slate-700 hover:bg-[#08563D]/5 hover:text-[#08563D] dark:text-slate-200 dark:hover:bg-[#343433] dark:hover:text-white'
                               }`
                             }
                           >
@@ -183,21 +183,21 @@ const SiteLayout = () => {
           </div>
         </div>
         <div
-          className={`overflow-hidden border-t border-gray-100 bg-white shadow-lg transition-all duration-300 dark:border-slate-800 dark:bg-slate-950 lg:hidden ${mobileOpen ? 'max-h-[640px] opacity-100' : 'max-h-0 opacity-0'}`}
+          className={`overflow-hidden border-t border-gray-100 bg-white shadow-lg transition-all duration-300 dark:border-[#484846] dark:bg-[#343433] lg:hidden ${mobileOpen ? 'max-h-[640px] opacity-100' : 'max-h-0 opacity-0'}`}
         >
           <nav className="space-y-2 px-4 pb-6 pt-4">
             {navItems.map((item) =>
               item.children ? (
                 <div key={item.label} className="space-y-1">
-                  <div className="px-3 py-2 text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">
+                  <div className="px-3 py-2 text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-400">
                     {item.label}
                   </div>
-                  <div className="ms-2 space-y-1 border-s-2 border-slate-100 ps-2 dark:border-slate-800">
+                  <div className="ms-2 space-y-1 border-s-2 border-slate-100 ps-2 dark:border-[#484846]">
                     {item.children.map((child) => (
                       <Link
                         key={child.to}
                         to={child.to}
-                        className="block rounded-md px-3 py-2 text-sm font-semibold text-slate-700 transition-colors hover:bg-gray-50 hover:text-[#08563D] dark:text-slate-300 dark:hover:bg-slate-900 dark:hover:text-[#2dd4bf]"
+                        className="block rounded-md px-3 py-2 text-sm font-semibold text-slate-700 transition-colors hover:bg-gray-50 hover:text-[#08563D] dark:text-slate-200 dark:hover:bg-[#2b2b2a] dark:hover:text-[#2dd4bf]"
                       >
                         {child.label}
                       </Link>
@@ -210,7 +210,7 @@ const SiteLayout = () => {
                   href={item.to}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block rounded-md px-3 py-2 text-base font-bold text-slate-800 transition-colors hover:bg-gray-50 hover:text-[#08563D] dark:text-slate-200 dark:hover:bg-slate-900 dark:hover:text-[#2dd4bf]"
+                  className="block rounded-md px-3 py-2 text-base font-bold text-slate-800 transition-colors hover:bg-gray-50 hover:text-[#08563D] dark:text-slate-200 dark:hover:bg-[#2b2b2a] dark:hover:text-[#2dd4bf]"
                 >
                   {item.label}
                 </a>
@@ -218,24 +218,24 @@ const SiteLayout = () => {
                 <Link
                   key={item.label}
                   to={item.to!}
-                  className="block rounded-md px-3 py-2 text-base font-bold text-slate-800 transition-colors hover:bg-gray-50 hover:text-[#08563D] dark:text-slate-200 dark:hover:bg-slate-900 dark:hover:text-[#2dd4bf]"
+                  className="block rounded-md px-3 py-2 text-base font-bold text-slate-800 transition-colors hover:bg-gray-50 hover:text-[#08563D] dark:text-slate-200 dark:hover:bg-[#2b2b2a] dark:hover:text-[#2dd4bf]"
                 >
                   {item.label}
                 </Link>
               ),
             )}
-            <div className="mt-4 flex gap-3 border-t border-gray-100 pt-4 dark:border-slate-800">
+            <div className="mt-4 flex gap-3 border-t border-gray-100 pt-4 dark:border-[#484846]">
               <button
                 type="button"
                 onClick={() => setLang(lang === 'en' ? 'ar' : 'en')}
-                className="flex-1 rounded-sm border border-gray-200 px-4 py-3 text-xs font-bold uppercase tracking-widest text-slate-800 dark:border-slate-800 dark:text-slate-200"
+                className="flex-1 rounded-sm border border-gray-200 px-4 py-3 text-xs font-bold uppercase tracking-widest text-slate-800 dark:border-[#484846] dark:text-slate-200"
               >
                 {t.nav.language}
               </button>
               <button
                 type="button"
                 onClick={toggleTheme}
-                className="flex items-center justify-center rounded-sm border border-gray-200 px-4 py-3 text-slate-800 dark:border-slate-800 dark:text-slate-200"
+                className="flex items-center justify-center rounded-sm border border-gray-200 px-4 py-3 text-slate-800 dark:border-[#484846] dark:text-slate-200"
                 aria-label="Toggle theme"
               >
                 {theme === 'dark' ? (
@@ -260,7 +260,7 @@ const SiteLayout = () => {
       </main>
 
       {/* Modern, Compact, High-Value Footer */}
-      <footer className="border-t border-slate-200 bg-slate-50 text-slate-600 transition-colors duration-200 dark:border-slate-800/80 dark:bg-[#070b14] dark:text-slate-400">
+      <footer className="border-t border-slate-200 bg-[#F2F2F2] text-slate-600 transition-colors duration-200 dark:border-[#484846] dark:bg-[#343433] dark:text-slate-300">
         <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-5">
             {/* Col 1: Brand & Bio (2 cols wide on large screens) */}
@@ -396,7 +396,7 @@ const SiteLayout = () => {
           </div>
 
           {/* Bottom Bar: Copyright & Legal */}
-          <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-slate-200/80 pt-6 text-[11px] text-slate-500 sm:flex-row dark:border-slate-800/60 dark:text-slate-500">
+          <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-slate-200/80 pt-6 text-[11px] text-slate-500 sm:flex-row dark:border-[#484846] dark:text-slate-400">
             <p>
               {isAr
                 ? '© 2026 نورثرن أناليتكس للخدمات الاستشارية. جميع الحقوق محفوظة.'
