@@ -1,6 +1,11 @@
 {
   "nav": {
+    "home": "الرئيسية",
+    "solution": "الحلول",
     "about": "من نحن",
+    "contact": "تواصل معنا",
+    "blog": "المدونة",
+    "signUp": "تسجيل",
     "services": "الخدمات",
     "projects": "المشاريع",
     "locator": "إس لوكيتر",
@@ -8,7 +13,7 @@
     "insights": "الرؤى",
     "blogs": "المدونة",
     "contact": "تواصل",
-    "language": "English",
+    "language": "En",
     "homeLabel": "الصفحة الرئيسية لنورثرن أناليتكس",
     "logoAlt": "نورثرن أناليتكس",
     "searchAria": "بحث",

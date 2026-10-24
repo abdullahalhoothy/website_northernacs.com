@@ -2,12 +2,13 @@ import typography from '@tailwindcss/typography';
 
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        arabic: ['Cairo', 'sans-serif'],
+        sans: ['"Montserrat"', 'sans-serif'],
+        arabic: ['"Noto Kufi Arabic"', 'sans-serif'],
       },
       colors: {
         nacs: {
