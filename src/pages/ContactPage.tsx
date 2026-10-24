@@ -1,12 +1,7 @@
 import type { ChangeEvent, ChangeEventHandler, FormEvent } from 'react';
 import { useState } from 'react';
-import {
-  FaCircleCheck,
-  FaPaperPlane,
-  FaPhone,
-  FaRegBuilding,
-  FaRegEnvelope,
-} from 'react-icons/fa6';
+import { FaCircleCheck, FaLinkedinIn, FaPaperPlane, FaWhatsapp } from 'react-icons/fa6';
+import { FiMail, FiMapPin, FiPhone } from 'react-icons/fi';
 import { toast } from 'sonner';
 import { useLanguage } from '../components/LanguageProvider';
 import { translations } from '../i18n';
@@ -32,11 +27,18 @@ const initialState: FormState = {
   company: '',
   comments: '',
 };
+const PHONE_HREF = 'tel:+966558188632';
+const PHONE_LABEL = '+966 55 818 8632';
+const EMAIL = 'contact@northernacs.com';
+const SOCIAL = {
+  linkedin: 'https://www.linkedin.com/company/northern-analytic',
+  twitter: 'https://x.com',
+  whatsapp: 'https://wa.me/966558188632',
+};
 const emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const phoneRx = /^[0-9()#&+*\-=. ]+$/;
 const fieldBase =
   'w-full rounded-md border border-nacs-line bg-white px-4 py-3 text-sm text-slate-800 placeholder:text-slate-400 transition-all focus:border-nacs-green focus:outline-none focus:ring-2 focus:ring-nacs-green/15';
-const HERO_IMAGE = '/images/northernacs/contact.jpeg';
 
 const ContactPage = () => {
   const { lang } = useLanguage();
@@ -93,144 +95,226 @@ const ContactPage = () => {
   const fieldClass = (field: FieldName) =>
     `${fieldBase} ${errors[field] ? 'border-red-400 focus:border-red-500 focus:ring-red-200' : ''}`;
 
+  const titleWords = t.title.trim().split(/\s+/);
+  const titleAccent = titleWords.pop() ?? '';
+  const titleLead = titleWords.join(' ');
+
   return (
     <>
-      <section className="bg-[#eceff1]">
-        <div className="relative">
-          <img
-            src={HERO_IMAGE}
-            alt={t.eyebrow}
-            className="h-[420px] w-full object-cover object-center md:h-[470px]"
-            loading="eager"
-          />
-          <div className="absolute bottom-0 start-0 w-full bg-nacs-green md:w-1/2">
-            <div className="px-12 py-8 sm:px-12">
-              <h2 className="text-5xl font-black uppercase tracking-wide text-white">
-                {t.eyebrow}
-              </h2>
-            </div>
-          </div>
+      <section className="bg-white pb-10 pt-6 md:pb-6 md:pt-12">
+        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+          <span className="inline-flex bg-[#D9A86D]/10 text-[#ccb28d] rounded-full bg-nacs-sandSoft px-4 py-2 text-sm font-bold text-nacs-sand">
+            {t.eyebrow}
+          </span>
+
+          <h1 className="mt-4 text-3xl font-medium text-[#08563D] leading-tight text-nacs-forest md:text-4xl">
+            {titleLead ? `${titleLead} ` : null}
+            <span className="text-[#ccb28d]">{titleAccent}</span>
+          </h1>
+
+          <p className="mx-auto mt-3 max-w-2xl text-base leading-6 text-nacs-caption ">{t.intro}</p>
         </div>
       </section>
 
-      <section className="bg-nacs-surface py-16 md:py-24">
-        <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-black text-slate-900 md:text-5xl">{t.title}</h1>
-          <p className="mx-auto mt-4 max-w-2xl text-nacs-muted">{t.intro}</p>
-        </div>
-      </section>
-      <section className="bg-white py-16 md:py-20">
-        <div className="mx-auto grid max-w-6xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
-          <aside className="rounded-2xl bg-nacs-green p-8 text-white">
-            <h2 className="mb-6 text-2xl font-black">{t.infoTitle}</h2>
-            <ul className="space-y-5 text-white/85">
-              <li className="flex gap-3">
-                <FaRegBuilding className="mt-1 shrink-0" />
-                Jeddah, Kingdom of Saudi Arabia
-              </li>
-              <li className="flex gap-3">
-                <FaRegEnvelope className="mt-1 shrink-0" />
-                <a href="mailto:contact@northernacs.com">contact@northernacs.com</a>
-              </li>
-              <li className="flex gap-3">
-                <FaPhone className="mt-1 shrink-0" />
-                <a href="tel:+966558188632">+966 55 818 8632</a>
-              </li>
-            </ul>
-          </aside>
-          <div className="rounded-2xl border border-nacs-line bg-white p-6 shadow-sm sm:p-8 md:p-10">
-            {submitted ? (
-              <div className="py-10 text-center">
-                <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-nacs-mint text-nacs-green">
-                  <FaCircleCheck size={32} />
-                </div>
-                <h3 className="mb-2 text-2xl font-black text-slate-900">{t.successTitle}</h3>
-                <p className="mx-auto mb-6 max-w-md text-nacs-muted">{t.successText}</p>
-                <button
-                  type="button"
-                  onClick={() => setSubmitted(false)}
-                  className="rounded-md bg-nacs-green px-8 py-3 text-sm font-bold uppercase tracking-widest text-white transition-all hover:bg-nacs-greenHover"
+      <section className="bg-white py-10 md:py-14">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="grid overflow-hidden rounded-[2rem] border border-nacs-line bg-white shadow-2xl shadow-slate-300/50 lg:grid-cols-2">
+            <aside className="flex h-full flex-col bg-nacs-green p-8 text-white md:p-12">
+              <h2 className="mb-8 text-2xl font-medium md:text-3xl">{t.infoTitle}</h2>
+              <ul className="space-y-8">
+                <li className="flex items-start gap-4">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/10">
+                    <FiPhone size={20} className="text-[#ccb28d]" />
+                  </span>
+                  <div>
+                    <p className="font-medium">{t.callLabel}</p>
+                    <a
+                      href={PHONE_HREF}
+                      dir="ltr"
+                      className={`mt-1 block text-xs text-white/90 ${
+                        lang === 'ar' ? 'text-right' : 'text-left'
+                      }`}
+                    >
+                      {PHONE_LABEL}
+                    </a>
+                    <p className="mt-1 text-xs text-white/60">{t.hours}</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-4">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/10">
+                    <FiMail size={20} className="text-[#ccb28d]" />
+                  </span>
+                  <div>
+                    <p className="font-medium">{t.emailLabel}</p>
+                    <a href={`mailto:${EMAIL}`} className="mt-1 block text-xs text-white/90">
+                      {EMAIL}
+                    </a>
+                    <p className="mt-1 text-xs text-white/60">{t.replyTime}</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-4">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/10">
+                    <FiMapPin size={20} className="text-[#ccb28d]" />
+                  </span>
+                  <div>
+                    <p className="font-medium">{t.hqLabel}</p>
+                    <p className="mt-1 text-xs text-white/90">{t.address}</p>
+                  </div>
+                </li>
+              </ul>
+              <div className="mt-auto flex items-center gap-3 pt-10">
+                <a
+                  href={SOCIAL.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={t.linkedinAria}
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-white/20"
                 >
-                  {t.again}
-                </button>
+                  <FaLinkedinIn size={15} />
+                </a>
+                <a
+                  href={SOCIAL.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2.5 text-sm font-medium transition-colors hover:bg-white/20"
+                >
+                  <FaWhatsapp size={16} />
+                  {t.whatsapp}
+                </a>
               </div>
-            ) : (
-              <form noValidate onSubmit={onSubmit} className="space-y-5">
-                <div className="grid gap-5 md:grid-cols-2">
-                  <Field
-                    name="firstName"
-                    placeholder={t.firstName}
-                    value={values.firstName}
-                    onChange={onChange('firstName')}
-                    error={errors.firstName}
-                    className={fieldClass('firstName')}
-                  />
-                  <Field
-                    name="lastName"
-                    placeholder={t.lastName}
-                    value={values.lastName}
-                    onChange={onChange('lastName')}
-                    error={errors.lastName}
-                    className={fieldClass('lastName')}
-                  />
-                </div>
-                <div className="grid gap-5 md:grid-cols-2">
-                  <Field
-                    name="email"
-                    type="email"
-                    placeholder={t.email}
-                    value={values.email}
-                    onChange={onChange('email')}
-                    error={errors.email}
-                    className={fieldClass('email')}
-                  />
-                  <Field
-                    name="phone"
-                    type="tel"
-                    placeholder={t.phone}
-                    value={values.phone}
-                    onChange={onChange('phone')}
-                    error={errors.phone}
-                    className={fieldClass('phone')}
-                  />
-                </div>
-                <Field
-                  name="location"
-                  placeholder={t.location}
-                  value={values.location}
-                  onChange={onChange('location')}
-                  error={errors.location}
-                  className={fieldClass('location')}
-                />
-                <Field
-                  name="company"
-                  placeholder={t.company}
-                  value={values.company}
-                  onChange={onChange('company')}
-                  className={fieldClass('company')}
-                />
-                <textarea
-                  name="comments"
-                  rows={5}
-                  placeholder={t.comments}
-                  value={values.comments}
-                  onChange={onChange('comments')}
-                  className={`${fieldClass('comments')} min-h-[140px] resize-y`}
-                />
-                {errors.comments && <p className="text-xs text-red-500">{errors.comments}</p>}
-                <div className="flex flex-col gap-4 pt-2 sm:flex-row sm:items-center sm:justify-between">
-                  <p className="text-xs text-slate-400">{t.required}</p>
+            </aside>
+            <div className="p-6 sm:p-8 md:p-12">
+              {submitted ? (
+                <div className="py-10 text-center">
+                  <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-nacs-mint text-nacs-green">
+                    <FaCircleCheck size={32} />
+                  </div>
+                  <h3 className="mb-2 text-2xl font-black text-slate-900">{t.successTitle}</h3>
+                  <p className="mx-auto mb-6 max-w-md text-nacs-muted">{t.successText}</p>
                   <button
-                    type="submit"
-                    disabled={submitting}
-                    className="inline-flex items-center justify-center rounded-md bg-nacs-green px-10 py-3.5 text-sm font-bold uppercase tracking-widest text-white shadow-lg transition-all hover:-translate-y-0.5 hover:bg-nacs-greenHover disabled:cursor-not-allowed disabled:opacity-70"
+                    type="button"
+                    onClick={() => setSubmitted(false)}
+                    className="rounded-md bg-nacs-green px-8 py-3 text-sm font-bold uppercase tracking-widest text-white transition-all hover:bg-nacs-greenHover"
                   >
-                    {submitting ? t.submitting : t.submit}
-                    {!submitting && <FaPaperPlane className="ms-3" size={13} />}
+                    {t.again}
                   </button>
                 </div>
-              </form>
-            )}
+              ) : (
+                <form noValidate onSubmit={onSubmit} className="space-y-5">
+                  <h2 className="text-2xl font-medium text-nacs-green">{t.formTitle}</h2>
+                  <div className="grid gap-5 md:grid-cols-2">
+                    <div className="flex flex-col gap-2">
+                      <label htmlFor="firstName" className="text-sm font-medium text-nacs-green">
+                        {t.firstName}
+                      </label>
+                      <Field
+                        name="firstName"
+                        placeholder={t.firstName}
+                        value={values.firstName}
+                        onChange={onChange('firstName')}
+                        error={errors.firstName}
+                        className={fieldClass('firstName')}
+                      />
+                    </div>
+                    <div className="flex flex-col gap-2">
+                      <label htmlFor="lastName" className="text-sm font-medium text-nacs-green">
+                        {t.lastName}
+                      </label>
+                      <Field
+                        name="lastName"
+                        placeholder={t.lastName}
+                        value={values.lastName}
+                        onChange={onChange('lastName')}
+                        error={errors.lastName}
+                        className={fieldClass('lastName')}
+                      />
+                    </div>
+                  </div>
+                  <div className="grid gap-5 md:grid-cols-2">
+                    <div className="flex flex-col gap-2">
+                      <label htmlFor="email" className="text-sm font-medium text-nacs-green">
+                        {t.email}
+                      </label>
+                      <Field
+                        name="email"
+                        type="email"
+                        placeholder={t.email}
+                        value={values.email}
+                        onChange={onChange('email')}
+                        error={errors.email}
+                        className={fieldClass('email')}
+                      />
+                    </div>
+                    <div className="flex flex-col gap-2">
+                      <label htmlFor="phone" className="text-sm font-medium text-nacs-green">
+                        {t.phone}
+                      </label>
+                      <Field
+                        name="phone"
+                        type="tel"
+                        placeholder={t.phone}
+                        value={values.phone}
+                        onChange={onChange('phone')}
+                        error={errors.phone}
+                        className={fieldClass('phone')}
+                      />
+                    </div>
+                  </div>
+                  <div className="grid gap-5 md:grid-cols-2">
+                    <div className="flex flex-col gap-2">
+                      <label htmlFor="location" className="text-sm font-medium text-nacs-green">
+                        {t.location}
+                      </label>
+                      <Field
+                        name="location"
+                        placeholder={t.location}
+                        value={values.location}
+                        onChange={onChange('location')}
+                        error={errors.location}
+                        className={fieldClass('location')}
+                      />
+                    </div>
+                    <div className="flex flex-col gap-2">
+                      <label htmlFor="company" className="text-sm font-medium text-nacs-green">
+                        {t.company}
+                      </label>
+                      <Field
+                        name="company"
+                        placeholder={t.company}
+                        value={values.company}
+                        onChange={onChange('company')}
+                        className={fieldClass('company')}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <label htmlFor="comments" className="text-sm font-medium text-nacs-green">
+                      {t.comments}
+                    </label>
+                    <textarea
+                      name="comments"
+                      rows={5}
+                      placeholder={t.comments}
+                      value={values.comments}
+                      onChange={onChange('comments')}
+                      className={`${fieldClass('comments')} min-h-[140px] resize-y`}
+                    />
+                  </div>
+                  {errors.comments && <p className="text-xs text-red-500">{errors.comments}</p>}
+                  <div className="flex flex-col gap-4 pt-2">
+                    {/* <p className="text-xs text-slate-400">{t.required}</p> */}
+                    <button
+                      type="submit"
+                      disabled={submitting}
+                      className="inline-flex w-full items-center justify-center rounded-xl bg-nacs-green px-10 py-4 text-sm font-bold text-white shadow-lg transition-all hover:-translate-y-0.5 hover:bg-nacs-forestHover disabled:cursor-not-allowed disabled:opacity-70"
+                    >
+                      {submitting ? t.submitting : t.submit}
+                      {!submitting && <FaPaperPlane className="ms-3" size={13} />}
+                    </button>
+                  </div>
+                </form>
+              )}
+            </div>
           </div>
         </div>
       </section>
