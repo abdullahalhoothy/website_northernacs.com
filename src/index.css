@@ -46,6 +46,11 @@ html.dark .bg-slate-950 {
   background-color: #343433 !important;
 }
 
+html.dark .bg-\[\#F2F2F2\],
+html.dark footer {
+  background-color: #343433 !important;
+}
+
 html.dark .text-slate-900,
 html.dark .text-slate-800 {
   color: #f8fafc !important;
