@@ -93,7 +93,7 @@ const HomePage = () => {
 
         <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-0">
           <div className="max-w-2xl animate-fade-in-up">
-            <h1 className="mb-6 text-4xl font-black leading-tight text-black md:text-5xl lg:text-6xl">
+            <h1 className="mb-6 text-4xl font-black !leading-tight text-black md:text-5xl lg:text-6xl">
               {t.home.title}
               <br />
               <span className="text-[#08563D]">{t.home.accent}</span>
@@ -102,7 +102,7 @@ const HomePage = () => {
             <div className="mt-10 flex flex-col items-start gap-2 sm:flex-row">
               <a
                 href="#s-locator-platform"
-                className="inline-flex items-center justify-center rounded-full bg-[#08563D] px-5 py-5 text-sm font-medium tracking-widest text-white shadow-lg transition-all hover:-translate-y-0.5 hover:bg-[#064531] hover:shadow-xl"
+                className="inline-flex items-center justify-center rounded-xl bg-[#08563D] px-5 py-5 text-sm font-bold tracking-widest text-white shadow-lg transition-all hover:-translate-y-0.5 hover:bg-[#064531] hover:shadow-xl"
               >
                 {t.home.learnMore}
                 <FiArrowUpRight className="ms-3" size={16} />
@@ -224,7 +224,7 @@ const HomePage = () => {
                 </h2>
                 <a
                   href="#solutions"
-                  className="inline-flex items-center gap-2 rounded-full bg-[#08563D] px-5 py-3 text-sm text-white transition-colors hover:bg-[#064531]"
+                  className="inline-flex items-center gap-2 rounded-xl bg-[#08563D] px-5 py-3 text-sm text-white transition-colors hover:bg-[#064531]"
                   style={{ fontWeight: 600 }}
                 >
                   {t.home.learnMore}
