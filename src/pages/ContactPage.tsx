@@ -103,13 +103,13 @@ const ContactPage = () => {
     <>
       <section className="bg-white pb-10 pt-6 md:pb-6 md:pt-12">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-          <span className="inline-flex bg-[#D9A86D]/10 text-[#ccb28d] rounded-full bg-nacs-sandSoft px-4 py-2 text-sm font-bold text-nacs-sand">
+          <span className="inline-flex bg-[#7E5CAC]/10 text-[#7E5CAC] rounded-full bg-nacs-sandSoft px-4 py-2 text-sm font-bold">
             {t.eyebrow}
           </span>
 
           <h1 className="mt-4 text-3xl font-medium text-[#08563D] leading-tight text-nacs-forest md:text-4xl">
             {titleLead ? `${titleLead} ` : null}
-            <span className="text-[#ccb28d]">{titleAccent}</span>
+            <span className="text-[#7E5CAC]">{titleAccent}</span>
           </h1>
 
           <p className="mx-auto mt-3 max-w-2xl text-base leading-6 text-nacs-caption ">{t.intro}</p>
