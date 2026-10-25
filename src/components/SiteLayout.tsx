@@ -166,7 +166,7 @@ const SiteLayout = () => {
               </button>
               <Link
                 to="/signup"
-                className="hidden rounded-sm bg-[#08563D] px-6 py-2.5 text-xs font-bold  tracking-widest text-white transition-all hover:bg-[#064531] dark:bg-[#08563D] dark:hover:bg-[#0a6f4e] md:inline-block"
+                className="hidden rounded-xl bg-[#08563D] px-6 py-2.5 text-xs font-bold  tracking-widest text-white transition-all hover:bg-[#064531] dark:bg-[#08563D] dark:hover:bg-[#0a6f4e] md:inline-block"
               >
                 {t.nav.signUp}
               </Link>
