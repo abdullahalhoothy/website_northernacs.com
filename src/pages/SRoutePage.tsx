@@ -1,10 +1,20 @@
+import { About } from '../components/solutions/About';
+import { Advantages } from '../components/solutions/Advantages';
+import { Customers } from '../components/solutions/Customers';
+import { FeaturesList } from '../components/solutions/FeaturesList';
+import { HeroSection } from '../components/solutions/HeroSection';
+import { ProductChooser } from '../components/solutions/ProductChooser';
+
 const SRoutePage = () => {
   return (
-    <div className="min-h-[60vh] flex items-center justify-center bg-gray-50 px-4 py-24">
-      <div className="text-center">
-        <h1 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">S-route</h1>
-      </div>
-    </div>
+    <>
+      <HeroSection />
+      <ProductChooser />
+      <Customers />
+      <Advantages />
+      <FeaturesList />
+      <About />
+    </>
   );
 };
 

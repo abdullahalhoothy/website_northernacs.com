@@ -272,7 +272,35 @@
     "notFound": "Article not found."
   },
   "aboutPage": {
-    "pageEyebrow": "ABOUT",
+    "pageEyebrow": "About Us",
+    "overviewTitle": "Overview",
+    "clientsTitle": "Partners & Sectors",
+    "clientsDescription": "We partner with leading technology platforms and serve organizations across key sectors to deliver measurable transformation and lasting impact.",
+    "clientsButton": "Contact Us",
+    "storiesPartnerTitle": "Official Partner",
+    "storiesPartnerText": "Databricks and Data & AI consulting partner.",
+    "storiesProductTitle": "Flagship Product",
+    "storiesProductText": "Location intelligence for market and site planning.",
+    "leadershipTitle": "Our Leadership",
+    "leadershipPrev": "Previous leader",
+    "leadershipNext": "Next leader",
+    "overviewParagraphs": [
+      "Northern Analytics is a specialized consultancy and advisory firm headquartered in Jeddah, translating top-tier North American expertise into the heart of the Kingdom's digital transformation. We integrate {data & AI solutions} and {advisory services}, helping organizations turn complex data into clear decisions, from strategy to implementation.",
+      "Through Databricks consulting and our S-Locator and S-route platforms, we deliver data and AI architecture, location intelligence, and practical execution that supports initiatives operating under the Saudi Vision 2030 umbrella."
+    ],
+    "numbersTitle": "Impact in Numbers",
+    "numbersPrev": "Previous",
+    "numbersNext": "Next",
+    "numbers": [
+      { "value": "4", "label": "Industry Sectors" },
+      { "value": "3", "label": "Solutions" },
+      { "value": "3", "label": "Core Services" },
+      { "value": "2", "label": "Digital Platforms" },
+      { "value": "60%", "label": "ROI Boost" },
+      { "value": "50%", "label": "Cost Saving Potential" },
+      { "value": "2", "label": "Maturity Tiers Gained" },
+      { "value": "4", "label": "Engagement Phases" }
+    ],
     "welcomeKicker": "Welcome to Northern Analytics",
     "welcomeHeading": "Modern Infrastructure Solutions",
     "welcomeBody": "Building stronger communities begins with a foundation of robust data, analytics, and AI. At Northern Analytics, we are at the forefront of resilient and sustainable planning, designing, and implementing cutting-edge data-driven and AI-powered technologies to address the challenges posed by a rapidly evolving world. Our innovative solutions in Data Science, Artificial Intelligence, and BI are reshaping the future of IT business model architecture, engineering, and intelligent decision-making.",
@@ -302,7 +330,7 @@
         "text": "We empower leadership to cut through market noise and identify the vendors that best serve their long-term vision. Our unbiased advisory ensures your architectural foundations are scalable, secure, and performant, maximizing the ROI of your data and AI investments."
       }
     ],
-    "storiesTitle": "Proven Success Stories",
+    "storiesTitle": "Recognition and awards",
     "storiesIntro": "Real results from our global engagements.",
     "stories": [
       {
@@ -338,7 +366,7 @@
         "cta": "Explore Case"
       }
     ],
-    "engagementTitle": "Our Engagement Model",
+    "engagementTitle": "Our History",
     "engagementIntro": "Journey to High Maturity",
     "steps": [
       {
@@ -399,6 +427,150 @@
         "image": "/images/northernacs/strengthening-the-banking-sector-by-world-bank-and-switzerland.jpg",
         "href": "https://northernacs.com/project2/"
       }
+    ]
+  },
+  "solutionsHero": {
+    "brand": "Consulting Databricks / Data & AI",
+    "subtitle": "The efficient software for your field sales team",
+    "description": "Discover the future of automatic {route} and dynamic {territory} with {brand}. AI-powered optimization ensures more customer visits, less driving and significant time savings. Get started now and put your field sales team on the road to success.",
+    "route": "route planning",
+    "territory": "territory planning",
+    "routePlanner": "Route Planner",
+    "territoryOptimization": "Territory Optimization",
+    "getStarted": "Get started now",
+    "imageAlt": "Field sales representatives planning routes and customer visits",
+    "manAlt": "Field sales representative reviewing a route on his phone",
+    "womanAlt": "Field sales representative planning visits on a tablet"
+  },
+  "productChooser": {
+    "routePlanner": {
+      "title": "Route Planner",
+      "description": "Discover the future of field sales route planning with the AI-supported portatour® Route Planner. More customer visits thanks to optimized routes and time savings thanks to an efficient schedule.",
+      "cta": "Free trial",
+      "more": "More details about the sales route planner",
+      "imageAlt": "Route planner on a phone and a tablet"
+    },
+    "territory": {
+      "title": "Territory Optimization",
+      "description": "Optimize your sales territory based on AI and distribute your customers efficiently to your field reps. With portatour® you get up to 7 possible scenarios at the touch of a button.",
+      "cta": "Arrange demo",
+      "more": "More details on territory optimization",
+      "imageAlt": "Territory optimization on a laptop"
+    }
+  },
+  "customers": {
+    "title": "Our Customers",
+    "logos": [
+      { "alt": "City Baby" },
+      { "alt": "Touch's" },
+      { "alt": "IFFCO" },
+      { "alt": "Krooky" },
+      { "alt": "Maqyas" }
+    ],
+    "categories": [
+      { "name": "Automotive Industry" },
+      { "name": "Building Materials" },
+      { "name": "Consumer Goods" },
+      { "name": "Cosmetics" },
+      { "name": "Electronic Products" },
+      { "name": "Industrial Goods" },
+      { "name": "Medical Devices" }
+    ]
+  },
+  "advantages": {
+    "titleLead": "Your advantages with",
+    "brand": "Consulting",
+    "subtitle": "Field sales software for automatic route planning and dynamic territory optimization",
+    "heading": "Savings meet efficiency",
+    "readMore": "read more…",
+    "tabsLabel": "Advantages",
+    "items": [
+      {
+        "stat": "18% fewer kilometers",
+        "logoAlt": "MIWA",
+        "avatarAlt": "Pieter Niemand",
+        "quote": "We save between 15 and 18% on mileage per year and a lot of time.",
+        "name": "Pieter Niemand",
+        "role": "MIWA National Director"
+      },
+      {
+        "stat": "20% more customer calls",
+        "logoAlt": "Company logo",
+        "avatarAlt": "Customer portrait",
+        "quote": "Optimized routes let our reps fit in about 20% more customer calls every week.",
+        "name": "Customer name",
+        "role": "Position, Company"
+      },
+      {
+        "stat": "50% time saved",
+        "logoAlt": "Company logo",
+        "avatarAlt": "Customer portrait",
+        "quote": "Planning our weekly schedule now takes half of the time it used to.",
+        "name": "Customer name",
+        "role": "Position, Company"
+      }
+    ]
+  },
+  "featuresList": {
+    "items": [
+      {
+        "title": "The Right Customer at the Right Time",
+        "description": "S-Route ensures your field teams focus on the customers that matter most, maximizing coverage, improving visit quality, and increasing sales opportunities.",
+        "bullets": [
+          "AI-powered customer prioritization",
+          "Balanced territory coverage",
+          "Automated visit scheduling",
+          "Smarter account management",
+          "Improved customer engagement"
+        ],
+        "imageAlt": "Map and routing view",
+        "avatarAlt": "Hashem Abbas",
+        "quote": "More Customer Visits. More Time Selling. Better Territory Coverage.",
+        "author": "Hashem Abbas",
+        "role": "Head Of Trade Marketing (KSA/Gulf/Jordan)"
+      },
+      {
+        "title": "Get Started in Minutes",
+        "description": "S-Route is designed for busy field sales teams. No complex setup, no lengthy implementation, and no technical expertise required. Start optimizing territories and customer visits from day one.",
+        "bullets": [
+          "Access S-Route from any smartphone, tablet, or computer",
+          "Generate optimized sales routes in minutes",
+          "Quickly onboard field teams with minimal training",
+          "Start improving territory coverage immediately"
+        ],
+        "imageAlt": "S-Route on a phone",
+        "avatarAlt": "Al-hussain Abbas",
+        "quote": "S-Route was incredibly easy to implement, and our sales team started seeing value almost immediately.",
+        "author": "Al-hussain Abbas",
+        "role": "Owner of an FMCG company"
+      },
+      {
+        "title": "Seamless CRM & ERP Integration",
+        "description": "S-Route integrates effortlessly with your existing CRM and ERP systems, ensuring your sales teams always work with accurate, up-to-date customer and territory data.",
+        "bullets": [
+          "Import customers, appointments, and sales data in seconds",
+          "Connect with Salesforce, Microsoft Dynamics, and other CRM platforms",
+          "Synchronize customer records automatically across systems",
+          "Eliminate manual data entry and reduce administrative work",
+          "Keep field teams focused on selling, not updating spreadsheets"
+        ],
+        "imageAlt": "CRM and ERP integrations",
+        "avatarAlt": "Mohammed Alhadi",
+        "quote": "S-Route transformed how our field teams operate. Route planning that used to take hours is now completed in minutes, allowing our representatives to focus on customers instead of logistics.",
+        "author": "Mohammed Alhadi",
+        "role": "Innovation | SME consultant | Business development"
+      }
+    ]
+  },
+  "aboutSolution": {
+    "titleLead": "About",
+    "brand": "Consulting",
+    "subtitle": "Revolutionary sales route planning and territory optimization for your field sales team - based on years of experience",
+    "pinLabel": "Location",
+    "stats": [
+      { "value": "2007", "label": "founded" },
+      { "value": "1500+", "label": "Customers" },
+      { "value": "20+", "label": "Countries" }
     ]
   }
 }
