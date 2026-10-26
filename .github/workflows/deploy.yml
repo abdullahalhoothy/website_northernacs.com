@@ -15,7 +15,7 @@ permissions:
 env:
   APP: northernacs
   ROOT: /var/www/northernacs
-  VPS_HOST: root@178.105.69.252
+  VPS_HOST: ${{ secrets.VPS_HOST }}
 
 jobs:
   deploy:
