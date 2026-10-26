@@ -1,27 +1,40 @@
 import DOMPurify from 'dompurify';
-import { useMemo } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useEffect, useMemo } from 'react';
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
+import SpecialtyCoffeeJeddahArticle, {
+  SPECIALTY_COFFEE_JEDDAH_SLUG,
+} from '../components/blog/SpecialtyCoffeeJeddahArticle';
 import { useLanguage } from '../components/LanguageProvider';
-import blogs from '../data/blogs.json';
-import { translations, type Lang } from '../i18n';
-
-type BlogPost = {
-  slug: string;
-  date: string;
-  title: Record<Lang, string>;
-  html: Record<Lang, string>;
-};
-const posts = blogs as BlogPost[];
+import { blogPosts } from '../data/blogPosts';
+import { translations } from '../i18n';
+import { articlePath } from '../seo/paths';
+import { buildPostSeo } from '../seo/postSeo';
+import { useSeo } from '../seo/seo';
 
 const BlogDetailPage = () => {
   const { slug } = useParams();
   const { lang } = useLanguage();
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
   const t = translations[lang].blogs;
-  const post = posts.find((item) => item.slug === slug);
+  const post = blogPosts.find((item) => item.slug === slug);
+
+  const seo = useMemo(() => (post ? buildPostSeo(post, lang) : null), [post, lang]);
+  useSeo(seo);
+
+  // Each language has its own URL (/blogs/... for Arabic, /en/blogs/... for English).
+  // Switching language moves the visitor to the matching URL so the address, the
+  // canonical tag, and the content always agree.
+  useEffect(() => {
+    if (!post) return;
+    const target = articlePath(post.slug, lang);
+    if (pathname.replace(/\/+$/, '') !== target) navigate(target, { replace: true });
+  }, [post, lang, pathname, navigate]);
 
   const safeHtml = useMemo(() => {
     if (!post) return '';
-    return DOMPurify.sanitize(post.html[lang]);
+    // DOMPurify needs a DOM. During prerendering (Node) the first-party HTML from blogs.json is used as-is.
+    return DOMPurify.isSupported ? DOMPurify.sanitize(post.html[lang]) : post.html[lang];
   }, [post, lang]);
 
   if (!post) {
@@ -35,6 +48,10 @@ const BlogDetailPage = () => {
         </div>
       </section>
     );
+  }
+
+  if (post.slug === SPECIALTY_COFFEE_JEDDAH_SLUG) {
+    return <SpecialtyCoffeeJeddahArticle post={post} />;
   }
 
   return (

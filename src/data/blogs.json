@@ -1,23 +1,49 @@
 [
   {
-    "slug": "databricks-lakehouse-ksa",
-    "date": "2026-04-28",
+    "slug": "best-area-specialty-coffee-jeddah",
+    "date": "2026-09-06",
+    "category": "market-analysis",
+    "tags": ["jeddah", "expansion"],
+    "image": "/images/northernacs/best-area-specialty-coffee-jeddah.jpg",
+    "seo": {
+      "title": {
+        "en": "Best Area to Open a Specialty Coffee Shop in Jeddah (2026) | S-Locator",
+        "ar": "أفضل منطقة لافتتاح مقهى قهوة مختصة في جدة (2026) | S-Locator"
+      },
+      "description": {
+        "en": "Compare Al Rawdah, Al Shati, Al Zahra, and Obhur to find the best area for a specialty coffee shop in Jeddah using demand, competition, and purchasing-power insights.",
+        "ar": "قارن بين الروضة والشاطئ والزهراء وأبحر لتعرف أفضل منطقة لافتتاح مقهى قهوة مختصة في جدة، مع تحليل الطلب والمنافسة والقوة الشرائية."
+      },
+      "image": "/images/northernacs/og-best-area-specialty-coffee-jeddah.jpg",
+      "imageWidth": 1200,
+      "imageHeight": 612
+    },
+    "authors": {
+      "en": ["Research Team"],
+      "ar": ["فريق البحث"]
+    },
     "title": {
-      "en": "Why the Lakehouse Matters for Saudi Transformation",
-      "ar": "لماذا تعد بنية الليك هاوس مهمة للتحول السعودي"
+      "en": "Best Area to Open a Specialty Coffee Shop in Jeddah",
+      "ar": "أفضل منطقة لافتتاح مقهى قهوة مختصة في جدة"
     },
     "excerpt": {
-      "en": "A practical look at how Databricks helps organizations modernize data, analytics, and AI delivery.",
-      "ar": "نظرة عملية على دور داتابريكس في تحديث البيانات والتحليلات والذكاء الاصطناعي."
+      "en": "Discover the best areas to open a specialty coffee shop in Jeddah. Explore data-driven insights on Al Rawdah, Al Shati, Al Zahra, and Obhur for F&B success.",
+      "ar": "اكتشف أفضل المناطق لافتتاح مقهى قهوة مختصة في جدة. استكشف رؤى مبنية على البيانات حول الروضة والشاطئ والزهراء وأبحر لنجاح قطاع الأغذية والمشروبات."
     },
     "html": {
-      "en": "<p>The lakehouse model gives organizations one governed foundation for data engineering, analytics, and AI. For Saudi organizations moving quickly on digital transformation, this reduces platform sprawl and improves time to value.</p><p>Northern Analytics helps teams design secure architectures, migrate workloads, and enable internal teams with patterns that can scale.</p>",
-      "ar": "<p>توفر بنية الليك هاوس أساسا موحدا ومحكوما لهندسة البيانات والتحليلات والذكاء الاصطناعي. وبالنسبة للجهات السعودية التي تتحرك بسرعة في التحول الرقمي، فإن ذلك يقلل تشتت المنصات ويسرع تحقيق القيمة.</p><p>تساعد نورثرن أناليتكس الفرق على تصميم بنى آمنة ونقل الأحمال وتمكين الفرق الداخلية بأنماط قابلة للتوسع.</p>"
+      "en": "<p>Discover the best areas to open a specialty coffee shop in Jeddah. Explore data-driven insights on Al Rawdah, Al Shati, Al Zahra, and Obhur for F&B success.</p><p>Based on the available evidence, Al Rawdah, Al Shati, Al Zahra, and Obhur are among the strongest neighborhoods to investigate for a specialty coffee shop in Jeddah. Al Rawdah stands out for its established specialty coffee culture and high purchasing power, particularly along commercial corridors like Abdul Maqsoud Khoja Street. Al Shati offers premium destination-driven footfall near the Corniche and luxury lifestyle centers. Al Zahra provides a balanced mix of commercial daytime traffic and residential density, while Obhur represents the best long-term growth opportunity due to Jeddah's rapid northward expansion and tourism developments.</p><p>The optimal choice depends entirely on whether your business model requires high-volume neighborhood convenience, a premium lifestyle destination, or an emerging growth market.</p>",
+      "ar": "<p>اكتشف أفضل المناطق لافتتاح مقهى قهوة مختصة في جدة. استكشف رؤى مبنية على البيانات حول الروضة والشاطئ والزهراء وأبحر لنجاح قطاع الأغذية والمشروبات.</p><p>استناداً إلى الأدلة المتاحة، تُعد الروضة والشاطئ والزهراء وأبحر من أقوى الأحياء التي تستحق الدراسة لافتتاح مقهى قهوة مختصة في جدة. تتميز الروضة بثقافة قهوة مختصة راسخة وقوة شرائية عالية، خصوصاً على المحاور التجارية مثل شارع عبد المقصود خوجة. ويوفر الشاطئ إقبالاً متميزاً مرتبطاً بالوجهة قرب الكورنيش ومراكز نمط الحياة الفاخرة. وتقدم الزهراء مزيجاً متوازناً من الحركة التجارية خلال النهار والكثافة السكنية، بينما تمثل أبحر أفضل فرصة للنمو على المدى الطويل بفضل توسع جدة السريع شمالاً والتطورات السياحية.</p><p>يعتمد الاختيار الأمثل كلياً على ما إذا كان نموذج عملك يحتاج إلى إقبال عالٍ وراحة الحي، أو وجهة لنمط حياة فاخر، أو سوق نمو ناشئ.</p>"
     }
   },
   {
     "slug": "location-intelligence-growth",
-    "date": "2026-04-20",
+    "date": "2026-10-20",
+    "category": "retail-trends",
+    "tags": ["s-loc", "riyadh", "jeddah", "demographics", "expansion"],
+    "authors": {
+      "en": ["Location Intelligence Team", "Product Team"],
+      "ar": ["فريق الذكاء المكاني", "فريق المنتج"]
+    },
     "title": {
       "en": "Location Intelligence as a Growth Engine",
       "ar": "الذكاء المكاني كمحرك للنمو"
@@ -29,6 +55,160 @@
     "html": {
       "en": "<p>Market expansion depends on knowing where customers, competitors, access points, and demand signals intersect. S-Locator turns these signals into practical planning workflows.</p><p>Teams can compare opportunities, reduce location risk, and communicate decisions with clear spatial evidence.</p>",
       "ar": "<p>يعتمد التوسع في الأسواق على فهم تقاطع العملاء والمنافسين ونقاط الوصول وإشارات الطلب. يحول إس لوكيتر هذه الإشارات إلى مسارات تخطيط عملية.</p><p>يمكن للفرق مقارنة الفرص وتقليل مخاطر المواقع وشرح القرارات بأدلة مكانية واضحة.</p>"
+    }
+  },
+  {
+    "slug": "retail-site-selection-saudi",
+    "date": "2026-10-14",
+    "category": "retail-trends",
+    "tags": ["s-loc", "riyadh", "expansion"],
+    "authors": {
+      "en": ["Northern Analytics Team"],
+      "ar": ["فريق نورثرن أناليتكس"]
+    },
+    "title": {
+      "en": "How Retailers Choose Their Next Site in Saudi Arabia",
+      "ar": "كيف يختار تجار التجزئة موقعهم القادم في السعودية"
+    },
+    "excerpt": {
+      "en": "Footfall, catchment demographics, and competitor density: the three signals that shape modern retail site selection across the Kingdom.",
+      "ar": "حركة الزوار وخصائص السكان وكثافة المنافسين: ثلاث إشارات تحدد اختيار مواقع التجزئة الحديثة في المملكة."
+    },
+    "html": {
+      "en": "<p>Retail expansion in the Kingdom is moving from intuition to evidence. Footfall patterns, catchment demographics, and competitor density now sit side by side in a single planning view.</p><p>Teams that combine these signals shortlist stronger sites and avoid costly relocations later.</p>",
+      "ar": "<p>ينتقل التوسع في قطاع التجزئة بالمملكة من الحدس إلى الأدلة. تجتمع أنماط حركة الزوار وخصائص السكان وكثافة المنافسين في عرض تخطيط واحد.</p><p>الفرق التي تجمع هذه الإشارات تختار مواقع أقوى وتتجنب عمليات النقل المكلفة لاحقا.</p>"
+    }
+  },
+  {
+    "slug": "pharmacy-network-planning",
+    "date": "2026-10-13",
+    "category": "healthcare-intelligence",
+    "tags": ["pharmacies", "demographics", "jeddah"],
+    "authors": {
+      "en": ["Data Science Team", "Location Intelligence Team"],
+      "ar": ["فريق علم البيانات", "فريق الذكاء المكاني"]
+    },
+    "title": {
+      "en": "Planning Pharmacy Networks with Demographic Data",
+      "ar": "تخطيط شبكات الصيدليات باستخدام البيانات السكانية"
+    },
+    "excerpt": {
+      "en": "How age profiles, household density, and clinic proximity help healthcare retailers place new pharmacies where demand is real.",
+      "ar": "كيف تساعد الفئات العمرية وكثافة الأسر والقرب من العيادات في وضع الصيدليات الجديدة حيث الطلب حقيقي."
+    },
+    "html": {
+      "en": "<p>Pharmacy demand follows people: their age, their health needs, and how close they live to clinics and hospitals. Demographic layers make that demand visible before a lease is signed.</p><p>Network planners can compare districts in Jeddah and Riyadh with the same scoring model.</p>",
+      "ar": "<p>يتبع الطلب على الصيدليات الناس: أعمارهم واحتياجاتهم الصحية وقربهم من العيادات والمستشفيات. تجعل الطبقات السكانية هذا الطلب مرئيا قبل توقيع عقد الإيجار.</p><p>يستطيع مخططو الشبكات مقارنة أحياء جدة والرياض بنموذج تقييم واحد.</p>"
+    }
+  },
+  {
+    "slug": "feasibility-study-checklist",
+    "date": "2026-10-08",
+    "category": "feasibility-studies",
+    "tags": ["roi", "expansion"],
+    "authors": {
+      "en": ["Northern Analytics Team"],
+      "ar": ["فريق نورثرن أناليتكس"]
+    },
+    "title": {
+      "en": "A Practical Checklist for Location Feasibility Studies",
+      "ar": "قائمة عملية لدراسات جدوى المواقع"
+    },
+    "excerpt": {
+      "en": "Eight questions every expansion team should answer before committing capital to a new location.",
+      "ar": "ثمانية أسئلة يجب أن تجيب عنها كل فرق التوسع قبل تخصيص رأس المال لموقع جديد."
+    },
+    "html": {
+      "en": "<p>A good feasibility study answers a small number of questions clearly: who is the customer, how many are nearby, who else is serving them, and what return is realistic.</p><p>This checklist keeps those questions in front of the team from the first shortlist to the final decision.</p>",
+      "ar": "<p>تجيب دراسة الجدوى الجيدة عن عدد قليل من الأسئلة بوضوح: من هو العميل، وكم عددهم في المنطقة، ومن يخدمهم أيضا، وما العائد الواقعي.</p><p>تبقي هذه القائمة الأسئلة أمام الفريق من أول قائمة مختصرة حتى القرار النهائي.</p>"
+    }
+  },
+  {
+    "slug": "market-analysis-ai",
+    "date": "2026-10-02",
+    "category": "market-analysis",
+    "tags": ["saas", "roi"],
+    "authors": {
+      "en": ["Data Science Team"],
+      "ar": ["فريق علم البيانات"]
+    },
+    "title": {
+      "en": "Turning Market Signals into Decisions with AI",
+      "ar": "تحويل إشارات السوق إلى قرارات باستخدام الذكاء الاصطناعي"
+    },
+    "excerpt": {
+      "en": "A look at how teams combine internal sales data with external market signals to move from reporting to forecasting.",
+      "ar": "نظرة على كيفية جمع الفرق بين بيانات المبيعات الداخلية وإشارات السوق الخارجية للانتقال من التقارير إلى التنبؤ."
+    },
+    "html": {
+      "en": "<p>Dashboards describe what happened. Market analysis with AI starts to explain why, and what is likely to happen next.</p><p>By joining internal sales data with external signals, teams build forecasts they can act on.</p>",
+      "ar": "<p>تصف لوحات المعلومات ما حدث. أما تحليل السوق بالذكاء الاصطناعي فيبدأ بتفسير السبب وما يُتوقع حدوثه لاحقا.</p><p>بدمج بيانات المبيعات الداخلية مع الإشارات الخارجية تبني الفرق توقعات يمكن العمل بها.</p>"
+    }
+  },
+  {
+    "slug": "ml-demand-forecasting",
+    "date": "2026-09-24",
+    "category": "data-science",
+    "tags": ["saas"],
+    "authors": {
+      "en": ["Data Science Team", "Product Team"],
+      "ar": ["فريق علم البيانات", "فريق المنتج"]
+    },
+    "title": {
+      "en": "Demand Forecasting Models That Teams Actually Use",
+      "ar": "نماذج التنبؤ بالطلب التي تستخدمها الفرق فعلا"
+    },
+    "excerpt": {
+      "en": "Accuracy matters, but adoption matters more. What we learned shipping forecasting models to commercial teams.",
+      "ar": "الدقة مهمة لكن التبني أهم. ما تعلمناه عند تسليم نماذج التنبؤ للفرق التجارية."
+    },
+    "html": {
+      "en": "<p>The best forecasting model is the one commercial teams trust enough to use. Clear explanations and simple outputs matter as much as accuracy.</p><p>We share the patterns that helped our forecasts move from notebooks into weekly decisions.</p>",
+      "ar": "<p>أفضل نموذج تنبؤ هو الذي تثق به الفرق التجارية بما يكفي لاستخدامه. التفسير الواضح والمخرجات البسيطة لا يقلان أهمية عن الدقة.</p><p>نشارك الأنماط التي ساعدت توقعاتنا على الانتقال من الدفاتر التحليلية إلى القرارات الأسبوعية.</p>"
+    }
+  },
+  {
+    "slug": "riyadh-jeddah-markets",
+    "date": "2026-09-18",
+    "category": "market-analysis",
+    "tags": ["riyadh", "jeddah", "demographics"],
+    "authors": {
+      "en": ["Northern Analytics Team"],
+      "ar": ["فريق نورثرن أناليتكس"]
+    },
+    "title": {
+      "en": "Riyadh vs Jeddah: Reading Two Markets",
+      "ar": "الرياض مقابل جدة: قراءة في سوقين"
+    },
+    "excerpt": {
+      "en": "Two cities, two very different customer profiles. A side-by-side view of demographics, income, and growth corridors.",
+      "ar": "مدينتان وملفان مختلفان للعملاء. عرض متجاور للتركيبة السكانية والدخل ومسارات النمو."
+    },
+    "html": {
+      "en": "<p>Riyadh and Jeddah look similar on a national map but behave differently on the ground. Income distribution, household size, and growth corridors all diverge.</p><p>A side-by-side comparison helps teams adapt their format and pricing to each city.</p>",
+      "ar": "<p>تبدو الرياض وجدة متشابهتين على الخريطة الوطنية لكنهما تختلفان على أرض الواقع. يتباين توزيع الدخل وحجم الأسرة ومسارات النمو.</p><p>تساعد المقارنة المتجاورة الفرق على تكييف النموذج والتسعير لكل مدينة.</p>"
+    }
+  },
+  {
+    "slug": "location-intelligence-roi",
+    "date": "2026-09-12",
+    "category": "feasibility-studies",
+    "tags": ["s-loc", "roi"],
+    "authors": {
+      "en": ["Location Intelligence Team"],
+      "ar": ["فريق الذكاء المكاني"]
+    },
+    "title": {
+      "en": "Measuring the ROI of Location Intelligence",
+      "ar": "قياس العائد على الاستثمار في الذكاء المكاني"
+    },
+    "excerpt": {
+      "en": "A simple framework for connecting site decisions to revenue, so the value of spatial analytics is easy to defend.",
+      "ar": "إطار بسيط لربط قرارات المواقع بالإيرادات حتى يسهل الدفاع عن قيمة التحليلات المكانية."
+    },
+    "html": {
+      "en": "<p>Location decisions are expensive and slow to reverse, so their return should be measured. We outline a simple framework that links each site decision to revenue and cost.</p><p>With that link in place, the value of spatial analytics becomes easy to explain to leadership.</p>",
+      "ar": "<p>قرارات المواقع مكلفة وبطيئة التراجع، لذا ينبغي قياس عائدها. نعرض إطارا بسيطا يربط كل قرار موقع بالإيرادات والتكلفة.</p><p>وبوجود هذا الربط يسهل شرح قيمة التحليلات المكانية للإدارة.</p>"
     }
   }
 ]

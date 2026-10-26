@@ -5,7 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && npm run build:client && npm run build:server && npm run prerender",
+    "build:client": "vite build",
+    "build:server": "vite build --ssr src/entry-server.tsx --outDir dist-server",
+    "prerender": "node scripts/prerender.mjs",
     "lint": "eslint .",
     "lint:files": "node scripts/eslint-files.mjs",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,css,json}\"",
@@ -22,16 +25,17 @@
   },
   "dependencies": {
     "@vitejs/plugin-react-swc": "^3.5.0",
+    "dompurify": "^3.2.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
     "react-router-dom": "^6.26.1",
-    "dompurify": "^3.2.4",
     "sonner": "^2.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
     "@tailwindcss/typography": "^0.5.19",
+    "@types/node": "^26.6.5",
     "@types/prop-types": "^15.7.15",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",

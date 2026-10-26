@@ -1,4 +1,5 @@
 import { About } from '../components/solutions/About';
+import { Faq } from '../components/solutions/Faq';
 import { Advantages } from '../components/solutions/Advantages';
 import { Customers } from '../components/solutions/Customers';
 import { FeaturesList } from '../components/solutions/FeaturesList';
@@ -14,6 +15,7 @@ const DatabricksConsultingPage = () => {
       <Advantages />
       <FeaturesList />
       <About />
+      <Faq product="databricks" />
     </>
   );
 };

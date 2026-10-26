@@ -13,7 +13,7 @@ const THEME_STORAGE_KEY = 'northernacs-theme';
 
 const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
 
-const getInitialTheme = (): Theme => {
+export const getInitialTheme = (): Theme => {
   if (typeof window === 'undefined') return 'light';
   const saved = localStorage.getItem(THEME_STORAGE_KEY);
   if (saved === 'dark' || saved === 'light') return saved;

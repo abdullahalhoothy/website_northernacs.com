@@ -269,7 +269,37 @@
     "intro": "Short articles and perspectives from Northern Analytics on data, AI, and location intelligence.",
     "readMore": "Read article",
     "back": "Back to blogs",
-    "notFound": "Article not found."
+    "notFound": "Article not found.",
+    "searchPlaceholder": "Find a blog post",
+    "searchLabel": "Find a blog post",
+    "clearSearch": "Clear search",
+    "categoriesTab": "Categories",
+    "popularTagTab": "Popular Tag",
+    "filtersLabel": "Filter articles",
+    "noResults": "No articles match this filter.",
+    "pagination": {
+      "label": "Blog pagination",
+      "previous": "Previous page",
+      "next": "Next page",
+      "page": "Page"
+    },
+    "categories": [
+      { "id": "retail-trends", "label": "Retail Trends" },
+      { "id": "healthcare-intelligence", "label": "Healthcare Intelligence" },
+      { "id": "data-science", "label": "Data Science" },
+      { "id": "market-analysis", "label": "Market Analysis" },
+      { "id": "feasibility-studies", "label": "Feasibility Studies" }
+    ],
+    "tags": [
+      { "id": "s-loc", "label": "#S-LOC" },
+      { "id": "riyadh", "label": "#Riyadh" },
+      { "id": "jeddah", "label": "#Jeddah" },
+      { "id": "pharmacies", "label": "#Pharmacies" },
+      { "id": "demographics", "label": "#Demographics" },
+      { "id": "expansion", "label": "#Expansion" },
+      { "id": "saas", "label": "#SaaS" },
+      { "id": "roi", "label": "#ROI" }
+    ]
   },
   "aboutPage": {
     "pageEyebrow": "About Us",
@@ -571,6 +601,167 @@
       { "value": "2007", "label": "founded" },
       { "value": "1500+", "label": "Customers" },
       { "value": "20+", "label": "Countries" }
+    ]
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "sRoute": [
+      {
+        "question": "How much time can a field team save with S-Route?",
+        "answer": "Teams that used to build routes by hand usually get that planning time back. Weekly schedules that took hours can be ready in minutes, so representatives spend the day with customers."
+      },
+      {
+        "question": "Does S-Route record the routes representatives drive?",
+        "answer": "S-Route plans the day. It does not need to track every kilometer a representative drives. The plan shows the visit order, the timing, and the customers that matter."
+      },
+      {
+        "question": "Can S-Route connect to Salesforce, Dynamics, or another CRM?",
+        "answer": "Yes. Customer, appointment, and sales data can come from Salesforce, Microsoft Dynamics, and other CRM or ERP systems, so the field team works from the same records as the office."
+      },
+      {
+        "question": "Can we use the routing logic inside our own field app?",
+        "answer": "The planning can sit behind the tools your team already opens. We shape the integration so representatives keep their workflow and still receive an optimized day."
+      },
+      {
+        "question": "A customer asks for a visit today. How does S-Route respond?",
+        "answer": "The new appointment can be dropped into the day and the remaining visits reordered. The representative sees a practical plan instead of rebuilding the route from scratch."
+      },
+      {
+        "question": "Can S-Route help representatives avoid traffic?",
+        "answer": "Visit order takes travel time into account, so the day is sequenced to spend less time on the road and more time in meetings."
+      },
+      {
+        "question": "Does better routing help teams win more customer visits?",
+        "answer": "A tighter day usually fits in more of the right visits. Coverage improves because the plan favors the accounts that matter, not only the ones that are closest."
+      },
+      {
+        "question": "Which teams is S-Route built for?",
+        "answer": "Field sales, merchandising, and service teams that visit many customers across a territory. It is used for daily routes and for keeping coverage balanced over the week."
+      },
+      {
+        "question": "Can we try S-Route before rolling it out?",
+        "answer": "Yes. A pilot with one team is enough to see the plan, the time saved, and how the visits fit the territory before a wider rollout."
+      },
+      {
+        "question": "Is planning done centrally, or can each representative plan their day?",
+        "answer": "Both. A manager can set priorities for the territory, and a representative can shape the day from the phone when a customer calls."
+      },
+      {
+        "question": "Can S-Route balance territories, not only daily routes?",
+        "answer": "Yes. The same planning view shows whether accounts and workload are spread fairly, so one representative is not overloaded while another is underused."
+      },
+      {
+        "question": "How is customer data protected?",
+        "answer": "Customer records stay in the systems you already govern. Access follows your roles, and the integration exchanges only the fields the route needs."
+      },
+      {
+        "question": "Does S-Route work on a phone?",
+        "answer": "Yes. Representatives open the plan on a phone, tablet, or computer, and they can start from the first visit without a separate setup step."
+      },
+      {
+        "question": "How soon can a team start?",
+        "answer": "Most teams are planning real visits within days. Customer data is imported, the territory is checked, and the first routes are ready without a long implementation."
+      }
+    ],
+    "sLocator": [
+      {
+        "question": "What is S-Locator used for?",
+        "answer": "S-Locator turns location, customer, and competitor signals into a site decision. Teams use it to choose where to open, where to expand, and which locations to avoid."
+      },
+      {
+        "question": "Which location decisions can it support?",
+        "answer": "New sites, relocations, catchment comparisons, and territory plans. The same evidence supports a single store decision or a network of locations."
+      },
+      {
+        "question": "Can we compare markets such as Riyadh and Jeddah?",
+        "answer": "Yes. Cities can be read side by side, including demographics, demand, and how competitors are already placed, so the format fits each market."
+      },
+      {
+        "question": "Does it include demographics and competitors?",
+        "answer": "Both sit in the same view. Household profile, population, and nearby competitors are scored together instead of in separate spreadsheets."
+      },
+      {
+        "question": "How does it help retail or pharmacy networks?",
+        "answer": "A network plan shows where coverage is thin and where a new branch would overlap an existing one. Retail and pharmacy teams use that to place the next site where demand is real."
+      },
+      {
+        "question": "Can several candidate sites be scored with one model?",
+        "answer": "Yes. Shortlisted sites share one scoring model, so leadership compares them on the same evidence rather than on separate opinions."
+      },
+      {
+        "question": "How are the results presented to leadership?",
+        "answer": "As a clear comparison: the sites, the evidence behind each score, and the risk of choosing one over another. The decision can be explained without a technical walkthrough."
+      },
+      {
+        "question": "Is the analysis built for the Saudi market?",
+        "answer": "Yes. The work is grounded in Saudi cities, districts, and the way customers actually move, not in a generic global template."
+      },
+      {
+        "question": "How long does a location study take?",
+        "answer": "A focused comparison of shortlisted sites is usually ready in days. A wider network or city study takes longer because more catchments are in scope."
+      },
+      {
+        "question": "Can S-Locator support an expansion plan, not a single site?",
+        "answer": "Yes. Expansion teams use it to sequence markets and sites, so capital goes to the locations with the stronger case first."
+      },
+      {
+        "question": "Who prepares the study?",
+        "answer": "Northern Analytics prepares the analysis with your commercial team. You keep the questions and the decision. We bring the spatial evidence and the model."
+      },
+      {
+        "question": "How do we start?",
+        "answer": "Share the markets or sites you are considering. We confirm the questions the study must answer, then return a scored comparison your team can act on."
+      }
+    ],
+    "databricks": [
+      {
+        "question": "What does a Databricks engagement include?",
+        "answer": "Architecture, migration, and the patterns your team will run day to day. The aim is one governed platform for data engineering, analytics, and AI."
+      },
+      {
+        "question": "Why use a lakehouse for a Saudi transformation program?",
+        "answer": "It replaces a stack of disconnected tools with one foundation. Teams spend less time moving data between platforms and more time delivering analysis and AI."
+      },
+      {
+        "question": "Can you migrate workloads from our current platform?",
+        "answer": "Yes. We map what should move, in what order, and how reports and pipelines keep running while the migration is underway."
+      },
+      {
+        "question": "Do you enable our team, or only deliver a build?",
+        "answer": "Both, with the emphasis on your team. Delivery includes the architecture and the working patterns so internal teams can extend the platform after we step back."
+      },
+      {
+        "question": "How are security and governance handled?",
+        "answer": "Access, lineage, and data quality are part of the design, not a later cleanup. The platform is shaped around the controls your organization already requires."
+      },
+      {
+        "question": "Can the same platform support AI, not only reporting?",
+        "answer": "Yes. Analytics and AI share the same governed data, so a model is trained on data the business already trusts."
+      },
+      {
+        "question": "How long does a typical engagement last?",
+        "answer": "A first use case can land in weeks. A broader platform, with migration and team enablement, is planned in stages so value shows up before the full program ends."
+      },
+      {
+        "question": "Which organizations do you work with?",
+        "answer": "Saudi organizations modernizing data and AI, across sectors that need reliable reporting and a path to production AI."
+      },
+      {
+        "question": "Can the platform be designed so data stays governed in the Kingdom?",
+        "answer": "Yes. Residency, access, and network boundaries are decided at the start and built into the architecture."
+      },
+      {
+        "question": "What happens after go-live?",
+        "answer": "Your team runs the platform with the patterns we leave behind. We stay available for the next use case when you want to extend it."
+      },
+      {
+        "question": "Do we need a Databricks platform already?",
+        "answer": "No. Engagements start from a current warehouse, a set of pipelines, or a decision to adopt Databricks. We meet the platform where it is."
+      },
+      {
+        "question": "How do we begin?",
+        "answer": "Tell us the decision the platform must support. We propose the first architecture slice, the team involved, and what “done” looks like for that slice."
+      }
     ]
   }
 }

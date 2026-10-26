@@ -85,3 +85,13 @@ jobs:
           code=$(curl -sk -o /dev/null -w '%{http_code}' --retry 3 --retry-delay 5 --max-time 10 "https://northernacs.com/")
           echo "https://northernacs.com/ -> $code"
           [ "$code" = "200" ] || { echo "Smoke test FAILED for northernacs.com"; exit 1; }
+
+      - name: SEO smoke test (prerendered article)
+        run: |
+          set -e
+          for path in "blogs/best-area-specialty-coffee-jeddah" "en/blogs/best-area-specialty-coffee-jeddah"; do
+            html=$(curl -sk --retry 3 --retry-delay 5 --max-time 15 "https://northernacs.com/$path")
+            echo "$html" | grep -q "<h1" || { echo "SEO smoke test FAILED: no <h1> in /$path (is nginx using 'try_files \$uri \$uri/index.html /index.html'?)"; exit 1; }
+            echo "$html" | grep -q "(2026) | S-Locator</title>" || { echo "SEO smoke test FAILED: prerendered <title> missing in /$path"; exit 1; }
+            echo "/$path -> prerendered OK"
+          done
