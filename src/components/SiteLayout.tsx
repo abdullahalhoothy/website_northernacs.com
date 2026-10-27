@@ -260,7 +260,7 @@ const SiteLayout = () => {
       </main>
 
       {/* Modern, Compact, High-Value Footer */}
-      <footer className="border-t border-slate-200 bg-[#F2F2F2] text-slate-600 transition-colors duration-200 dark:border-[#484846] dark:bg-[#343433] dark:text-slate-300">
+      <footer className="border-t border-slate-200 bg-[#F2F2F2] text-slate-600 transition-colors duration-200 dark:bg-darkBg !dark:text-slate-300">
         <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-5">
             {/* Col 1: Brand & Bio (2 cols wide on large screens) */}
@@ -273,7 +273,7 @@ const SiteLayout = () => {
                   loading="lazy"
                 />
               </Link>
-              <p className="max-w-sm text-sm leading-relaxed text-slate-500 dark:text-slate-400">
+              <p className="max-w-sm text-sm leading-relaxed font-medium text-slate-500 dark:text-slate-400">
                 {t.footer.tagline}
               </p>
               <div className="flex items-center gap-3 pt-2">
@@ -282,7 +282,7 @@ const SiteLayout = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={t.footer.linkedinAria}
-                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-600 shadow-sm transition-colors hover:border-[#08563D] hover:bg-[#08563D] hover:text-white dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:border-emerald-600 dark:hover:bg-emerald-600"
+                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-600 shadow-sm transition-colors hover:border-[#08563D] hover:bg-[#08563D] hover:text-white dark:border-slate-800 dark:bg-darkBg dark:text-slate-300 dark:hover:border-emerald-600 dark:hover:bg-emerald-600"
                 >
                   <FaLinkedinIn size={14} />
                 </a>
@@ -298,25 +298,25 @@ const SiteLayout = () => {
                 <li>
                   <Link
                     to="/solutions/consulting-databricks"
-                    className="transition-colors hover:text-[#08563D] hover:underline dark:hover:text-emerald-400"
+                    className="transition-colors  hover:underline font-medium hover:text-[#0F732E] dark:hover:text-[#0F732E]"
                   >
-                    Databricks / Data & AI
+                    {t.footer.databricks}
                   </Link>
                 </li>
                 <li>
                   <Link
                     to="/solutions/s-route"
-                    className="transition-colors hover:text-[#08563D] hover:underline dark:hover:text-emerald-400"
+                    className="transition-colors  hover:underline font-medium hover:text-[#0F732E] dark:hover:text-[#0F732E]"
                   >
-                    S-route
+                    {t.footer.sRoute}
                   </Link>
                 </li>
                 <li>
                   <Link
                     to="/solutions/s-locator"
-                    className="transition-colors hover:text-[#08563D] hover:underline dark:hover:text-emerald-400"
+                    className="transition-colors  hover:underline font-medium hover:text-[#0F732E] dark:hover:text-[#0F732E]"
                   >
-                    S-locator
+                    {t.footer.sLocator}
                   </Link>
                 </li>
                 <li>
@@ -324,9 +324,9 @@ const SiteLayout = () => {
                     href="https://www.s-locator.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="transition-colors hover:text-[#08563D] hover:underline dark:hover:text-emerald-400"
+                    className="transition-colors  hover:underline font-medium hover:text-[#0F732E] dark:hover:text-[#0F732E]"
                   >
-                    S-Locator Live Platform ↗
+                    {t.footer.livePlatform}
                   </a>
                 </li>
               </ul>
@@ -335,13 +335,13 @@ const SiteLayout = () => {
             {/* Col 3: Company */}
             <div>
               <h4 className="mb-4 text-sm font-bold tracking-wider text-slate-900 dark:text-slate-200">
-                {isAr ? 'الشركة' : 'Company'}
+                {t.footer.company}
               </h4>
               <ul className="space-y-2.5 text-sm">
                 <li>
                   <Link
                     to="/about"
-                    className="transition-colors hover:text-[#08563D] hover:underline dark:hover:text-emerald-400"
+                    className="transition-colors  hover:underline  hover:text-[#0F732E] font-medium dark:hover:text-[#0F732E]"
                   >
                     {t.nav.about}
                   </Link>
@@ -349,7 +349,7 @@ const SiteLayout = () => {
                 <li>
                   <Link
                     to="/blogs"
-                    className="transition-colors hover:text-[#08563D] hover:underline dark:hover:text-emerald-400"
+                    className="transition-colors hover:text-[#0F732E] hover:underline font-medium dark:hover:text-[#0F732E]"
                   >
                     {t.nav.blog}
                   </Link>
@@ -357,9 +357,9 @@ const SiteLayout = () => {
                 <li>
                   <Link
                     to="/contact"
-                    className="transition-colors hover:text-[#08563D] hover:underline dark:hover:text-emerald-400"
+                    className="transition-colors hover:text-[#0F732E] hover:underline font-medium dark:hover:text-[#0F732E]"
                   >
-                    {isAr ? 'تواصل مع خبرائنا' : 'Contact Our Experts'}
+                    {t.footer.experts}
                   </Link>
                 </li>
               </ul>
@@ -368,27 +368,23 @@ const SiteLayout = () => {
             {/* Col 4: Contact & Office */}
             <div>
               <h4 className="mb-4 text-sm font-bold tracking-wider text-slate-900 dark:text-slate-200">
-                {isAr ? 'تواصل معنا' : 'Contact'}
+                {t.footer.contact}
               </h4>
               <ul className="space-y-2.5 text-xs text-slate-600 dark:text-slate-400">
                 <li className="flex items-start gap-2">
                   <FaLocationDot
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#08563D] dark:text-emerald-500"
+                    className="mt-0.5 shrink-0 text-[#0F732E] dark:text-[#0F732E]"
                   />
-                  <span className="text-[12px]">
-                    {isAr
-                      ? 'جدة، حي الفيصلية، شارع الهدا، المملكة العربية السعودية'
-                      : 'Halab Al-Baghdadiyah, Jeddah, Kingdom of Saudi Arabia'}
-                  </span>
+                  <span className="text-[12px] font-medium">{t.footer.officeAddress}</span>
                 </li>
                 <li className="flex items-center gap-2 pt-1">
-                  <FaEnvelope size={16} className="shrink-0 text-[#08563D] dark:text-emerald-500" />
+                  <FaEnvelope size={16} className="shrink-0 text-[#0F732E] dark:text-[#0F732E]" />
                   <a
-                    href="mailto:contact@northernacs.com"
-                    className="text-slate-700 text-sm transition-colors hover:text-[#08563D] hover:underline dark:text-slate-400 dark:hover:text-emerald-400"
+                    href={`mailto:${t.footer.email}`}
+                    className="text-slate-700 font-medium text-sm transition-colors hover:text-[#0F732E] hover:underline dark:text-slate-400 dark:hover:text-emerald-400"
                   >
-                    contact@northernacs.com
+                    {t.footer.email}
                   </a>
                 </li>
               </ul>
@@ -396,21 +392,17 @@ const SiteLayout = () => {
           </div>
 
           {/* Bottom Bar: Copyright & Legal */}
-          <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-slate-200/80 pt-6 text-[11px] text-slate-500 sm:flex-row dark:border-[#484846] dark:text-slate-400">
-            <p>
-              {isAr
-                ? '© 2026 نورثرن أناليتكس للخدمات الاستشارية. جميع الحقوق محفوظة.'
-                : '© 2026 Northern Analytics Consulting Services. All rights reserved.'}
-            </p>
+          <div className="mt-10 flex flex-col font-medium items-center justify-between gap-4 border-t border-slate-200/80 pt-6 text-[11px] text-slate-500 sm:flex-row dark:border-[#484846] dark:text-slate-400">
+            <p>{t.footer.copyright}</p>
             <div className="flex flex-wrap gap-5 text-slate-500 dark:text-slate-500">
-              <span className="cursor-default hover:text-slate-700 dark:hover:text-slate-300">
-                {isAr ? 'الخصوصية' : 'Privacy'}
+              <span className="cursor-default font-medium hover:text-slate-700 dark:hover:text-slate-300">
+                {t.footer.privacy}
               </span>
-              <span className="cursor-default hover:text-slate-700 dark:hover:text-slate-300">
-                {isAr ? 'شروط الاستخدام' : 'Terms of Use'}
+              <span className="cursor-default font-medium hover:text-slate-700 dark:hover:text-slate-300">
+                {t.footer.terms}
               </span>
-              <span className="cursor-default hover:text-slate-700 dark:hover:text-slate-300">
-                {isAr ? 'إمكانية الوصول' : 'Accessibility'}
+              <span className="cursor-default font-medium hover:text-slate-700 dark:hover:text-slate-300">
+                {t.footer.accessibility}
               </span>
             </div>
           </div>
