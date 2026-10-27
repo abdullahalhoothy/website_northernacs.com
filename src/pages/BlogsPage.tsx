@@ -16,26 +16,32 @@ const BlogsPage = () => {
   const t = translations[lang].blogs;
 
   return (
-    <section className="bg-nacs-surface py-16 md:py-24">
+    <section className="bg-nacs-surface py-16 dark:bg-[#343433] md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 max-w-3xl">
-          <span className="mb-3 block text-xs font-bold uppercase tracking-[0.3em] text-nacs-green">
+          <span className="mb-3 block text-xs font-bold uppercase tracking-[0.3em] text-nacs-green dark:text-[#c5ead8]">
             {t.eyebrow}
           </span>
-          <h1 className="text-4xl font-black text-slate-900 md:text-5xl">{t.title}</h1>
-          <p className="mt-4 text-lg text-nacs-muted">{t.intro}</p>
+          <h1 className="text-4xl font-black text-slate-900 dark:text-[#f2f2f0] md:text-5xl">
+            {t.title}
+          </h1>
+          <p className="mt-4 text-lg text-nacs-muted dark:text-[#c8c8c4]">{t.intro}</p>
         </div>
         <div className="grid gap-8 md:grid-cols-2">
           {posts.map((post) => (
             <article
               key={post.slug}
-              className="rounded-2xl border border-nacs-line bg-white p-8 shadow-sm"
+              className="rounded-2xl border border-nacs-line bg-white p-8 shadow-sm dark:border-[#5c5c5a] dark:bg-[#3e3e3d]"
             >
-              <time className="text-xs font-bold uppercase tracking-[0.2em] text-nacs-green">
+              <time className="text-xs font-bold uppercase tracking-[0.2em] text-nacs-green dark:text-[#c5ead8]">
                 {post.date}
               </time>
-              <h2 className="mt-4 text-2xl font-black text-slate-900">{post.title[lang]}</h2>
-              <p className="mt-3 leading-relaxed text-nacs-muted">{post.excerpt[lang]}</p>
+              <h2 className="mt-4 text-2xl font-black text-slate-900 dark:text-[#f2f2f0]">
+                {post.title[lang]}
+              </h2>
+              <p className="mt-3 leading-relaxed text-nacs-muted dark:text-[#c8c8c4]">
+                {post.excerpt[lang]}
+              </p>
               <Link
                 to={`/blogs/${post.slug}`}
                 className="mt-6 inline-block rounded-md bg-nacs-green px-6 py-3 text-xs font-bold uppercase tracking-widest text-white transition-all hover:bg-nacs-greenHover"

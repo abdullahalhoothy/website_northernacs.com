@@ -25,7 +25,7 @@ const AboutPage = () => {
 
   return (
     <>
-      <section className="bg-[#eceff1]">
+      <section className="bg-[#eceff1] dark:bg-[#343433]">
         <div className="relative">
           <img
             src={HERO_IMAGE}
@@ -43,15 +43,15 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="bg-[#eceff1] py-16 md:py-20">
+      <section className="bg-[#eceff1] py-16 dark:bg-[#343433] md:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12">
-          <h2 className="mb-4 text-3xl font-bold leading-tight text-nacs-green md:text-5xl">
+          <h2 className="mb-4 text-3xl font-bold leading-tight text-nacs-green dark:text-[#c5ead8] md:text-5xl">
             {t.welcomeKicker}
           </h2>
-          <h3 className="mb-6 text-4xl font-bold leading-tight text-slate-700 md:text-5xl">
+          <h3 className="mb-6 text-4xl font-bold leading-tight text-slate-700 dark:text-[#f2f2f0] md:text-5xl">
             {t.welcomeHeading}
           </h3>
-          <p className="max-w-6xl text-base font-normal leading-relaxed text-slate-700 md:text-lg">
+          <p className="max-w-6xl text-base font-normal leading-relaxed text-slate-700 dark:text-[#c8c8c4] md:text-lg">
             {t.welcomeBody}
           </p>
         </div>
@@ -72,7 +72,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-24">
+      <section className="bg-gray-50 py-24 dark:bg-[#343433]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 md:grid-cols-2 lg:gap-20">
             <PurposeCard Icon={FaRegEye} title={t.visionTitle} text={t.visionText} />
@@ -81,11 +81,13 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="border-y border-gray-200 bg-gray-50 py-24">
+      <section className="border-y border-gray-200 bg-gray-50 py-24 dark:border-[#5c5c5a] dark:bg-[#343433]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
-            <h2 className="mb-4 text-3xl font-bold text-slate-900 md:text-4xl">{t.valuesTitle}</h2>
-            <p className="mx-auto max-w-2xl text-slate-500">{t.valuesIntro}</p>
+            <h2 className="mb-4 text-3xl font-bold text-slate-900 dark:text-[#f2f2f0] md:text-4xl">
+              {t.valuesTitle}
+            </h2>
+            <p className="mx-auto max-w-2xl text-slate-500 dark:text-[#a3a39e]">{t.valuesIntro}</p>
           </div>
           <div className="grid gap-8 lg:grid-cols-3">
             {t.values.map(({ icon, title, text }) => (
@@ -95,11 +97,13 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-24">
+      <section className="bg-gray-50 py-24 dark:bg-[#343433]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
-            <h2 className="mb-4 text-3xl font-bold text-slate-900">{t.engagementTitle}</h2>
-            <p className="text-slate-500">{t.engagementIntro}</p>
+            <h2 className="mb-4 text-3xl font-bold text-slate-900 dark:text-[#f2f2f0]">
+              {t.engagementTitle}
+            </h2>
+            <p className="text-slate-500 dark:text-[#a3a39e]">{t.engagementIntro}</p>
           </div>
           <div className="grid gap-4 text-center md:grid-cols-4">
             {t.steps.map((step, index) => (
@@ -109,11 +113,11 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="border-t border-gray-200 bg-white py-24">
+      <section className="border-t border-gray-200 bg-white py-24 dark:border-[#5c5c5a] dark:bg-[#343433]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-16 lg:grid-cols-2">
             <div>
-              <h2 className="text-3xl font-bold leading-snug text-slate-900 md:text-4xl">
+              <h2 className="text-3xl font-bold leading-snug text-slate-900 dark:text-[#f2f2f0] md:text-4xl">
                 {t.leadershipHeading}
               </h2>
             </div>
@@ -150,35 +154,35 @@ const AboutPage = () => {
 };
 
 const PurposeCard = ({ Icon, title, text }: { Icon: IconType; title: string; text: string }) => (
-  <article className="group relative overflow-hidden rounded-xl border border-gray-200 bg-white p-10 shadow-xl transition-all duration-300 hover:border-nacs-green">
+  <article className="group relative overflow-hidden rounded-xl border border-gray-200 bg-white p-10 shadow-xl transition-all duration-300 hover:border-nacs-green dark:border-[#5c5c5a] dark:bg-[#3e3e3d]">
     <Icon className="pointer-events-none absolute end-8 top-8 text-[7rem] text-nacs-green opacity-5" />
     <div className="relative z-10">
-      <h2 className="mb-4 flex items-center gap-3 border-b border-gray-100 pb-4 text-2xl font-bold text-slate-900">
-        <Icon className="shrink-0 text-nacs-green" size={22} />
+      <h2 className="mb-4 flex items-center gap-3 border-b border-gray-100 pb-4 text-2xl font-bold text-slate-900 dark:border-[#5c5c5a] dark:text-[#f2f2f0]">
+        <Icon className="shrink-0 text-nacs-green dark:text-[#c5ead8]" size={22} />
         {title}
       </h2>
-      <p className="text-lg italic leading-relaxed text-slate-600">{text}</p>
+      <p className="text-lg italic leading-relaxed text-slate-600 dark:text-[#c8c8c4]">{text}</p>
     </div>
   </article>
 );
 
 const ValueCard = ({ Icon, title, text }: { Icon: IconType; title: string; text: string }) => (
-  <article className="rounded-lg border-b-4 border-nacs-green bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
-    <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-nacs-green/10 text-3xl text-nacs-green">
+  <article className="rounded-lg border-b-4 border-nacs-green bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl dark:bg-[#3e3e3d]">
+    <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-nacs-green/10 text-3xl text-nacs-green dark:bg-[#08563D]/25 dark:text-[#c5ead8]">
       <Icon />
     </div>
-    <h3 className="mb-3 text-xl font-bold text-slate-900">{title}</h3>
-    <p className="text-sm leading-relaxed text-slate-600">{text}</p>
+    <h3 className="mb-3 text-xl font-bold text-slate-900 dark:text-[#f2f2f0]">{title}</h3>
+    <p className="text-sm leading-relaxed text-slate-600 dark:text-[#c8c8c4]">{text}</p>
   </article>
 );
 
 const StepCard = ({ number, title, text }: { number: number; title: string; text: string }) => (
-  <article className="rounded-lg border border-gray-200 bg-white p-6">
+  <article className="rounded-lg border border-gray-200 bg-white p-6 dark:border-[#5c5c5a] dark:bg-[#3e3e3d]">
     <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-nacs-green text-xl font-bold text-white">
       {number}
     </div>
-    <h3 className="mb-2 font-bold text-slate-900">{title}</h3>
-    <p className="text-xs text-slate-500">{text}</p>
+    <h3 className="mb-2 font-bold text-slate-900 dark:text-[#f2f2f0]">{title}</h3>
+    <p className="text-xs text-slate-500 dark:text-[#a3a39e]">{text}</p>
   </article>
 );
 
@@ -195,8 +199,8 @@ const LeaderCard = ({
 }) => {
   const [errored, setErrored] = useState(false);
   return (
-    <article className="group flex items-center gap-6 rounded-xl border border-gray-100 bg-gray-50 p-6 transition-all duration-300 hover:shadow-lg">
-      <div className="h-28 w-28 shrink-0 overflow-hidden rounded-full border-4 border-gray-100 bg-white shadow-md">
+    <article className="group flex items-center gap-6 rounded-xl border border-gray-100 bg-gray-50 p-6 transition-all duration-300 hover:shadow-lg dark:border-[#5c5c5a] dark:bg-[#3e3e3d]">
+      <div className="h-28 w-28 shrink-0 overflow-hidden rounded-full border-4 border-gray-100 bg-white shadow-md dark:border-[#5c5c5a] dark:bg-[#484846]">
         {!errored ? (
           <img
             src={image}
@@ -206,17 +210,17 @@ const LeaderCard = ({
             loading="lazy"
           />
         ) : (
-          <div className="flex h-full w-full items-center justify-center text-nacs-green">
+          <div className="flex h-full w-full items-center justify-center text-nacs-green dark:text-[#c5ead8]">
             <FaUserTie size={36} />
           </div>
         )}
       </div>
       <div>
-        <h3 className="text-xl font-bold text-slate-900">{name}</h3>
-        <span className="mb-2 block text-xs font-bold uppercase tracking-widest text-nacs-green">
+        <h3 className="text-xl font-bold text-slate-900 dark:text-[#f2f2f0]">{name}</h3>
+        <span className="mb-2 block text-xs font-bold uppercase tracking-widest text-nacs-green dark:text-[#c5ead8]">
           {role}
         </span>
-        <p className="text-xs leading-relaxed text-slate-500">{text}</p>
+        <p className="text-xs leading-relaxed text-slate-500 dark:text-[#a3a39e]">{text}</p>
       </div>
     </article>
   );
