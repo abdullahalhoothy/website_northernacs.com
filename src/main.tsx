@@ -1,18 +1,30 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { createRoot, hydrateRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import { Toaster } from 'sonner';
-import App from './App';
-import { LanguageProvider } from './components/LanguageProvider';
+import { getInitialLang } from './components/LanguageProvider';
+import { getInitialTheme } from './components/ThemeProvider';
+import Root from './Root';
 import './index.css';
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+const container = document.getElementById('root')!;
+
+const app = (
   <React.StrictMode>
     <BrowserRouter>
-      <LanguageProvider>
-        <App />
-        <Toaster position="top-right" richColors />
-      </LanguageProvider>
+      <Root />
     </BrowserRouter>
-  </React.StrictMode>,
+  </React.StrictMode>
 );
+
+// Prerendered pages are hydrated only when the browser would render the exact same tree
+// (same language, light theme). Otherwise the prerendered markup is discarded and the app
+// renders fresh, which avoids hydration mismatches for returning visitors.
+const prerenderedLang = container.dataset.prerenderLang;
+const canHydrate =
+  Boolean(prerenderedLang) && prerenderedLang === getInitialLang() && getInitialTheme() === 'light';
+
+if (canHydrate) {
+  hydrateRoot(container, app);
+} else {
+  createRoot(container).render(app);
+}

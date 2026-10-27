@@ -1,16 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
+  color-scheme: light;
   color: #0f172a;
   background: #ffffff;
 }
 
-html {
-  scroll-behavior: smooth;
+html.dark {
+  color-scheme: dark;
+  color: #f2f2f0;
+  background: #343433;
+}
+
+html.dark body {
+  background-color: #343433;
+  color: #f2f2f0;
+}
+
+html[lang='en'] {
+  font-family: 'Montserrat', sans-serif;
+}
+
+html[lang='ar'] {
+  font-family: 'Noto Kufi Arabic', sans-serif;
 }
 
 body {
@@ -21,4 +35,20 @@ body {
 
 img {
   max-width: 100%;
+}
+
+/* Infinite horizontal marquee: the track holds two identical groups, so -50% loops seamlessly. */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@layer utilities {
+  .animate-marquee {
+    animation: marquee 60s linear infinite;
+  }
 }

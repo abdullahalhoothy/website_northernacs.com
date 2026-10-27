@@ -35,7 +35,7 @@ const initialState: FormState = {
 const emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const phoneRx = /^[0-9()#&+*\-=. ]+$/;
 const fieldBase =
-  'w-full rounded-md border border-nacs-line bg-white px-4 py-3 text-sm text-slate-800 placeholder:text-slate-400 transition-all focus:border-nacs-green focus:outline-none focus:ring-2 focus:ring-nacs-green/15';
+  'w-full rounded-md border border-nacs-line bg-white px-4 py-3 text-sm text-slate-800 placeholder:text-slate-400 transition-all focus:border-nacs-green focus:outline-none focus:ring-2 focus:ring-nacs-green/15 dark:border-[#5c5c5a] dark:bg-[#3e3e3d] dark:text-[#f2f2f0] dark:placeholder:text-[#a3a39e]';
 const HERO_IMAGE = '/images/northernacs/contact.jpeg';
 
 const ContactPage = () => {
@@ -95,7 +95,7 @@ const ContactPage = () => {
 
   return (
     <>
-      <section className="bg-[#eceff1]">
+      <section className="bg-[#eceff1] dark:bg-[#343433]">
         <div className="relative">
           <img
             src={HERO_IMAGE}
@@ -113,13 +113,15 @@ const ContactPage = () => {
         </div>
       </section>
 
-      <section className="bg-nacs-surface py-16 md:py-24">
+      <section className="bg-nacs-surface py-16 dark:bg-[#343433] md:py-24">
         <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-black text-slate-900 md:text-5xl">{t.title}</h1>
-          <p className="mx-auto mt-4 max-w-2xl text-nacs-muted">{t.intro}</p>
+          <h1 className="text-4xl font-black text-slate-900 dark:text-[#f2f2f0] md:text-5xl">
+            {t.title}
+          </h1>
+          <p className="mx-auto mt-4 max-w-2xl text-nacs-muted dark:text-[#c8c8c4]">{t.intro}</p>
         </div>
       </section>
-      <section className="bg-white py-16 md:py-20">
+      <section className="bg-white py-16 dark:bg-[#343433] md:py-20">
         <div className="mx-auto grid max-w-6xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
           <aside className="rounded-2xl bg-nacs-green p-8 text-white">
             <h2 className="mb-6 text-2xl font-black">{t.infoTitle}</h2>
@@ -138,14 +140,18 @@ const ContactPage = () => {
               </li>
             </ul>
           </aside>
-          <div className="rounded-2xl border border-nacs-line bg-white p-6 shadow-sm sm:p-8 md:p-10">
+          <div className="rounded-2xl border border-nacs-line bg-white p-6 shadow-sm dark:border-[#5c5c5a] dark:bg-[#3e3e3d] sm:p-8 md:p-10">
             {submitted ? (
               <div className="py-10 text-center">
-                <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-nacs-mint text-nacs-green">
+                <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-nacs-mint text-nacs-green dark:bg-[#08563D]/25 dark:text-[#c5ead8]">
                   <FaCircleCheck size={32} />
                 </div>
-                <h3 className="mb-2 text-2xl font-black text-slate-900">{t.successTitle}</h3>
-                <p className="mx-auto mb-6 max-w-md text-nacs-muted">{t.successText}</p>
+                <h3 className="mb-2 text-2xl font-black text-slate-900 dark:text-[#f2f2f0]">
+                  {t.successTitle}
+                </h3>
+                <p className="mx-auto mb-6 max-w-md text-nacs-muted dark:text-[#c8c8c4]">
+                  {t.successText}
+                </p>
                 <button
                   type="button"
                   onClick={() => setSubmitted(false)}
