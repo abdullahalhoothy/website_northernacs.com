@@ -1,7 +1,10 @@
 {
   "nav": {
     "home": "Home",
-    "solution": "Solution",
+    "solution": "Solutions",
+    "consultingDatabricks": "Consulting Databricks / Data & AI",
+    "sRoute": "S-route",
+    "sLocator": "S-locator",
     "about": "About",
     "contact": "Contact",
     "blog": "Blog",
@@ -16,7 +19,8 @@
     "homeLabel": "Northern Analytics home",
     "logoAlt": "Northern Analytics",
     "searchAria": "Search",
-    "menuToggleAria": "Toggle menu"
+    "menuToggleAria": "Toggle menu",
+    "themeToggleAria": "Toggle theme"
   },
   "footer": {
     "linkedinAria": "LinkedIn",

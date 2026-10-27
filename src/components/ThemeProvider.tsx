@@ -1,5 +1,5 @@
 /* eslint-disable react-refresh/only-export-components */
-import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
+import { createContext, useCallback, useContext, useLayoutEffect, useMemo, useState } from 'react';
 
 export type Theme = 'light' | 'dark';
 
@@ -36,13 +36,8 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
     });
   }, []);
 
-  useEffect(() => {
-    const root = document.documentElement;
-    if (theme === 'dark') {
-      root.classList.add('dark');
-    } else {
-      root.classList.remove('dark');
-    }
+  useLayoutEffect(() => {
+    document.documentElement.classList.toggle('dark', theme === 'dark');
   }, [theme]);
 
   const value = useMemo(() => ({ theme, toggleTheme, setTheme }), [theme, toggleTheme, setTheme]);

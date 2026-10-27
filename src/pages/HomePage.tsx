@@ -74,7 +74,7 @@ const HomePage = () => {
   const techTitleParts = t.home.techTitle.split(/\{(.*?)\}/g);
 
   return (
-    <div className="bg-[#f8fafc]">
+    <div className="bg-[#f8fafc] dark:bg-[#343433]">
       {/* 1. HERO SECTION */}
       <section
         id="top"
@@ -88,7 +88,7 @@ const HomePage = () => {
           loading="eager"
         />
         <div
-          className={`absolute inset-0 ${isAr ? 'bg-gradient-to-l' : 'bg-gradient-to-r'} from-white via-white/80 to-transparent`}
+          className={`absolute inset-0 ${isAr ? 'bg-gradient-to-l' : 'bg-gradient-to-r'} from-white via-white/80 to-transparent dark:from-[#343433] dark:via-[#343433]/85 dark:to-transparent`}
         />
 
         <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-0">
@@ -96,18 +96,10 @@ const HomePage = () => {
             <h1 className="mb-6 text-4xl font-black !leading-tight text-black md:text-5xl lg:text-6xl">
               {t.home.title}
               <br />
-              <span className="text-[#08563D]">{t.home.accent}</span>
+              <span className="text-[#08563D] dark:text-[#c5ead8]">{t.home.accent}</span>
             </h1>
 
-            <div className="mt-10 flex flex-col items-start gap-2 sm:flex-row">
-              <a
-                href="#s-locator-platform"
-                className="inline-flex items-center justify-center rounded-xl bg-[#08563D] px-5 py-5 text-sm font-bold tracking-widest text-white shadow-lg transition-all hover:-translate-y-0.5 hover:bg-[#064531] hover:shadow-xl"
-              >
-                {t.home.learnMore}
-                <FiArrowUpRight className="ms-3" size={16} />
-              </a>
-            </div>
+            <div className="mt-10 flex flex-col items-start gap-2 sm:flex-row"></div>
           </div>
         </div>
       </section>

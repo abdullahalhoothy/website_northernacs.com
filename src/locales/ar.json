@@ -2,6 +2,9 @@
   "nav": {
     "home": "الرئيسية",
     "solution": "الحلول",
+    "consultingDatabricks": "Consulting Databricks / Data & AI",
+    "sRoute": "S-route",
+    "sLocator": "S-locator",
     "about": "من نحن",
     "contact": "تواصل معنا",
     "blog": "المدونة",
@@ -9,15 +12,13 @@
     "services": "الخدمات",
     "projects": "المشاريع",
     "locator": "إس لوكيتر",
-    "industries": "القطاعات",
-    "insights": "الرؤى",
     "blogs": "المدونة",
-    "contact": "تواصل",
     "language": "En",
     "homeLabel": "الصفحة الرئيسية لنورثرن أناليتكس",
     "logoAlt": "نورثرن أناليتكس",
     "searchAria": "بحث",
-    "menuToggleAria": "فتح وإغلاق القائمة"
+    "menuToggleAria": "فتح وإغلاق القائمة",
+    "themeToggleAria": "تبديل المظهر"
   },
   "footer": {
     "linkedinAria": "لينكد إن",
@@ -34,7 +35,6 @@
     "terms": "شروط الاستخدام",
     "accessibility": "إمكانية الوصول",
     "services": "الخدمات والمنتجات",
-    "industries": "القطاعات",
     "contact": "تواصل معنا",
     "experts": "تواصل مع خبرائنا",
     "rights": "جميع الحقوق محفوظة.",
