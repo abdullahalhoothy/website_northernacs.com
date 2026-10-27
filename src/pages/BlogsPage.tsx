@@ -191,7 +191,7 @@ const BlogsPage = () => {
   };
 
   return (
-    <section className="bg-nacs-surface py-16 md:py-12">
+    <section className="bg-nacs-surface py-16 dark:bg-[#343433] md:py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div
           ref={topRef}
@@ -222,7 +222,7 @@ const BlogsPage = () => {
               }}
               placeholder={t.searchPlaceholder}
               aria-label={t.searchLabel}
-              className="h-12 w-full rounded-xl border border-slate-200 bg-white ps-11 pe-11 text-sm text-slate-800 outline-none transition-all placeholder:text-slate-400 focus:border-nacs-green focus:ring-4 focus:ring-nacs-green/10 [&::-webkit-search-cancel-button]:hidden"
+              className="h-12 w-full rounded-xl border border-slate-200 bg-white ps-11 pe-11 text-sm text-slate-800 outline-none transition-all placeholder:text-slate-400 focus:border-nacs-green focus:ring-4 focus:ring-nacs-green/10 dark:border-[#484846] dark:bg-[#3e3e3d] dark:text-[#f2f2f0] dark:placeholder:text-[#a3a39e] [&::-webkit-search-cancel-button]:hidden"
             />
             {query ? (
               <button
@@ -241,7 +241,7 @@ const BlogsPage = () => {
         </div>
 
         {!featured ? (
-          <p className="rounded-2xl border border-dashed border-slate-200 bg-white px-6 py-16 text-center text-nacs-muted">
+          <p className="rounded-2xl border border-dashed border-slate-200 bg-white px-6 py-16 text-center text-nacs-muted dark:border-[#484846] dark:bg-[#3e3e3d] dark:text-[#c8c8c4]">
             {t.noResults}
           </p>
         ) : (
@@ -330,7 +330,7 @@ const BlogsPage = () => {
                   onClick={() => goToPage(currentPage - 1)}
                   disabled={currentPage === 1}
                   aria-label={t.pagination.previous}
-                  className="flex h-10 w-10 items-center justify-center rounded-md border border-slate-200 bg-white text-slate-600 transition-colors hover:border-nacs-green hover:text-nacs-green disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-slate-200 disabled:hover:text-slate-600 dark:border-[#484846]"
+                  className="flex h-10 w-10 items-center justify-center rounded-md border border-slate-200 bg-white text-slate-600 transition-colors hover:border-nacs-green hover:text-nacs-green disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-slate-200 disabled:hover:text-slate-600 dark:border-[#484846] dark:bg-[#3e3e3d] dark:text-[#c8c8c4]"
                 >
                   <FiChevronLeft size={18} className="rtl:rotate-180" />
                 </button>
@@ -344,7 +344,7 @@ const BlogsPage = () => {
                     className={`flex h-10 min-w-10 items-center justify-center rounded-md border px-3 text-sm font-semibold transition-colors ${
                       number === currentPage
                         ? 'border-nacs-green bg-nacs-green text-white'
-                        : 'border-slate-200 bg-white text-slate-600 hover:border-nacs-green hover:text-nacs-green dark:border-[#484846]'
+                        : 'border-slate-200 bg-white text-slate-600 hover:border-nacs-green hover:text-nacs-green dark:border-[#484846] dark:bg-[#3e3e3d] dark:text-[#c8c8c4]'
                     }`}
                   >
                     {number}
@@ -355,7 +355,7 @@ const BlogsPage = () => {
                   onClick={() => goToPage(currentPage + 1)}
                   disabled={currentPage === totalPages}
                   aria-label={t.pagination.next}
-                  className="flex h-10 w-10 items-center justify-center rounded-md border border-slate-200 bg-white text-slate-600 transition-colors hover:border-nacs-green hover:text-nacs-green disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-slate-200 disabled:hover:text-slate-600 dark:border-[#484846]"
+                  className="flex h-10 w-10 items-center justify-center rounded-md border border-slate-200 bg-white text-slate-600 transition-colors hover:border-nacs-green hover:text-nacs-green disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-slate-200 disabled:hover:text-slate-600 dark:border-[#484846] dark:bg-[#3e3e3d] dark:text-[#c8c8c4]"
                 >
                   <FiChevronRight size={18} className="rtl:rotate-180" />
                 </button>

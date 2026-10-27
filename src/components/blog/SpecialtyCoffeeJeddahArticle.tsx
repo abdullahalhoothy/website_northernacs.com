@@ -39,7 +39,7 @@ const SpecialtyCoffeeJeddahArticle = ({ post }: { post: ArticlePost }) => {
   const byLabel = article.by;
 
   return (
-    <article className="bg-[#fafbfc]">
+    <article className="bg-[#fafbfc] dark:bg-[#343433]">
       <header className="relative isolate flex h-[calc(100dvh-5rem)] items-center overflow-hidden bg-[#140c24]">
         <img
           src={post.image || HERO_IMAGE}
@@ -135,7 +135,7 @@ const SpecialtyCoffeeJeddahArticle = ({ post }: { post: ArticlePost }) => {
           <h2 className="text-start text-[28px] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#110222] sm:text-[32px]">
             {article.comparison.title}
           </h2>
-          <div className="mt-6 overflow-x-auto rounded-2xl border border-[#eceef1] bg-white shadow-[0_10px_30px_rgba(17,2,34,0.06)]">
+          <div className="mt-6 overflow-x-auto rounded-2xl border border-[#eceef1] bg-white shadow-[0_10px_30px_rgba(17,2,34,0.06)] dark:border-[#484846] dark:bg-[#3e3e3d]">
             <table className="w-full min-w-[980px] table-fixed border-collapse text-start text-[14px]">
               <colgroup>
                 <col className="w-[120px]" />

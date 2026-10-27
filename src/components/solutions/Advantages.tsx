@@ -21,7 +21,7 @@ export const Advantages = () => {
   const active = copy.items[activeIndex];
 
   return (
-    <section className="bg-white py-20 font-normal lg:py-28">
+    <section className="bg-white py-20 font-normal dark:bg-[#343433] lg:py-28">
       <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
         <h2 className="mx-auto max-w-2xl text-4xl font-semibold leading-tight text-[#3a3a3a] dark:text-slate-100 sm:text-5xl">
           {copy.titleLead}{' '}

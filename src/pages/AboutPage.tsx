@@ -190,7 +190,7 @@ const OverviewSection = ({
     'flex h-10 w-10 items-center justify-center rounded-full border border-nacs-green bg-white text-nacs-green transition-colors hover:bg-nacs-green hover:text-white disabled:cursor-default disabled:border-[#d9e8e1] disabled:text-[#c3d9cf] disabled:hover:bg-white disabled:hover:text-[#c3d9cf] lg:h-[46px] lg:w-[46px] dark:border-emerald-400 dark:text-emerald-400 dark:hover:bg-emerald-400 dark:hover:text-[#343433] dark:disabled:border-[#484846] dark:disabled:text-[#5b5b59]';
 
   return (
-    <section className="relative overflow-hidden border-b-2 border-nacs-green bg-white">
+    <section className="relative overflow-hidden border-b-2 border-nacs-green bg-white dark:bg-[#343433]">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute end-0 top-0 h-full w-[9.2%] min-w-[44px] bg-[#f3f3f3] dark:bg-white/5 rtl:-scale-x-100"
@@ -337,7 +337,7 @@ const LeadershipSection = ({
     'flex h-[35px] w-[35px] items-center justify-center rounded-full border border-nacs-green bg-white text-nacs-green transition-colors hover:bg-nacs-green hover:text-white dark:border-emerald-400 dark:text-emerald-400 dark:hover:bg-emerald-400 dark:hover:text-[#343433]';
 
   return (
-    <section className="bg-white">
+    <section className="bg-white dark:bg-[#343433]">
       <div className="mx-auto max-w-[1440px] px-6 pb-14 pt-14 sm:px-10 lg:px-[13.5%] lg:pb-16 lg:pt-[72px]">
         <h2 className="text-3xl font-bold leading-[1.2] text-nacs-greenDeep dark:text-white">
           {title}
@@ -845,7 +845,7 @@ const SuccessSection = ({
                   className="shrink-0 px-2.5"
                   style={{ flexBasis: `${100 / perPage}%` }}
                 >
-                  <article className="flex h-full min-h-[253px] flex-col items-center overflow-hidden rounded-[17px] border border-[#dde5e1] bg-white px-3 pb-6 pt-7 text-center shadow-[0_6px_24px_rgba(8,86,61,0.07)] dark:border-[#484846]">
+                  <article className="flex h-full min-h-[253px] flex-col items-center overflow-hidden rounded-[17px] border border-[#dde5e1] bg-white px-3 pb-6 pt-7 text-center shadow-[0_6px_24px_rgba(8,86,61,0.07)] dark:border-[#484846] dark:bg-[#3e3e3d]">
                     <div className="flex h-[100px] w-full max-w-[175px] items-center justify-center">
                       {card.kind === 'logo' ? (
                         <img
