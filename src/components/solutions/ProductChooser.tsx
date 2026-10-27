@@ -55,7 +55,9 @@ export const ProductChooser = () => {
           >
             <div className="mb-8 flex items-center gap-3">
               <product.Icon className={`h-8 w-8 ${product.iconClass}`} />
-              <h2 className="text-3xl font-medium text-slate-900 dark:text-[#f2f2f0]">{product.title}</h2>
+              <h2 className="text-3xl font-medium text-slate-900 dark:text-[#f2f2f0]">
+                {product.title}
+              </h2>
             </div>
             <img src="" alt={product.imageAlt} className="mb-8 h-64 w-80 object-contain" />
             <p className="mb-8 max-w-md font-light leading-relaxed text-slate-500 dark:text-[#a3a39e]">

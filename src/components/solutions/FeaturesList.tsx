@@ -25,7 +25,10 @@ export const FeaturesList = () => {
               </p>
               <ul className="mt-6 flex flex-col gap-3.5">
                 {feature.bullets.map((bullet) => (
-                  <li key={bullet} className="flex items-start gap-3 text-slate-500 dark:text-[#a3a39e]">
+                  <li
+                    key={bullet}
+                    className="flex items-start gap-3 text-slate-500 dark:text-[#a3a39e]"
+                  >
                     <FaCircleCheck className="mt-0.5 h-5 w-5 shrink-0 text-[#7E5CAC]/80" />
                     <span className="leading-relaxed">{bullet}</span>
                   </li>
