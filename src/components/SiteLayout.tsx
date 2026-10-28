@@ -311,7 +311,7 @@ const SiteLayout = () => {
             {/* Col 2: Solutions */}
             <div>
               <h4 className="mb-4 text-sm font-bold  tracking-wider text-slate-900 dark:text-white">
-                {t.nav.solution}
+                {t.footer.solutions}
               </h4>
               <ul className="space-y-2.5 text-sm">
                 <li>

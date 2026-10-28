@@ -24,7 +24,8 @@
   },
   "footer": {
     "linkedinAria": "LinkedIn",
-    "tagline": "Bridging Strategy & Advanced Data & AI for the Digital Age.",
+    "tagline": "We Build Your Plans on Real Data and Modern Artificial Intelligence Tools.",
+    "solutions": "Our Partners and Services",
     "databricks": "Databricks / Data & AI",
     "sRoute": "S-route",
     "sLocator": "S-locator",
@@ -71,32 +72,32 @@
   },
   "home": {
     "partner": "Official Partner",
-    "title": "Databricks / Data & AI",
-    "accent": "Consulting",
+    "title": "Data and AI consulting that exceeds",
+    "accent": "expectations",
     "learnMore": "Learn more",
     "spotlightEyebrow": "Beyond Expectations",
-    "spotlightTitle": "Data & Location",
-    "spotlightTitleLine": "Intelligence Experts",
-    "spotlightBody": "Northern Analytics, headquartered in Jeddah, helps organizations across Saudi Arabia turn complex data into clear decisions. Through Databricks consulting and the S-Locator platform, we deliver data and AI architecture, market and location intelligence, and practical execution. We help clients not only understand their market, but move on it with clarity and speed.",
+    "spotlightTitle": "Data analysis experts",
+    "spotlightTitleLine": "And selecting the best websites",
+    "spotlightBody": "Northern Analytics is a Saudi company based in Jeddah that helps businesses understand their data and turn it into clear decisions. We organize your data and use artificial intelligence to analyze it, provide insights into market conditions and the best locations for your business, and then help you implement the right solutions step by step.",
     "spotlightImageAlt": "Abstract glass form representing data and location intelligence",
     "solutionsTitle": "Solutions",
     "solutionItems": [
       {
         "title": "Consulting",
-        "text": "Databricks and Data & AI consulting, from architecture and migration to enablement, so teams adopt a secure and scalable lakehouse."
+        "text": "Bringing your scattered data together in one secure place using the Databricks platform."
       },
       {
         "title": "S-route",
-        "text": "Route planning that organizes how field teams reach the right locations, with less time on the road and clearer daily execution."
+        "text": "It optimizes the daily routes of your sales representatives and field teams, helping them reach their target locations in less time and at a lower cost."
       },
       {
         "title": "S-locator",
-        "text": "A location intelligence platform for market planning, site selection, territory design, and data-driven expansion."
+        "text": "A platform that helps you identify the best location for your next branch and understand competitors and customers in each area before expanding your business."
       }
     ],
-    "offerTitle": "Data and location intelligence, ready for Saudi Arabia",
-    "offerText": "Northern Analytics brings Databricks consulting, S-route, and S-locator to organizations across the Kingdom. From lakehouse architecture to field routes and location decisions, we help teams move from data to action.",
-    "techTitle": "Turning {data} into {decisions} to drive growth and success across the Kingdom.",
+    "offerTitle": "Data and location intelligence solutions tailored to the Saudi market.",
+    "offerText": "We offer three services to businesses across the Kingdom: data analysis, field team route planning, and optimal location selection. Our goal is to turn your data into practical actions.",
+    "techTitle": "We Turn Your {data} into {decisions} That Help Your Business Grow Across the Kingdom.",
     "projectShots": [
       {
         "src": "/images/northernacs/s-locator-map-mockup.png",
@@ -330,18 +331,24 @@
     "pageEyebrow": "About Us",
     "overviewTitle": "Overview",
     "clientsTitle": "Partners & Sectors",
-    "clientsDescription": "We partner with leading technology platforms and serve organizations across key sectors to deliver measurable transformation and lasting impact.",
+    "clientsDescription": "We work with global technology platforms and serve companies across key sectors, delivering measurable results.",
+    "clientsDescription2": "Change Corporate Strategy to Corporate Strategic Planning.",
     "clientsButton": "Contact Us",
     "storiesPartnerTitle": "Official Partner",
-    "storiesPartnerText": "Databricks and Data & AI consulting partner.",
+    "storiesPartnerText": "Official Databricks Certified Partner",
     "storiesProductTitle": "Flagship Product",
-    "storiesProductText": "Location intelligence for market and site planning.",
+    "storiesProductText": "S-Locator is our platform for selecting the best locations and understanding the market.",
     "leadershipTitle": "Our Leadership",
     "leadershipPrev": "Previous leader",
     "leadershipNext": "Next leader",
     "overviewParagraphs": [
-      "Northern Analytics is a specialized consultancy and advisory firm headquartered in Jeddah, translating top-tier North American expertise into the heart of the Kingdom's digital transformation. We integrate {data & AI solutions} and {advisory services}, helping organizations turn complex data into clear decisions, from strategy to implementation.",
-      "Through Databricks consulting and our S-Locator and S-route platforms, we deliver data and AI architecture, location intelligence, and practical execution that supports initiatives operating under the Saudi Vision 2030 umbrella."
+      "Northern Analytics is a specialized consultancy and advisory firm headquartered in Jeddah, translating top-tier North American expertise into the heart of the Kingdom's digital transformation. We integrate {data & AI solutions} and {advisory services}, helping organizations turn complex data into clear decisions, from strategy to implementation."
+    ],
+    "overviewServicesIntro": "We offer three core services:",
+    "overviewServices": [
+      "Organizing and analyzing data with AI through the Databricks platform",
+      "Choosing the best locations for your branches through the S-Locator platform",
+      "Planning routes for your field teams through the S-Route platform"
     ],
     "numbersTitle": "Impact in Numbers",
     "numbersPrev": "Previous",
@@ -385,7 +392,7 @@
         "text": "We empower leadership to cut through market noise and identify the vendors that best serve their long-term vision. Our unbiased advisory ensures your architectural foundations are scalable, secure, and performant, maximizing the ROI of your data and AI investments."
       }
     ],
-    "storiesTitle": "Recognition and awards",
+    "storiesTitle": "Our Partners and Services",
     "storiesIntro": "Real results from our global engagements.",
     "stories": [
       {
@@ -393,7 +400,7 @@
         "sector": "Banking and Finance",
         "title": "Redefining Data and AI Strategy",
         "challenge": "Fragmented data and low maturity.",
-        "result": "Moved the bank up 2 tiers in data and AI maturity.",
+        "result": "We enhanced a bank’s ability to leverage data and artificial intelligence.",
         "cta": "Explore Case"
       },
       {
@@ -401,7 +408,7 @@
         "sector": "Corporate Strategy",
         "title": "National Data Monetization",
         "challenge": "G7 entity needed sovereign strategy.",
-        "result": "Created new licensing revenue streams.",
+        "result": "We helped a client generate additional revenue by licensing its products.",
         "cta": "Explore Case"
       },
       {
@@ -409,7 +416,7 @@
         "sector": "Telecom and Investment",
         "title": "Smart Network Operations",
         "challenge": "High dispatch costs and outages.",
-        "result": "50% cost saving potential identified.",
+        "result": "We identified an opportunity to reduce costs by 50%.",
         "cta": "Explore Case"
       },
       {
@@ -417,28 +424,28 @@
         "sector": "Energy and Industrial",
         "title": "Automated Cloud Pipelines",
         "challenge": "Manual data processing.",
-        "result": "60% boost in operational ROI.",
+        "result": "We increased operating profits by 60%.",
         "cta": "Explore Case"
       }
     ],
-    "engagementTitle": "Our History",
+    "engagementTitle": "How We Work",
     "engagementIntro": "Journey to High Maturity",
     "steps": [
       {
-        "title": "Define",
-        "text": "Align leadership and identify high-impact opportunities."
+        "title": "We understand your project",
+        "text": "We meet with management to understand its goals and identify the most important opportunities."
       },
       {
-        "title": "Design",
-        "text": "Assess capabilities and design architecture."
+        "title": "Design the appropriate solution",
+        "text": "We assess your current situation and design the right solution for you."
       },
       {
-        "title": "Build",
-        "text": "Develop and deploy data and AI solutions."
+        "title": "Building the solution",
+        "text": "We implement the solution and put it into practice."
       },
       {
-        "title": "Deploy",
-        "text": "Integrate into daily operations and enable change management."
+        "title": "Integrating the solution into your project",
+        "text": "We integrate the solution into daily operations and train your team on it."
       }
     ],
     "leadershipHeading": "We combine world-class insights with local mastery and execute end-to-end strategies that transform complex challenges into meaningful, sustainable growth.",
