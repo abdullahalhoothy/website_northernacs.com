@@ -1,6 +1,7 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 import { isLang, LANG_STORAGE_KEY, type Lang } from '../i18n';
+import { isEnglishPath } from '../seo/paths';
 
 interface LanguageContextValue {
   lang: Lang;
@@ -9,14 +10,30 @@ interface LanguageContextValue {
 
 const LanguageContext = createContext<LanguageContextValue | undefined>(undefined);
 
-const getInitialLang = (): Lang => {
+export const getInitialLang = (): Lang => {
   if (typeof window === 'undefined') return 'ar';
+  // The URL wins: /en/... is the English version of a page and must render English.
+  if (isEnglishPath(window.location.pathname)) {
+    try {
+      localStorage.setItem(LANG_STORAGE_KEY, 'en');
+    } catch {
+      /* storage may be unavailable (private mode) */
+    }
+    return 'en';
+  }
   const saved = localStorage.getItem(LANG_STORAGE_KEY);
   return isLang(saved) ? saved : 'ar';
 };
 
-export const LanguageProvider = ({ children }: { children: React.ReactNode }) => {
-  const [lang, setLangState] = useState<Lang>(getInitialLang);
+export const LanguageProvider = ({
+  children,
+  initialLang,
+}: {
+  children: React.ReactNode;
+  /** Set by the prerenderer; on the client the language is resolved from URL/storage. */
+  initialLang?: Lang;
+}) => {
+  const [lang, setLangState] = useState<Lang>(() => initialLang ?? getInitialLang());
 
   const setLang = (nextLang: Lang) => {
     setLangState(nextLang);

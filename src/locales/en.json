@@ -1,7 +1,10 @@
 {
   "nav": {
     "home": "Home",
-    "solution": "Solution",
+    "solution": "Solutions",
+    "consultingDatabricks": "Consulting Databricks / Data & AI",
+    "sRoute": "S-route",
+    "sLocator": "S-locator",
     "about": "About",
     "contact": "Contact",
     "blog": "Blog",
@@ -16,15 +19,27 @@
     "homeLabel": "Northern Analytics home",
     "logoAlt": "Northern Analytics",
     "searchAria": "Search",
-    "menuToggleAria": "Toggle menu"
+    "menuToggleAria": "Toggle menu",
+    "themeToggleAria": "Toggle theme"
   },
   "footer": {
     "linkedinAria": "LinkedIn",
     "tagline": "Bridging Strategy & Advanced Data & AI for the Digital Age.",
+    "databricks": "Databricks / Data & AI",
+    "sRoute": "S-route",
+    "sLocator": "S-locator",
+    "livePlatform": "S-Locator Live Platform ↗",
+    "company": "Company",
+    "officeAddress": "Halab Al-Baghdadiyah, Jeddah, Kingdom of Saudi Arabia",
+    "email": "contact@northernacs.com",
+    "copyright": "© 2026 Northern Analytics Consulting Services. All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms of Use",
+    "accessibility": "Accessibility",
     "services": "Services & Products",
     "industries": "Industries",
     "contact": "Contact",
-    "experts": "Contact our experts",
+    "experts": "Contact Our Experts",
     "rights": "All rights reserved.",
     "address": [
       "Jeddah, Kingdom of Saudi Arabia",
@@ -279,10 +294,68 @@
     "intro": "Short articles and perspectives from Northern Analytics on data, AI, and location intelligence.",
     "readMore": "Read article",
     "back": "Back to blogs",
-    "notFound": "Article not found."
+    "notFound": "Article not found.",
+    "searchPlaceholder": "Find a blog post",
+    "searchLabel": "Find a blog post",
+    "clearSearch": "Clear search",
+    "categoriesTab": "Categories",
+    "popularTagTab": "Popular Tag",
+    "filtersLabel": "Filter articles",
+    "noResults": "No articles match this filter.",
+    "pagination": {
+      "label": "Blog pagination",
+      "previous": "Previous page",
+      "next": "Next page",
+      "page": "Page"
+    },
+    "categories": [
+      { "id": "retail-trends", "label": "Retail Trends" },
+      { "id": "healthcare-intelligence", "label": "Healthcare Intelligence" },
+      { "id": "data-science", "label": "Data Science" },
+      { "id": "market-analysis", "label": "Market Analysis" },
+      { "id": "feasibility-studies", "label": "Feasibility Studies" }
+    ],
+    "tags": [
+      { "id": "s-loc", "label": "#S-LOC" },
+      { "id": "riyadh", "label": "#Riyadh" },
+      { "id": "jeddah", "label": "#Jeddah" },
+      { "id": "pharmacies", "label": "#Pharmacies" },
+      { "id": "demographics", "label": "#Demographics" },
+      { "id": "expansion", "label": "#Expansion" },
+      { "id": "saas", "label": "#SaaS" },
+      { "id": "roi", "label": "#ROI" }
+    ]
   },
   "aboutPage": {
-    "pageEyebrow": "ABOUT",
+    "pageEyebrow": "About Us",
+    "overviewTitle": "Overview",
+    "clientsTitle": "Partners & Sectors",
+    "clientsDescription": "We partner with leading technology platforms and serve organizations across key sectors to deliver measurable transformation and lasting impact.",
+    "clientsButton": "Contact Us",
+    "storiesPartnerTitle": "Official Partner",
+    "storiesPartnerText": "Databricks and Data & AI consulting partner.",
+    "storiesProductTitle": "Flagship Product",
+    "storiesProductText": "Location intelligence for market and site planning.",
+    "leadershipTitle": "Our Leadership",
+    "leadershipPrev": "Previous leader",
+    "leadershipNext": "Next leader",
+    "overviewParagraphs": [
+      "Northern Analytics is a specialized consultancy and advisory firm headquartered in Jeddah, translating top-tier North American expertise into the heart of the Kingdom's digital transformation. We integrate {data & AI solutions} and {advisory services}, helping organizations turn complex data into clear decisions, from strategy to implementation.",
+      "Through Databricks consulting and our S-Locator and S-route platforms, we deliver data and AI architecture, location intelligence, and practical execution that supports initiatives operating under the Saudi Vision 2030 umbrella."
+    ],
+    "numbersTitle": "Impact in Numbers",
+    "numbersPrev": "Previous",
+    "numbersNext": "Next",
+    "numbers": [
+      { "value": "4", "label": "Industry Sectors" },
+      { "value": "3", "label": "Solutions" },
+      { "value": "3", "label": "Core Services" },
+      { "value": "2", "label": "Digital Platforms" },
+      { "value": "60%", "label": "ROI Boost" },
+      { "value": "50%", "label": "Cost Saving Potential" },
+      { "value": "2", "label": "Maturity Tiers Gained" },
+      { "value": "4", "label": "Engagement Phases" }
+    ],
     "welcomeKicker": "Welcome to Northern Analytics",
     "welcomeHeading": "Modern Infrastructure Solutions",
     "welcomeBody": "Building stronger communities begins with a foundation of robust data, analytics, and AI. At Northern Analytics, we are at the forefront of resilient and sustainable planning, designing, and implementing cutting-edge data-driven and AI-powered technologies to address the challenges posed by a rapidly evolving world. Our innovative solutions in Data Science, Artificial Intelligence, and BI are reshaping the future of IT business model architecture, engineering, and intelligent decision-making.",
@@ -312,7 +385,7 @@
         "text": "We empower leadership to cut through market noise and identify the vendors that best serve their long-term vision. Our unbiased advisory ensures your architectural foundations are scalable, secure, and performant, maximizing the ROI of your data and AI investments."
       }
     ],
-    "storiesTitle": "Proven Success Stories",
+    "storiesTitle": "Recognition and awards",
     "storiesIntro": "Real results from our global engagements.",
     "stories": [
       {
@@ -348,7 +421,7 @@
         "cta": "Explore Case"
       }
     ],
-    "engagementTitle": "Our Engagement Model",
+    "engagementTitle": "Our History",
     "engagementIntro": "Journey to High Maturity",
     "steps": [
       {
@@ -410,5 +483,626 @@
         "href": "https://northernacs.com/project2/"
       }
     ]
+  },
+  "solutionsHero": {
+    "brand": "Consulting Databricks / Data & AI",
+    "subtitle": "The efficient software for your field sales team",
+    "description": "Discover the future of automatic {route} and dynamic {territory} with {brand}. AI-powered optimization ensures more customer visits, less driving and significant time savings. Get started now and put your field sales team on the road to success.",
+    "route": "route planning",
+    "territory": "territory planning",
+    "routePlanner": "Route Planner",
+    "territoryOptimization": "Territory Optimization",
+    "getStarted": "Get started now",
+    "imageAlt": "Field sales representatives planning routes and customer visits",
+    "manAlt": "Field sales representative reviewing a route on his phone",
+    "womanAlt": "Field sales representative planning visits on a tablet"
+  },
+  "productChooser": {
+    "routePlanner": {
+      "title": "Route Planner",
+      "description": "Discover the future of field sales route planning with the AI-supported portatour® Route Planner. More customer visits thanks to optimized routes and time savings thanks to an efficient schedule.",
+      "cta": "Free trial",
+      "more": "More details about the sales route planner",
+      "imageAlt": "Route planner on a phone and a tablet"
+    },
+    "territory": {
+      "title": "Territory Optimization",
+      "description": "Optimize your sales territory based on AI and distribute your customers efficiently to your field reps. With portatour® you get up to 7 possible scenarios at the touch of a button.",
+      "cta": "Arrange demo",
+      "more": "More details on territory optimization",
+      "imageAlt": "Territory optimization on a laptop"
+    }
+  },
+  "customers": {
+    "title": "Our Customers",
+    "logos": [
+      { "alt": "City Baby" },
+      { "alt": "Touch's" },
+      { "alt": "IFFCO" },
+      { "alt": "Krooky" },
+      { "alt": "Maqyas" }
+    ],
+    "categories": [
+      { "name": "Automotive Industry" },
+      { "name": "Building Materials" },
+      { "name": "Consumer Goods" },
+      { "name": "Cosmetics" },
+      { "name": "Electronic Products" },
+      { "name": "Industrial Goods" },
+      { "name": "Medical Devices" }
+    ]
+  },
+  "advantages": {
+    "titleLead": "Your advantages with",
+    "brand": "Consulting",
+    "subtitle": "Field sales software for automatic route planning and dynamic territory optimization",
+    "heading": "Savings meet efficiency",
+    "readMore": "read more…",
+    "tabsLabel": "Advantages",
+    "items": [
+      {
+        "stat": "18% fewer kilometers",
+        "logoAlt": "MIWA",
+        "avatarAlt": "Pieter Niemand",
+        "quote": "We save between 15 and 18% on mileage per year and a lot of time.",
+        "name": "Pieter Niemand",
+        "role": "MIWA National Director"
+      },
+      {
+        "stat": "20% more customer calls",
+        "logoAlt": "Company logo",
+        "avatarAlt": "Customer portrait",
+        "quote": "Optimized routes let our reps fit in about 20% more customer calls every week.",
+        "name": "Customer name",
+        "role": "Position, Company"
+      },
+      {
+        "stat": "50% time saved",
+        "logoAlt": "Company logo",
+        "avatarAlt": "Customer portrait",
+        "quote": "Planning our weekly schedule now takes half of the time it used to.",
+        "name": "Customer name",
+        "role": "Position, Company"
+      }
+    ]
+  },
+  "featuresList": {
+    "items": [
+      {
+        "title": "The Right Customer at the Right Time",
+        "description": "S-Route ensures your field teams focus on the customers that matter most, maximizing coverage, improving visit quality, and increasing sales opportunities.",
+        "bullets": [
+          "AI-powered customer prioritization",
+          "Balanced territory coverage",
+          "Automated visit scheduling",
+          "Smarter account management",
+          "Improved customer engagement"
+        ],
+        "imageAlt": "Map and routing view",
+        "avatarAlt": "Hashem Abbas",
+        "quote": "More Customer Visits. More Time Selling. Better Territory Coverage.",
+        "author": "Hashem Abbas",
+        "role": "Head Of Trade Marketing (KSA/Gulf/Jordan)"
+      },
+      {
+        "title": "Get Started in Minutes",
+        "description": "S-Route is designed for busy field sales teams. No complex setup, no lengthy implementation, and no technical expertise required. Start optimizing territories and customer visits from day one.",
+        "bullets": [
+          "Access S-Route from any smartphone, tablet, or computer",
+          "Generate optimized sales routes in minutes",
+          "Quickly onboard field teams with minimal training",
+          "Start improving territory coverage immediately"
+        ],
+        "imageAlt": "S-Route on a phone",
+        "avatarAlt": "Al-hussain Abbas",
+        "quote": "S-Route was incredibly easy to implement, and our sales team started seeing value almost immediately.",
+        "author": "Al-hussain Abbas",
+        "role": "Owner of an FMCG company"
+      },
+      {
+        "title": "Seamless CRM & ERP Integration",
+        "description": "S-Route integrates effortlessly with your existing CRM and ERP systems, ensuring your sales teams always work with accurate, up-to-date customer and territory data.",
+        "bullets": [
+          "Import customers, appointments, and sales data in seconds",
+          "Connect with Salesforce, Microsoft Dynamics, and other CRM platforms",
+          "Synchronize customer records automatically across systems",
+          "Eliminate manual data entry and reduce administrative work",
+          "Keep field teams focused on selling, not updating spreadsheets"
+        ],
+        "imageAlt": "CRM and ERP integrations",
+        "avatarAlt": "Mohammed Alhadi",
+        "quote": "S-Route transformed how our field teams operate. Route planning that used to take hours is now completed in minutes, allowing our representatives to focus on customers instead of logistics.",
+        "author": "Mohammed Alhadi",
+        "role": "Innovation | SME consultant | Business development"
+      }
+    ]
+  },
+  "aboutSolution": {
+    "titleLead": "About",
+    "brand": "Consulting",
+    "subtitle": "Revolutionary sales route planning and territory optimization for your field sales team - based on years of experience",
+    "pinLabel": "Location",
+    "stats": [
+      { "value": "2007", "label": "founded" },
+      { "value": "1500+", "label": "Customers" },
+      { "value": "20+", "label": "Countries" }
+    ]
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "sRoute": [
+      {
+        "question": "How much time can a field team save with S-Route?",
+        "answer": "Teams that used to build routes by hand usually get that planning time back. Weekly schedules that took hours can be ready in minutes, so representatives spend the day with customers."
+      },
+      {
+        "question": "Does S-Route record the routes representatives drive?",
+        "answer": "S-Route plans the day. It does not need to track every kilometer a representative drives. The plan shows the visit order, the timing, and the customers that matter."
+      },
+      {
+        "question": "Can S-Route connect to Salesforce, Dynamics, or another CRM?",
+        "answer": "Yes. Customer, appointment, and sales data can come from Salesforce, Microsoft Dynamics, and other CRM or ERP systems, so the field team works from the same records as the office."
+      },
+      {
+        "question": "Can we use the routing logic inside our own field app?",
+        "answer": "The planning can sit behind the tools your team already opens. We shape the integration so representatives keep their workflow and still receive an optimized day."
+      },
+      {
+        "question": "A customer asks for a visit today. How does S-Route respond?",
+        "answer": "The new appointment can be dropped into the day and the remaining visits reordered. The representative sees a practical plan instead of rebuilding the route from scratch."
+      },
+      {
+        "question": "Can S-Route help representatives avoid traffic?",
+        "answer": "Visit order takes travel time into account, so the day is sequenced to spend less time on the road and more time in meetings."
+      },
+      {
+        "question": "Does better routing help teams win more customer visits?",
+        "answer": "A tighter day usually fits in more of the right visits. Coverage improves because the plan favors the accounts that matter, not only the ones that are closest."
+      },
+      {
+        "question": "Which teams is S-Route built for?",
+        "answer": "Field sales, merchandising, and service teams that visit many customers across a territory. It is used for daily routes and for keeping coverage balanced over the week."
+      },
+      {
+        "question": "Can we try S-Route before rolling it out?",
+        "answer": "Yes. A pilot with one team is enough to see the plan, the time saved, and how the visits fit the territory before a wider rollout."
+      },
+      {
+        "question": "Is planning done centrally, or can each representative plan their day?",
+        "answer": "Both. A manager can set priorities for the territory, and a representative can shape the day from the phone when a customer calls."
+      },
+      {
+        "question": "Can S-Route balance territories, not only daily routes?",
+        "answer": "Yes. The same planning view shows whether accounts and workload are spread fairly, so one representative is not overloaded while another is underused."
+      },
+      {
+        "question": "How is customer data protected?",
+        "answer": "Customer records stay in the systems you already govern. Access follows your roles, and the integration exchanges only the fields the route needs."
+      },
+      {
+        "question": "Does S-Route work on a phone?",
+        "answer": "Yes. Representatives open the plan on a phone, tablet, or computer, and they can start from the first visit without a separate setup step."
+      },
+      {
+        "question": "How soon can a team start?",
+        "answer": "Most teams are planning real visits within days. Customer data is imported, the territory is checked, and the first routes are ready without a long implementation."
+      }
+    ],
+    "sLocator": [
+      {
+        "question": "What is S-Locator used for?",
+        "answer": "S-Locator turns location, customer, and competitor signals into a site decision. Teams use it to choose where to open, where to expand, and which locations to avoid."
+      },
+      {
+        "question": "Which location decisions can it support?",
+        "answer": "New sites, relocations, catchment comparisons, and territory plans. The same evidence supports a single store decision or a network of locations."
+      },
+      {
+        "question": "Can we compare markets such as Riyadh and Jeddah?",
+        "answer": "Yes. Cities can be read side by side, including demographics, demand, and how competitors are already placed, so the format fits each market."
+      },
+      {
+        "question": "Does it include demographics and competitors?",
+        "answer": "Both sit in the same view. Household profile, population, and nearby competitors are scored together instead of in separate spreadsheets."
+      },
+      {
+        "question": "How does it help retail or pharmacy networks?",
+        "answer": "A network plan shows where coverage is thin and where a new branch would overlap an existing one. Retail and pharmacy teams use that to place the next site where demand is real."
+      },
+      {
+        "question": "Can several candidate sites be scored with one model?",
+        "answer": "Yes. Shortlisted sites share one scoring model, so leadership compares them on the same evidence rather than on separate opinions."
+      },
+      {
+        "question": "How are the results presented to leadership?",
+        "answer": "As a clear comparison: the sites, the evidence behind each score, and the risk of choosing one over another. The decision can be explained without a technical walkthrough."
+      },
+      {
+        "question": "Is the analysis built for the Saudi market?",
+        "answer": "Yes. The work is grounded in Saudi cities, districts, and the way customers actually move, not in a generic global template."
+      },
+      {
+        "question": "How long does a location study take?",
+        "answer": "A focused comparison of shortlisted sites is usually ready in days. A wider network or city study takes longer because more catchments are in scope."
+      },
+      {
+        "question": "Can S-Locator support an expansion plan, not a single site?",
+        "answer": "Yes. Expansion teams use it to sequence markets and sites, so capital goes to the locations with the stronger case first."
+      },
+      {
+        "question": "Who prepares the study?",
+        "answer": "Northern Analytics prepares the analysis with your commercial team. You keep the questions and the decision. We bring the spatial evidence and the model."
+      },
+      {
+        "question": "How do we start?",
+        "answer": "Share the markets or sites you are considering. We confirm the questions the study must answer, then return a scored comparison your team can act on."
+      }
+    ],
+    "databricks": [
+      {
+        "question": "What does a Databricks engagement include?",
+        "answer": "Architecture, migration, and the patterns your team will run day to day. The aim is one governed platform for data engineering, analytics, and AI."
+      },
+      {
+        "question": "Why use a lakehouse for a Saudi transformation program?",
+        "answer": "It replaces a stack of disconnected tools with one foundation. Teams spend less time moving data between platforms and more time delivering analysis and AI."
+      },
+      {
+        "question": "Can you migrate workloads from our current platform?",
+        "answer": "Yes. We map what should move, in what order, and how reports and pipelines keep running while the migration is underway."
+      },
+      {
+        "question": "Do you enable our team, or only deliver a build?",
+        "answer": "Both, with the emphasis on your team. Delivery includes the architecture and the working patterns so internal teams can extend the platform after we step back."
+      },
+      {
+        "question": "How are security and governance handled?",
+        "answer": "Access, lineage, and data quality are part of the design, not a later cleanup. The platform is shaped around the controls your organization already requires."
+      },
+      {
+        "question": "Can the same platform support AI, not only reporting?",
+        "answer": "Yes. Analytics and AI share the same governed data, so a model is trained on data the business already trusts."
+      },
+      {
+        "question": "How long does a typical engagement last?",
+        "answer": "A first use case can land in weeks. A broader platform, with migration and team enablement, is planned in stages so value shows up before the full program ends."
+      },
+      {
+        "question": "Which organizations do you work with?",
+        "answer": "Saudi organizations modernizing data and AI, across sectors that need reliable reporting and a path to production AI."
+      },
+      {
+        "question": "Can the platform be designed so data stays governed in the Kingdom?",
+        "answer": "Yes. Residency, access, and network boundaries are decided at the start and built into the architecture."
+      },
+      {
+        "question": "What happens after go-live?",
+        "answer": "Your team runs the platform with the patterns we leave behind. We stay available for the next use case when you want to extend it."
+      },
+      {
+        "question": "Do we need a Databricks platform already?",
+        "answer": "No. Engagements start from a current warehouse, a set of pipelines, or a decision to adopt Databricks. We meet the platform where it is."
+      },
+      {
+        "question": "How do we begin?",
+        "answer": "Tell us the decision the platform must support. We propose the first architecture slice, the team involved, and what “done” looks like for that slice."
+      }
+    ]
+  },
+  "specialtyCoffeeJeddah": {
+    "back": "Back to Blog",
+    "by": "By",
+    "fallbackCategory": "Market Analysis",
+    "fallbackAuthor": "Research Team",
+    "lead": "Discover the best areas to open a specialty coffee shop in Jeddah. Explore data-driven insights on Al Rawdah, Al Shati, Al Zahra, and Obhur for F&B success.",
+    "quickTitle": "Quick Answer",
+    "before": "Based on the available evidence, ",
+    "strong": "Al Rawdah, Al Shati, Al Zahra, and Obhur",
+    "after": " are among the strongest neighborhoods to investigate for a specialty coffee shop in Jeddah. Al Rawdah stands out for its established specialty coffee culture and high purchasing power, particularly along commercial corridors like Abdul Maqsoud Khoja Street. Al Shati offers premium destination-driven footfall near the Corniche and luxury lifestyle centers. Al Zahra provides a balanced mix of commercial daytime traffic and residential density, while Obhur represents the best long-term growth opportunity due to Jeddah's rapid northward expansion and tourism developments.",
+    "closing": "The optimal choice depends entirely on whether your business model requires high-volume neighborhood convenience, a premium lifestyle destination, or an emerging growth market.",
+    "areasSection": {
+      "title": "Top Areas for Specialty Coffee in Jeddah",
+      "intro": "Several neighborhoods emerge as strong candidates, but publicly available district-level data is insufficient to establish a definitive, numbered ranking. However, based on location-intelligence indicators—such as purchasing power, commercial clustering, and existing specialty F&B activity—these four districts consistently present the strongest fundamentals.",
+      "standout": "Why it stands out:",
+      "customer": "Customer profile:",
+      "specialty": "Specialty coffee environment:",
+      "commercial": "Commercial environment:",
+      "access": "Accessibility:",
+      "growth": "Growth:",
+      "suited": "Best suited for:"
+    },
+    "areas": [
+      {
+        "name": "Al Rawdah",
+        "standout": "Al Rawdah is historically the epicenter of Jeddah's modern specialty coffee movement. The district is characterized by strong purchasing power, mature commercial corridors, and a densely populated, affluent residential base.",
+        "points": {
+          "customer": "Affluent locals, business professionals, and specialty coffee enthusiasts who prioritize cup quality and brand prestige.",
+          "specialty": "Highly competitive but highly validated. Corridors like Abdul Maqsoud Khoja Street feature dense clusters of independent roasters and premium cafés, proving the area's high demand for third-wave coffee.",
+          "commercial": "A strong mix of high-end retail, corporate offices, and premium dining, ensuring both morning commuter traffic and evening lifestyle visits.",
+          "access": "Centrally located with excellent connectivity to major arteries like Madinah Road and Prince Saud Al Faisal Street.",
+          "growth": "While mature, the district continually refreshes its retail stock, maintaining its status as a top-tier neighborhood.",
+          "suited": "Premium neighborhood specialty cafés and flagship roastery concepts targeting established coffee connoisseurs."
+        }
+      },
+      {
+        "name": "Al Shati",
+        "standout": "Bordering the Red Sea, Al Shati is Jeddah's premier lifestyle and tourism district. Real estate reports frequently highlight coastal and entertainment-focused districts as commanding premium retail performance, attracting significant leisure footfall.",
+        "points": {
+          "customer": "High-net-worth individuals, tourists, weekend visitors, and younger demographics seeking aesthetic, experiential venues.",
+          "specialty": "Dominated by high-end, destination-style cafés where the architectural design and sea views are as important as the coffee profile.",
+          "commercial": "Proximity to the Jeddah Corniche, luxury hotels, and premium open-air lifestyle centers creates massive evening and weekend demand.",
+          "access": "Primarily accessed via King Abdulaziz Road and the Corniche Road; highly visible but can face peak-hour leisure traffic.",
+          "growth": "Driven by ongoing coastal and tourism developments aligned with Vision 2030 initiatives.",
+          "suited": "Premium destination cafés, experiential lifestyle concepts, and high-margin specialty brands."
+        }
+      },
+      {
+        "name": "Al Zahra",
+        "standout": "Al Zahra strikes a highly profitable balance between residential density and heavy commercial activity, making it one of the most operationally consistent neighborhoods in the city.",
+        "points": {
+          "customer": "Mid-to-high-income residents, healthcare professionals, and office workers seeking daily convenience and quality.",
+          "specialty": "Strong presence of both drive-thru concepts and sit-down neighborhood cafés. Batterjee Street acts as a major F&B artery.",
+          "commercial": "Anchored by major hospitals, prominent office buildings, and significant retail centers, generating strong daytime demand often lacking in purely residential areas.",
+          "access": "Bounded by King Abdulaziz Road and Prince Sultan Road, offering excellent vehicular access and visibility.",
+          "growth": "Steady, with continued infill development of community commercial plazas.",
+          "suited": "High-volume concepts, drive-thru specialty coffee, and mixed residential/commercial cafés capturing morning and afternoon trade."
+        }
+      },
+      {
+        "name": "Obhur (North and South)",
+        "standout": "As Jeddah expands physically and economically northward, Obhur has transformed from a weekend retreat into a permanent, high-growth residential and tourism hub.",
+        "points": {
+          "customer": "New homeowners, young families, and domestic tourists drawn to waterfront developments.",
+          "specialty": "Less saturated than central Jeddah, offering significant early-mover advantages for quality-driven brands.",
+          "commercial": "Evolving rapidly with new community retail centers, beach clubs, and waterfront promenades.",
+          "access": "Benefiting from major infrastructure upgrades, though sprawling layouts require a reliance on vehicular traffic.",
+          "growth": "Exceptional. It is the primary corridor for Jeddah's future expansion and mega-projects.",
+          "suited": "Long-term growth concepts, large-format roasteries, and destination community cafés."
+        }
+      }
+    ],
+    "comparison": {
+      "title": "Comparing the Top Neighborhoods",
+      "columns": [
+        "Area",
+        "Demand",
+        "Competition",
+        "Purchasing Power",
+        "Accessibility",
+        "Commercial Activity",
+        "Best Fit"
+      ],
+      "rows": [
+        {
+          "area": "Al Rawdah",
+          "demand": "Very High",
+          "competition": "Very High",
+          "purchasing": "High",
+          "accessibility": "Central / Convenient",
+          "commercial": "Premium Retail & Office",
+          "fit": "Flagship / Purist Café"
+        },
+        {
+          "area": "Al Shati",
+          "demand": "High (Leisure)",
+          "competition": "High",
+          "purchasing": "Very High",
+          "accessibility": "Destination / Leisure Traffic",
+          "commercial": "Tourism & Luxury Lifestyle",
+          "fit": "Premium Destination"
+        },
+        {
+          "area": "Al Zahra",
+          "demand": "High (Daily)",
+          "competition": "Moderate to High",
+          "purchasing": "Mid-to-High",
+          "accessibility": "High Traffic / High Visibility",
+          "commercial": "Healthcare, Offices, Retail",
+          "fit": "High-Volume / Daily Café"
+        },
+        {
+          "area": "Obhur",
+          "demand": "Growing",
+          "competition": "Low to Moderate",
+          "purchasing": "Mid-to-High",
+          "accessibility": "Expanding Infrastructure",
+          "commercial": "Emerging Retail & Tourism",
+          "fit": "Long-Term / Community Café"
+        }
+      ]
+    },
+    "closingSections": [
+      {
+        "title": "Why One Jeddah Neighborhood Can Be Better Than Another",
+        "blocks": [
+          {
+            "type": "p",
+            "parts": [
+              {
+                "text": "When searching for the best area to open a specialty coffee shop in Jeddah, "
+              },
+              {
+                "text": "\"best\"",
+                "bold": true
+              },
+              {
+                "text": " is entirely relative to your specific business model. Different specialty coffee concepts require vastly different environments to succeed."
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "label": "Premium Destination Concepts:",
+                "text": "If your brand relies on high aesthetics, signature drinks, and evening socializing, you require an environment with affluent customer profiles, high lifestyle activity, and premium F&B clustering. Areas like Al Shati thrive on this tourism and leisure-driven activity."
+              },
+              {
+                "label": "Neighborhood & Purist Concepts:",
+                "text": "If your focus is on single-origin pour-overs, freshly roasted beans, and morning routines, you need recurring residential demand and strong daytime commercial activity. A neighborhood like Al Rawdah or Al Zahra offers the nearby households and convenient accessibility needed to build daily loyalty, despite higher competitive pressure."
+              },
+              {
+                "label": "Growth-Oriented Concepts:",
+                "text": "If you are building a large-scale roastery or looking to capture a market before rents peak, you should value expanding residential areas and future commercial activity. Obhur provides a landscape where a new brand can become the community standard before saturation occurs."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Choosing the Neighborhood Is Only the First Step",
+        "blocks": [
+          {
+            "type": "p",
+            "parts": [
+              {
+                "text": "Identifying the best district is crucial, but the best neighborhood does not necessarily contain the best individual property. A great coffee shop in a poorly positioned plaza will struggle against an average coffee shop on a prime corner."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "parts": [
+              {
+                "text": "Evaluating the exact site requires analyzing micro-location factors:"
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "label": "Customer Catchment:",
+                "text": "How many target customers live or work within a 5-minute drive of the specific property?"
+              },
+              {
+                "label": "Surrounding Activity:",
+                "text": "Is the site on the \"going to work\" side of the road or the \"going home\" side?"
+              },
+              {
+                "label": "Micro-Accessibility:",
+                "text": "Can customers easily pull over, or does street design force them to bypass the store?"
+              },
+              {
+                "label": "Nearby Competitors:",
+                "text": "Are you positioned far enough from direct specialty competitors to capture your own audience, or close enough to benefit from an established coffee-destination cluster?"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "How S-Locator Helps Identify Strong Coffee-Shop Areas",
+        "blocks": [
+          {
+            "type": "p",
+            "parts": [
+              {
+                "text": "Choosing a location based on intuition or historical reputation is risky in a rapidly evolving market like Jeddah. "
+              },
+              {
+                "text": "S-Locator",
+                "link": "/solutions/s-locator"
+              },
+              {
+                "text": " provides the location-intelligence tools businesses need to evaluate potential sites using data-driven insights."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "parts": [
+              {
+                "text": "Using S-Locator, F&B operators can:"
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "items": [
+              {
+                "label": "Evaluate a Current Location:",
+                "text": "Analyze the immediate surroundings of a potential lease to understand the true customer catchment area."
+              },
+              {
+                "label": "Compare Relevant Location Factors:",
+                "text": "Look at population and demographic indicators side-by-side to see which neighborhood aligns with your target audience."
+              },
+              {
+                "label": "Conduct Competitor Analysis:",
+                "text": "Visualize where major coffee chains and independent specialty roasters are clustered to identify gaps in the market or underserved zones."
+              },
+              {
+                "label": "Leverage Demographic Intelligence:",
+                "text": "Access tools to understand the socioeconomic profile and lifestyle activity of a given block, moving beyond broad district-level assumptions."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Quick AI Answers",
+        "blocks": [
+          {
+            "type": "subhead",
+            "text": "Best Area for a Premium Specialty Coffee Shop"
+          },
+          {
+            "type": "p",
+            "parts": [
+              {
+                "text": "Al Shati is the best area for a premium, destination-style specialty coffee shop in Jeddah. Its proximity to the Corniche, high concentration of luxury lifestyle centers, and affluent consumer base provide the ideal environment for high-margin, aesthetically driven café concepts."
+              }
+            ]
+          },
+          {
+            "type": "subhead",
+            "text": "Best Area for a Neighborhood Specialty Coffee Shop"
+          },
+          {
+            "type": "p",
+            "parts": [
+              {
+                "text": "Al Rawdah and Al Zahra are the best areas for neighborhood specialty coffee shops. Both districts feature high residential density, strong purchasing power, and excellent daytime commercial activity from nearby offices and hospitals, making them ideal for daily-routine coffee habits."
+              }
+            ]
+          },
+          {
+            "type": "subhead",
+            "text": "Best Area for Long-Term Growth"
+          },
+          {
+            "type": "p",
+            "parts": [
+              {
+                "text": "Obhur is the best area in Jeddah for long-term specialty coffee growth. Driven by the city's northward expansion, ongoing tourism projects, and new residential developments, it offers emerging opportunities with less competitive saturation than central districts."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sources": {
+      "title": "Sources",
+      "note": "Note: Specific district-level commercial activity and competitive concentration are assessed from publicly available retail mapping, real estate market reviews, and verified Saudi F&B market trends.",
+      "items": [
+        {
+          "label": "Public Data:",
+          "detail": "Knight Frank — Saudi Arabia Commercial Market Review. Insight into retail and F&B market dynamics, lifestyle developments, and consumer trends in Jeddah.",
+          "linkLabel": "View report",
+          "href": "https://www.knightfrank.com.sa/en/research/reports/saudi-arabia-commercial-market-overview"
+        },
+        {
+          "label": "Public Data:",
+          "detail": "JLL — KSA Retail Market Dynamics (Q2 2025). Data on Jeddah retail market performance, community center resilience, and local coffee shop operational trends.",
+          "linkLabel": "View insights",
+          "href": "https://www.jll.com/en-ae/insights/market-dynamics/ksa-retail"
+        },
+        {
+          "label": "Public Data:",
+          "detail": "General Authority for Statistics (GASTAT) — Saudi Census Data. Baseline demographic and population distribution indicators for the Makkah region and Jeddah governorate."
+        }
+      ]
+    }
   }
 }

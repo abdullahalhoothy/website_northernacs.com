@@ -19,6 +19,7 @@ function App() {
         <Route path="contact" element={<ContactPage />} />
         <Route path="blogs" element={<BlogsPage />} />
         <Route path="blogs/:slug" element={<BlogDetailPage />} />
+        <Route path="en/blogs/:slug" element={<BlogDetailPage />} />
         <Route path="solutions/consulting-databricks" element={<DatabricksConsultingPage />} />
         <Route path="solutions/s-route" element={<SRoutePage />} />
         <Route path="solutions/s-locator" element={<SLocatorPage />} />
