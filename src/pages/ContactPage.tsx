@@ -32,7 +32,6 @@ const PHONE_LABEL = '+966 55 818 8632';
 const EMAIL = 'contact@northernacs.com';
 const SOCIAL = {
   linkedin: 'https://www.linkedin.com/company/northern-analytic',
-  twitter: 'https://x.com',
   whatsapp: 'https://wa.me/966558188632',
 };
 const emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -209,6 +208,7 @@ const ContactPage = () => {
                       </label>
                       <Field
                         name="firstName"
+                        id="firstName"
                         placeholder={t.firstName}
                         value={values.firstName}
                         onChange={onChange('firstName')}
@@ -222,6 +222,7 @@ const ContactPage = () => {
                       </label>
                       <Field
                         name="lastName"
+                        id="lastName"
                         placeholder={t.lastName}
                         value={values.lastName}
                         onChange={onChange('lastName')}
@@ -237,6 +238,7 @@ const ContactPage = () => {
                       </label>
                       <Field
                         name="email"
+                        id="email"
                         type="email"
                         placeholder={t.email}
                         value={values.email}
@@ -251,6 +253,7 @@ const ContactPage = () => {
                       </label>
                       <Field
                         name="phone"
+                        id="phone"
                         type="tel"
                         placeholder={t.phone}
                         value={values.phone}
@@ -267,6 +270,7 @@ const ContactPage = () => {
                       </label>
                       <Field
                         name="location"
+                        id="location"
                         placeholder={t.location}
                         value={values.location}
                         onChange={onChange('location')}
@@ -280,6 +284,7 @@ const ContactPage = () => {
                       </label>
                       <Field
                         name="company"
+                        id="company"
                         placeholder={t.company}
                         value={values.company}
                         onChange={onChange('company')}
@@ -293,6 +298,7 @@ const ContactPage = () => {
                     </label>
                     <textarea
                       name="comments"
+                      id="comments"
                       rows={5}
                       placeholder={t.comments}
                       value={values.comments}
@@ -332,6 +338,7 @@ const Field = ({
   className,
 }: {
   name: string;
+  id: string;
   type?: string;
   placeholder: string;
   value: string;
