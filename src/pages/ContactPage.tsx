@@ -106,7 +106,7 @@ const ContactPage = () => {
             {t.eyebrow}
           </span>
 
-          <h1 className="mt-4 text-3xl font-medium text-[#08563D] leading-tight text-nacs-forest md:text-4xl">
+          <h1 className="mt-4 text-3xl font-medium text-[#08563D] leading-tightس md:text-4xl">
             {titleLead ? `${titleLead} ` : null}
             <span className="text-[#7E5CAC]">{titleAccent}</span>
           </h1>

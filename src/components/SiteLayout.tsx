@@ -292,7 +292,7 @@ const SiteLayout = () => {
                   loading="lazy"
                 />
               </Link>
-              <p className="max-w-sm text-sm leading-relaxed font-medium text-slate-500 dark:text-slate-400">
+              <p className="max-w-sm text-sm leading-relaxed font-medium text-slate-500 dark:text-white">
                 {t.footer.tagline}
               </p>
               <div className="flex items-center gap-3 pt-2">
@@ -301,7 +301,7 @@ const SiteLayout = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={t.footer.linkedinAria}
-                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-600 shadow-sm transition-colors hover:border-[#08563D] hover:bg-[#08563D] hover:text-white dark:border-slate-800 dark:bg-darkBg dark:text-slate-300 dark:hover:border-emerald-600 dark:hover:bg-emerald-600"
+                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-600 dark:text-white shadow-sm transition-colors hover:border-[#08563D] hover:bg-[#08563D] hover:text-white dark:border-slate-800 dark:bg-darkBg  dark:hover:border-[#0F732E]/80 dark:hover:bg-[#0F732E]"
                 >
                   <FaLinkedinIn size={14} />
                 </a>
@@ -310,14 +310,14 @@ const SiteLayout = () => {
 
             {/* Col 2: Solutions */}
             <div>
-              <h4 className="mb-4 text-sm font-bold  tracking-wider text-slate-900 dark:text-slate-200">
+              <h4 className="mb-4 text-sm font-bold  tracking-wider text-slate-900 dark:text-white">
                 {t.nav.solution}
               </h4>
               <ul className="space-y-2.5 text-sm">
                 <li>
                   <Link
                     to="/solutions/consulting-databricks"
-                    className="transition-colors  hover:underline font-medium hover:text-[#0F732E] dark:hover:text-[#0F732E]"
+                    className="transition-colors hover:underline dark:text-white font-medium hover:text-[#0F732E] dark:hover:text-[#0F732E]"
                   >
                     {t.footer.databricks}
                   </Link>
@@ -325,7 +325,7 @@ const SiteLayout = () => {
                 <li>
                   <Link
                     to="/solutions/s-route"
-                    className="transition-colors  hover:underline font-medium hover:text-[#0F732E] dark:hover:text-[#0F732E]"
+                    className="transition-colors  hover:underline dark:text-white font-medium hover:text-[#0F732E] dark:hover:text-[#0F732E]"
                   >
                     {t.footer.sRoute}
                   </Link>
@@ -333,7 +333,7 @@ const SiteLayout = () => {
                 <li>
                   <Link
                     to="/solutions/s-locator"
-                    className="transition-colors  hover:underline font-medium hover:text-[#0F732E] dark:hover:text-[#0F732E]"
+                    className="transition-colors  hover:underline dark:text-white font-medium hover:text-[#0F732E] dark:hover:text-[#0F732E]"
                   >
                     {t.footer.sLocator}
                   </Link>
@@ -343,7 +343,7 @@ const SiteLayout = () => {
                     href="https://www.s-locator.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="transition-colors  hover:underline font-medium hover:text-[#0F732E] dark:hover:text-[#0F732E]"
+                    className="transition-colors  hover:underline dark:text-white font-medium hover:text-[#0F732E] dark:hover:text-[#0F732E]"
                   >
                     {t.footer.livePlatform}
                   </a>
@@ -353,14 +353,14 @@ const SiteLayout = () => {
 
             {/* Col 3: Company */}
             <div>
-              <h4 className="mb-4 text-sm font-bold tracking-wider text-slate-900 dark:text-slate-200">
+              <h4 className="mb-4 text-sm font-bold tracking-wider text-slate-900 dark:text-white">
                 {t.footer.company}
               </h4>
               <ul className="space-y-2.5 text-sm">
                 <li>
                   <Link
                     to="/about"
-                    className="transition-colors  hover:underline  hover:text-[#0F732E] font-medium dark:hover:text-[#0F732E]"
+                    className="transition-colors hover:underline dark:text-white hover:text-[#0F732E] font-medium dark:hover:text-[#0F732E]"
                   >
                     {t.nav.about}
                   </Link>
@@ -368,7 +368,7 @@ const SiteLayout = () => {
                 <li>
                   <Link
                     to="/blogs"
-                    className="transition-colors hover:text-[#0F732E] hover:underline font-medium dark:hover:text-[#0F732E]"
+                    className="transition-colors hover:text-[#0F732E] dark:text-white hover:underline font-medium dark:hover:text-[#0F732E]"
                   >
                     {t.nav.blog}
                   </Link>
@@ -376,7 +376,7 @@ const SiteLayout = () => {
                 <li>
                   <Link
                     to="/contact"
-                    className="transition-colors hover:text-[#0F732E] hover:underline font-medium dark:hover:text-[#0F732E]"
+                    className="transition-colors hover:text-[#0F732E] dark:text-white hover:underline font-medium dark:hover:text-[#0F732E]"
                   >
                     {t.footer.experts}
                   </Link>
@@ -386,10 +386,10 @@ const SiteLayout = () => {
 
             {/* Col 4: Contact & Office */}
             <div>
-              <h4 className="mb-4 text-sm font-bold tracking-wider text-slate-900 dark:text-slate-200">
+              <h4 className="mb-4 text-sm font-bold tracking-wider text-slate-900 dark:text-white">
                 {t.footer.contact}
               </h4>
-              <ul className="space-y-2.5 text-xs text-slate-600 dark:text-slate-400">
+              <ul className="space-y-2.5 text-xs text-slate-600 dark:text-white">
                 <li className="flex items-start gap-2">
                   <FaLocationDot
                     size={16}
@@ -401,7 +401,7 @@ const SiteLayout = () => {
                   <FaEnvelope size={16} className="shrink-0 text-[#0F732E] dark:text-[#0F732E]" />
                   <a
                     href={`mailto:${t.footer.email}`}
-                    className="text-slate-700 font-medium text-sm transition-colors hover:text-[#0F732E] hover:underline dark:text-slate-400 dark:hover:text-emerald-400"
+                    className="text-slate-700 font-medium text-sm transition-colors hover:text-[#0F732E] hover:underline dark:text-white dark:hover:text-[#0F732E]"
                   >
                     {t.footer.email}
                   </a>
@@ -411,9 +411,9 @@ const SiteLayout = () => {
           </div>
 
           {/* Bottom Bar: Copyright & Legal */}
-          <div className="mt-10 flex flex-col font-medium items-center justify-between gap-4 border-t border-slate-200/80 pt-6 text-[11px] text-slate-500 sm:flex-row dark:border-[#484846] dark:text-slate-400">
+          <div className="mt-10 flex flex-col font-medium items-center justify-between gap-4 border-t border-slate-200/80 pt-6 text-[11px] text-slate-500 sm:flex-row dark:border-[#484846] dark:text-white">
             <p>{t.footer.copyright}</p>
-            <div className="flex flex-wrap gap-5 text-slate-500 dark:text-slate-500">
+            <div className="flex flex-wrap gap-5 text-slate-500 dark:text-white">
               <span className="cursor-default font-medium">{t.footer.privacy}</span>
               <span className="cursor-default font-medium">{t.footer.terms}</span>
               <span className="cursor-default font-medium">{t.footer.accessibility}</span>

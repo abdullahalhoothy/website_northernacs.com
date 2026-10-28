@@ -39,7 +39,7 @@ const SpecialtyCoffeeJeddahArticle = ({ post }: { post: ArticlePost }) => {
   const byLabel = article.by;
 
   return (
-    <article className="bg-[#fafbfc]">
+    <article className="bg-[#fafbfc] text-[#0f172a] dark:bg-darkBg dark:text-[#f2f2f0]">
       <header className="relative isolate flex h-[calc(100dvh-5rem)] items-center overflow-hidden bg-[#140c24]">
         <img
           src={post.image || HERO_IMAGE}
@@ -51,7 +51,7 @@ const SpecialtyCoffeeJeddahArticle = ({ post }: { post: ArticlePost }) => {
         <div className="relative z-10 mx-auto flex w-full max-w-[820px] flex-col items-start px-4 text-start sm:px-6">
           <Link
             to="/blogs"
-            className="inline-flex items-center gap-2 rounded-xl border border-[#0F732E] px-4 py-[7px] text-[14px] font-semibold leading-none text-[#0F732E] transition-colors hover:bg-[#3ad75a]/10"
+            className="inline-flex items-center gap-2 rounded-xl border border-[#8fd9b0] px-4 py-[7px] text-[14px] font-semibold leading-none text-[#8fd9b0] transition-colors hover:bg-[#3ad75a]/10"
           >
             <FiArrowLeft className="rtl:rotate-180" size={15} aria-hidden="true" />
             {backLabel}
@@ -85,43 +85,47 @@ const SpecialtyCoffeeJeddahArticle = ({ post }: { post: ArticlePost }) => {
       </header>
 
       <div className="mx-auto max-w-[820px] px-4 pb-16 pt-8 font-normal sm:px-6 sm:pt-10">
-        <p className="rounded-2xl border-s-[3px] border-[#0F732E] bg-[#ffffff] px-6 py-5 text-start text-[18px] italic leading-[1.7] text-[#55626e] sm:px-8 sm:py-6 sm:text-[19px]">
+        <p className="rounded-2xl border-s-[3px] border-[#0F732E] bg-[#ffffff] px-6 py-5 text-start text-[18px] italic leading-[1.7] text-[#55626e] dark:border-[#8fd9b0] dark:bg-[#3e3e3d] dark:text-[#c8c8c4] sm:px-8 sm:py-6 sm:text-[19px]">
           {text.lead}
         </p>
 
-        <h2 className="mt-12 text-start text-[28px] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#140820] sm:text-[32px]">
+        <h2 className="mt-12 text-start text-[28px] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#140820] dark:text-[#f2f2f0] sm:text-[32px]">
           {text.quickTitle}
         </h2>
-        <p className="mt-4 text-start text-[16px] leading-[1.8] text-[#5c6772] sm:text-[17px]">
+        <p className="mt-4 text-start text-[16px] leading-[1.8] text-[#5c6772] dark:text-[#c8c8c4] sm:text-[17px]">
           {text.before}
-          <strong className="font-bold text-[#2b1055]">{text.strong}</strong>
+          <strong className="font-bold text-[#2b1055] dark:text-[#e7d6fb]">{text.strong}</strong>
           {text.after}
         </p>
-        <p className="mt-8 text-start text-[16px] font-bold leading-[1.75] text-[#432c69] sm:text-[17px]">
+        <p className="mt-8 text-start text-[16px] font-bold leading-[1.75] text-[#432c69] dark:text-[#d7c4f0] sm:text-[17px]">
           {text.closing}
         </p>
 
         <section className="mt-14">
-          <h2 className="text-start text-[28px] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0F732E] sm:text-[32px]">
+          <h2 className="text-start text-[28px] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0F732E] dark:text-[#8fd9b0] sm:text-[32px]">
             {labels.title}
           </h2>
-          <p className="mt-4 text-start text-[16px] leading-[1.8]  sm:text-[17px]">
+          <p className="mt-4 text-start text-[16px] leading-[1.8] text-[#5c6772] dark:text-[#c8c8c4] sm:text-[17px]">
             {labels.intro}
           </p>
           <div className="mt-10 space-y-10">
             {article.areas.map((area) => (
               <section key={area.name}>
-                <h3 className="text-start text-[22px] font-bold leading-tight text-[#7E5CAC]">
+                <h3 className="text-start text-[22px] font-bold leading-tight text-[#7E5CAC] dark:text-[#d4b8f0]">
                   {area.name}
                 </h3>
-                <p className="mt-3 text-start text-[16px] leading-[1.8]  sm:text-[17px]">
-                  <strong className="font-bold text-[#0F732E]">{labels.standout} </strong>
+                <p className="mt-3 text-start text-[16px] leading-[1.8] text-[#5c6772] dark:text-[#c8c8c4] sm:text-[17px]">
+                  <strong className="font-bold text-[#0F732E] dark:text-[#8fd9b0]">
+                    {labels.standout}{' '}
+                  </strong>
                   {area.standout}
                 </p>
-                <ul className="mt-4 list-disc space-y-3 ps-5 text-start text-[16px] leading-[1.75]  marker:text-[#7E5CAC] sm:text-[17px]">
+                <ul className="mt-4 list-disc space-y-3 ps-5 text-start text-[16px] leading-[1.75] text-[#5c6772] marker:text-[#7E5CAC] dark:text-[#c8c8c4] dark:marker:text-[#d4b8f0] sm:text-[17px]">
                   {pointOrder.map((key) => (
                     <li key={key}>
-                      <strong className="font-bold text-[#0F732E]">{labels[key]} </strong>
+                      <strong className="font-bold text-[#0F732E] dark:text-[#8fd9b0]">
+                        {labels[key]}{' '}
+                      </strong>
                       {area.points[key]}
                     </li>
                   ))}
@@ -132,10 +136,10 @@ const SpecialtyCoffeeJeddahArticle = ({ post }: { post: ArticlePost }) => {
         </section>
 
         <section className="mt-16">
-          <h2 className="text-start text-[28px] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#110222] sm:text-[32px]">
+          <h2 className="text-start text-[28px] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#110222] dark:text-[#f2f2f0] sm:text-[32px]">
             {article.comparison.title}
           </h2>
-          <div className="mt-6 overflow-x-auto rounded-2xl border border-[#eceef1] bg-white shadow-[0_10px_30px_rgba(17,2,34,0.06)]">
+          <div className="mt-6 overflow-x-auto rounded-2xl border border-[#eceef1] bg-white shadow-[0_10px_30px_rgba(17,2,34,0.06)] dark:border-[#5c5c5a] dark:bg-[#3e3e3d] dark:shadow-none">
             <table className="w-full min-w-[980px] table-fixed border-collapse text-start text-[14px]">
               <colgroup>
                 <col className="w-[120px]" />
@@ -147,14 +151,14 @@ const SpecialtyCoffeeJeddahArticle = ({ post }: { post: ArticlePost }) => {
                 <col className="w-[160px]" />
               </colgroup>
               <thead>
-                <tr className="bg-[#110222] text-[11px] font-bold uppercase leading-tight tracking-[0.08em]">
+                <tr className="bg-[#0F732E] text-[11px] font-bold uppercase leading-tight tracking-[0.08em]">
                   {article.comparison.columns.map((column, index) => (
                     <th
                       key={column}
                       scope="col"
                       className={`border-e border-white/10 px-4 py-4 text-start align-middle last:border-e-0 ${
                         index === article.comparison.columns.length - 1
-                          ? 'text-[#0F732E]'
+                          ? 'text-[#8fd9b0]'
                           : 'text-white'
                       }`}
                     >
@@ -165,10 +169,10 @@ const SpecialtyCoffeeJeddahArticle = ({ post }: { post: ArticlePost }) => {
               </thead>
               <tbody>
                 {article.comparison.rows.map((row) => (
-                  <tr key={row.area} className="border-t border-[#f3f4f6]">
+                  <tr key={row.area} className="border-t border-[#f3f4f6] dark:border-[#5c5c5a]">
                     <th
                       scope="row"
-                      className="border-e border-[#f3f4f6] px-4 py-6 text-start align-middle text-[15px] font-bold leading-snug text-[#211331]"
+                      className="border-e border-[#f3f4f6] px-4 py-6 text-start align-middle text-[15px] font-bold leading-snug text-[#211331] dark:border-[#5c5c5a] dark:text-[#f2f2f0]"
                     >
                       {row.area}
                     </th>
@@ -181,12 +185,12 @@ const SpecialtyCoffeeJeddahArticle = ({ post }: { post: ArticlePost }) => {
                     ].map((value, index) => (
                       <td
                         key={`${row.area}-${index}`}
-                        className="border-e border-[#f3f4f6] px-4 py-6 align-middle text-[14px] font-medium leading-snug text-[#7d8694]"
+                        className="border-e border-[#f3f4f6] px-4 py-6 align-middle text-[14px] font-medium leading-snug text-[#7d8694] dark:border-[#5c5c5a] dark:text-[#c8c8c4]"
                       >
                         {value}
                       </td>
                     ))}
-                    <td className="px-4 py-6 align-middle text-[15px] font-extrabold leading-snug text-[#1e102e]">
+                    <td className="px-4 py-6 align-middle text-[15px] font-extrabold leading-snug text-[#1e102e] dark:text-[#f2f2f0]">
                       {row.fit}
                     </td>
                   </tr>
@@ -198,7 +202,7 @@ const SpecialtyCoffeeJeddahArticle = ({ post }: { post: ArticlePost }) => {
 
         {article.closingSections.map((section) => (
           <section key={section.title} className="mt-16">
-            <h2 className="text-start text-[28px] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#110222] sm:text-[32px]">
+            <h2 className="text-start text-[28px] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#110222] dark:text-[#f2f2f0] sm:text-[32px]">
               {section.title}
             </h2>
             {section.blocks.map((block, index) => {
@@ -206,7 +210,7 @@ const SpecialtyCoffeeJeddahArticle = ({ post }: { post: ArticlePost }) => {
                 return (
                   <h3
                     key={`${section.title}-sub-${index}`}
-                    className={`${index === 0 ? 'mt-5' : 'mt-8'} text-start text-[20px] font-bold leading-snug text-[#0F732E] sm:text-[22px]`}
+                    className={`${index === 0 ? 'mt-5' : 'mt-8'} text-start text-[20px] font-bold leading-snug text-[#0F732E] dark:text-[#8fd9b0] sm:text-[22px]`}
                   >
                     {block.text}
                   </h3>
@@ -217,11 +221,13 @@ const SpecialtyCoffeeJeddahArticle = ({ post }: { post: ArticlePost }) => {
                 return (
                   <ul
                     key={`${section.title}-list-${index}`}
-                    className="mt-4 list-disc space-y-4 ps-5 text-start text-[16px] leading-[1.75] text-[#646C79] marker:text-[#0F732E] sm:text-[17px]"
+                    className="mt-4 list-disc space-y-4 ps-5 text-start text-[16px] leading-[1.75] text-[#646C79] marker:text-[#0F732E] dark:text-[#c8c8c4] dark:marker:text-[#8fd9b0] sm:text-[17px]"
                   >
                     {block.items.map((item) => (
                       <li key={item.label}>
-                        <strong className="font-bold text-[#110222]">{item.label} </strong>
+                        <strong className="font-bold text-[#110222] dark:text-[#f2f2f0]">
+                          {item.label}{' '}
+                        </strong>
                         {item.text}
                       </li>
                     ))}
@@ -233,7 +239,7 @@ const SpecialtyCoffeeJeddahArticle = ({ post }: { post: ArticlePost }) => {
               return (
                 <p
                   key={`${section.title}-p-${index}`}
-                  className={`${tight ? 'mt-2' : 'mt-4'} text-start text-[16px] leading-[1.8] text-[#646C79] sm:text-[17px]`}
+                  className={`${tight ? 'mt-2' : 'mt-4'} text-start text-[16px] leading-[1.8] text-[#646C79] dark:text-[#c8c8c4] sm:text-[17px]`}
                 >
                   {block.parts?.map((part, partIndex) => {
                     if ('link' in part && part.link) {
@@ -241,7 +247,7 @@ const SpecialtyCoffeeJeddahArticle = ({ post }: { post: ArticlePost }) => {
                         <Link
                           key={partIndex}
                           to={part.link}
-                          className="font-bold text-[#0F732E] hover:underline"
+                          className="font-bold text-[#0F732E] hover:underline dark:text-[#8fd9b0]"
                         >
                           {part.text}
                         </Link>
@@ -249,7 +255,10 @@ const SpecialtyCoffeeJeddahArticle = ({ post }: { post: ArticlePost }) => {
                     }
                     if ('bold' in part && part.bold) {
                       return (
-                        <strong key={partIndex} className="font-bold text-[#110222]">
+                        <strong
+                          key={partIndex}
+                          className="font-bold text-[#110222] dark:text-[#f2f2f0]"
+                        >
                           {part.text}
                         </strong>
                       );
@@ -263,16 +272,16 @@ const SpecialtyCoffeeJeddahArticle = ({ post }: { post: ArticlePost }) => {
         ))}
 
         <section className="mt-16">
-          <h2 className="text-start text-[28px] font-extrabold leading-[1.15] tracking-[-0.03em] text-[#110222] sm:text-[32px]">
+          <h2 className="text-start text-[28px] font-extrabold leading-[1.15] tracking-[-0.03em] text-[#110222] dark:text-[#f2f2f0] sm:text-[32px]">
             {faqCopy[lang].title}
           </h2>
           <div className="mt-6 space-y-8">
             {faqCopy[lang].items.map((item) => (
               <div key={item.question}>
-                <h3 className="text-start text-[20px] font-bold leading-snug text-[#0F732E] sm:text-[22px]">
+                <h3 className="text-start text-[20px] font-bold leading-snug text-[#0F732E] dark:text-[#8fd9b0] sm:text-[22px]">
                   {item.question}
                 </h3>
-                <p className="mt-2 text-start text-[16px] leading-[1.8] text-[#646C79] sm:text-[17px]">
+                <p className="mt-2 text-start text-[16px] leading-[1.8] text-[#646C79] dark:text-[#c8c8c4] sm:text-[17px]">
                   {item.answer}
                 </p>
               </div>
@@ -280,21 +289,23 @@ const SpecialtyCoffeeJeddahArticle = ({ post }: { post: ArticlePost }) => {
           </div>
         </section>
 
-        <section className="mt-14 border-t border-[#e6e8ec] pt-10">
-          <h2 className="text-start text-[28px] font-extrabold leading-[1.15] tracking-[-0.03em] text-[#110222] sm:text-[32px]">
+        <section className="mt-14 border-t border-[#e6e8ec] pt-10 dark:border-[#5c5c5a]">
+          <h2 className="text-start text-[28px] font-extrabold leading-[1.15] tracking-[-0.03em] text-[#110222] dark:text-[#f2f2f0] sm:text-[32px]">
             {article.sources.title}
           </h2>
-          <ul className="mt-5 list-disc space-y-4 ps-5 text-start text-[16px] leading-[1.75] text-[#646C79] marker:text-[#0F732E] sm:text-[17px]">
+          <ul className="mt-5 list-disc space-y-4 ps-5 text-start text-[16px] leading-[1.75] text-[#646C79] marker:text-[#0F732E] dark:text-[#c8c8c4] dark:marker:text-[#8fd9b0] sm:text-[17px]">
             {article.sources.items.map((item) => (
               <li key={item.detail}>
-                <strong className="font-bold text-[#110222]">{item.label} </strong>
+                <strong className="font-bold text-[#110222] dark:text-[#f2f2f0]">
+                  {item.label}{' '}
+                </strong>
                 {item.detail}{' '}
                 {item.href && item.linkLabel ? (
                   <a
                     href={item.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="font-semibold text-[#0F732E] hover:underline"
+                    className="font-semibold text-[#0F732E] hover:underline dark:text-[#8fd9b0]"
                   >
                     {item.linkLabel}
                   </a>
@@ -302,7 +313,7 @@ const SpecialtyCoffeeJeddahArticle = ({ post }: { post: ArticlePost }) => {
               </li>
             ))}
           </ul>
-          <p className="mt-6 text-start text-[13px] italic leading-[1.7] text-[#8b93a0] sm:text-[14px]">
+          <p className="mt-6 text-start text-[13px] italic leading-[1.7] text-[#8b93a0] dark:text-slate-400 sm:text-[14px]">
             {article.sources.note}
           </p>
         </section>

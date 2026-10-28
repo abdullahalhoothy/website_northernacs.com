@@ -39,7 +39,7 @@ const BlogDetailPage = () => {
 
   if (!post) {
     return (
-      <section className="bg-white py-20 dark:bg-[#343433]">
+      <section className="bg-white py-20 dark:bg-darkBg">
         <div className="mx-auto max-w-3xl px-4">
           <p className="mb-6 text-lg text-nacs-muted dark:text-[#c8c8c4]">{t.notFound}</p>
           <Link to="/blogs" className="font-bold text-nacs-green dark:text-[#c5ead8]">
@@ -55,7 +55,7 @@ const BlogDetailPage = () => {
   }
 
   return (
-    <article className="bg-white py-16 dark:bg-[#343433] md:py-24">
+    <article className="bg-white py-16 dark:bg-darkBg md:py-24">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <Link
           to="/blogs"
@@ -70,7 +70,7 @@ const BlogDetailPage = () => {
           {post.title[lang]}
         </h1>
         <div
-          className="prose prose-slate mt-10 max-w-none prose-headings:text-slate-900 prose-a:text-nacs-green dark:prose-invert dark:prose-headings:text-[#f2f2f0] dark:prose-p:text-[#c8c8c4] dark:prose-a:text-[#c5ead8]"
+          className="prose prose-slate mt-10 max-w-none prose-headings:text-slate-900 prose-a:text-nacs-green dark:prose-invert dark:prose-headings:text-[#f2f2f0] dark:prose-p:text-[#c8c8c4] dark:prose-strong:text-[#f2f2f0] dark:prose-li:text-[#c8c8c4] dark:prose-a:text-[#8fd9b0]"
           dangerouslySetInnerHTML={{ __html: safeHtml }}
         />
       </div>
