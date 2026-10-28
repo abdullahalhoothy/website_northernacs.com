@@ -7,23 +7,28 @@ export const FeaturesList = () => {
   const items = translations[lang].featuresList.items;
 
   return (
-    <section className="overflow-hidden bg-white py-8">
+    <section className="overflow-hidden bg-white py-8 dark:bg-[#343433]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {items.map((feature, index) => (
           <div
             key={feature.title}
             className={`grid items-stretch gap-10 py-16 lg:grid-cols-2 lg:gap-20 ${
-              index !== 0 ? 'border-t border-slate-100' : ''
+              index !== 0 ? 'border-t border-slate-100 dark:border-[#484846]' : ''
             }`}
           >
             <div className={`flex flex-col ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-              <h2 className="text-3xl font-medium leading-tight text-slate-900 sm:text-4xl">
+              <h2 className="text-3xl font-medium leading-tight text-slate-900 dark:text-[#f2f2f0] sm:text-4xl">
                 {feature.title}
               </h2>
-              <p className="mt-4 text-base leading-relaxed text-slate-500">{feature.description}</p>
+              <p className="mt-4 text-base leading-relaxed text-slate-500 dark:text-[#a3a39e]">
+                {feature.description}
+              </p>
               <ul className="mt-6 flex flex-col gap-3.5">
                 {feature.bullets.map((bullet) => (
-                  <li key={bullet} className="flex items-start gap-3 text-slate-500">
+                  <li
+                    key={bullet}
+                    className="flex items-start gap-3 text-slate-500 dark:text-[#a3a39e]"
+                  >
                     <FaCircleCheck className="mt-0.5 h-5 w-5 shrink-0 text-[#7E5CAC]/80" />
                     <span className="leading-relaxed">{bullet}</span>
                   </li>
@@ -36,16 +41,18 @@ export const FeaturesList = () => {
                     <img
                       src=""
                       alt={feature.avatarAlt}
-                      className="mb-3 h-14 w-14 overflow-hidden rounded-full bg-white object-cover text-[0px] shadow-sm"
+                      className="mb-3 h-14 w-14 overflow-hidden rounded-full bg-white object-cover text-[0px] shadow-sm dark:bg-[#484846]"
                     />
                     <FaQuoteLeft className="text-2xl text-[#7E5CAC]" aria-hidden="true" />
                   </div>
                   <figcaption className="min-w-0">
-                    <blockquote className="text-[15px] italic leading-relaxed text-slate-600">
+                    <blockquote className="text-[15px] italic leading-relaxed text-slate-600 dark:text-slate-300">
                       “{feature.quote}”
                     </blockquote>
-                    <p className="mt-3 text-sm font-semibold text-slate-900">{feature.author}</p>
-                    <p className="text-xs text-slate-500">{feature.role}</p>
+                    <p className="mt-3 text-sm font-semibold text-slate-900 dark:text-[#f2f2f0]">
+                      {feature.author}
+                    </p>
+                    <p className="text-xs text-slate-500 dark:text-[#a3a39e]">{feature.role}</p>
                   </figcaption>
                 </div>
               </figure>

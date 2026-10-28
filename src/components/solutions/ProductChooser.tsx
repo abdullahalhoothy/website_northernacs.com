@@ -44,21 +44,23 @@ export const ProductChooser = () => {
   ];
 
   return (
-    <section className="overflow-hidden border-b border-slate-100 bg-white py-20 lg:py-24">
+    <section className="overflow-hidden border-b border-slate-100 bg-white py-20 dark:border-[#484846] dark:bg-[#343433] lg:py-24">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 md:grid-cols-2 md:gap-0 lg:px-8">
         {products.map((product, index) => (
           <div
             key={product.title}
             className={`flex h-full flex-col items-center px-4 text-center lg:px-16 ${
-              index === 1 ? 'border-slate-100 pt-12 md:border-s md:pt-0' : ''
+              index === 1 ? 'border-slate-100 pt-12 dark:border-[#484846] md:border-s md:pt-0' : ''
             }`}
           >
             <div className="mb-8 flex items-center gap-3">
               <product.Icon className={`h-8 w-8 ${product.iconClass}`} />
-              <h2 className="text-3xl font-medium text-slate-900">{product.title}</h2>
+              <h2 className="text-3xl font-medium text-slate-900 dark:text-[#f2f2f0]">
+                {product.title}
+              </h2>
             </div>
             <img src="" alt={product.imageAlt} className="mb-8 h-64 w-80 object-contain" />
-            <p className="mb-8 max-w-md font-light leading-relaxed text-slate-500">
+            <p className="mb-8 max-w-md font-light leading-relaxed text-slate-500 dark:text-[#a3a39e]">
               {product.description}
             </p>
             <div className="mt-auto flex flex-col items-center">

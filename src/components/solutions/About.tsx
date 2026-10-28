@@ -8,7 +8,7 @@ export const About = () => {
   const copy = translations[lang].aboutSolution;
 
   return (
-    <section className="bg-white py-10 font-normal lg:py-24">
+    <section className="bg-white py-10 font-normal dark:bg-[#343433] lg:py-24">
       <div className="mx-auto max-w-5xl px-4 text-center sm:px-6">
         <h2 className="text-[32px] font-semibold leading-tight text-[#3a3a3a] dark:text-slate-100 sm:text-4xl">
           {copy.titleLead}{' '}
