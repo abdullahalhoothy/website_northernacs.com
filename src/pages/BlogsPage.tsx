@@ -141,7 +141,7 @@ const BlogsPage = () => {
           onClick={() => setPinnedId((current) => (current === id ? null : id))}
           className={`flex items-center gap-1.5 text-sm font-bold tracking-wider transition-colors ${
             open || selectedId
-              ? 'text-[#08563D] dark:text-[#2dd4bf]'
+              ? 'text-[#08563D] dark:text-nacs-green/95'
               : 'text-slate-800 hover:text-[#08563D] dark:text-slate-200 dark:hover:text-[#2dd4bf]'
           }`}
         >
@@ -191,7 +191,7 @@ const BlogsPage = () => {
   };
 
   return (
-    <section className="bg-nacs-surface py-16 dark:bg-[#343433] md:py-12">
+    <section className="bg-nacs-surface py-16 dark:bg-darkBg md:py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div
           ref={topRef}
@@ -222,7 +222,7 @@ const BlogsPage = () => {
               }}
               placeholder={t.searchPlaceholder}
               aria-label={t.searchLabel}
-              className="h-12 w-full rounded-xl border border-slate-200 bg-white ps-11 pe-11 text-sm text-slate-800 outline-none transition-all placeholder:text-slate-400 focus:border-nacs-green focus:ring-4 focus:ring-nacs-green/10 dark:border-[#484846] dark:bg-[#3e3e3d] dark:text-[#f2f2f0] dark:placeholder:text-[#a3a39e] [&::-webkit-search-cancel-button]:hidden"
+              className="h-12 w-full rounded-xl border border-slate-200 bg-white ps-11 pe-11 text-sm text-slate-800 outline-none transition-all placeholder:text-slate-400 focus:border-nacs-green focus:ring-4 focus:ring-nacs-green/10 dark:border-[#5c5c5a] dark:bg-[#3e3e3d] dark:text-[#f2f2f0] dark:placeholder:text-slate-400 dark:focus:border-[#0F732E]/80 dark:focus:ring-[#0F732E]/15 [&::-webkit-search-cancel-button]:hidden"
             />
             {query ? (
               <button
@@ -232,7 +232,7 @@ const BlogsPage = () => {
                   setPage(1);
                 }}
                 aria-label={t.clearSearch}
-                className="absolute end-3 top-1/2 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full text-slate-400 transition-colors hover:bg-slate-100 hover:text-slate-700"
+                className="absolute end-3 top-1/2 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full text-slate-400 transition-colors hover:bg-slate-100 hover:text-slate-700 dark:hover:bg-[#484846] dark:hover:text-[#f2f2f0]"
               >
                 <FiX size={15} />
               </button>
@@ -241,7 +241,7 @@ const BlogsPage = () => {
         </div>
 
         {!featured ? (
-          <p className="rounded-2xl border border-dashed border-slate-200 bg-white px-6 py-16 text-center text-nacs-muted dark:border-[#484846] dark:bg-[#3e3e3d] dark:text-[#c8c8c4]">
+          <p className="rounded-2xl border border-dashed border-slate-200 bg-white px-6 py-16 text-center text-nacs-muted dark:border-[#5c5c5a] dark:bg-[#3e3e3d] dark:text-[#c8c8c4]">
             {t.noResults}
           </p>
         ) : (
@@ -263,10 +263,10 @@ const BlogsPage = () => {
                   <span aria-hidden="true">·</span>
                   <time dateTime={featured.date}>{formatDate(featured.date, lang)}</time>
                 </div>
-                <h2 className="mt-[18px] text-[28px] font-semibold leading-[1.3] text-slate-900 lg:text-[30px]">
+                <h2 className="mt-[18px] text-[28px] font-semibold leading-[1.3] text-slate-900 dark:text-[#f2f2f0] lg:text-[30px]">
                   <Link
                     to={articlePath(featured.slug, lang)}
-                    className="transition-colors hover:text-nacs-green"
+                    className="transition-colors hover:text-nacs-green dark:hover:text-nacs-green/90"
                   >
                     {featured.title[lang]}
                   </Link>
@@ -301,10 +301,10 @@ const BlogsPage = () => {
                         <time dateTime={post.date}>{formatDate(post.date, lang)}</time>
                       </span>
                     </div>
-                    <h3 className="mt-3 text-[18px] font-bold leading-[1.35] text-slate-900">
+                    <h3 className="mt-3 text-[18px] font-bold leading-[1.35] text-slate-900 dark:text-[#f2f2f0]">
                       <Link
                         to={articlePath(post.slug, lang)}
-                        className="transition-colors hover:text-nacs-green"
+                        className="transition-colors hover:text-nacs-green dark:hover:text-nacs-green/90"
                       >
                         {post.title[lang]}
                       </Link>
@@ -330,7 +330,7 @@ const BlogsPage = () => {
                   onClick={() => goToPage(currentPage - 1)}
                   disabled={currentPage === 1}
                   aria-label={t.pagination.previous}
-                  className="flex h-10 w-10 items-center justify-center rounded-md border border-slate-200 bg-white text-slate-600 transition-colors hover:border-nacs-green hover:text-nacs-green disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-slate-200 disabled:hover:text-slate-600 dark:border-[#484846] dark:bg-[#3e3e3d] dark:text-[#c8c8c4]"
+                  className="flex h-10 w-10 items-center justify-center rounded-md border border-slate-200 bg-white text-slate-600 transition-colors hover:border-nacs-green hover:text-nacs-green disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-slate-200 disabled:hover:text-slate-600 dark:border-[#5c5c5a] dark:bg-[#3e3e3d] dark:text-[#f2f2f0] dark:hover:border-[#8fd9b0] dark:hover:text-[#8fd9b0] dark:disabled:hover:border-[#5c5c5a] dark:disabled:hover:text-[#f2f2f0]"
                 >
                   <FiChevronLeft size={18} className="rtl:rotate-180" />
                 </button>
@@ -344,7 +344,7 @@ const BlogsPage = () => {
                     className={`flex h-10 min-w-10 items-center justify-center rounded-md border px-3 text-sm font-semibold transition-colors ${
                       number === currentPage
                         ? 'border-nacs-green bg-nacs-green text-white'
-                        : 'border-slate-200 bg-white text-slate-600 hover:border-nacs-green hover:text-nacs-green dark:border-[#484846] dark:bg-[#3e3e3d] dark:text-[#c8c8c4]'
+                        : 'border-slate-200 bg-white text-slate-600 hover:border-nacs-green hover:text-nacs-green dark:border-[#5c5c5a] dark:bg-[#3e3e3d] dark:text-[#f2f2f0] dark:hover:border-[#8fd9b0] dark:hover:text-[#8fd9b0]'
                     }`}
                   >
                     {number}
@@ -355,7 +355,7 @@ const BlogsPage = () => {
                   onClick={() => goToPage(currentPage + 1)}
                   disabled={currentPage === totalPages}
                   aria-label={t.pagination.next}
-                  className="flex h-10 w-10 items-center justify-center rounded-md border border-slate-200 bg-white text-slate-600 transition-colors hover:border-nacs-green hover:text-nacs-green disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-slate-200 disabled:hover:text-slate-600 dark:border-[#484846] dark:bg-[#3e3e3d] dark:text-[#c8c8c4]"
+                  className="flex h-10 w-10 items-center justify-center rounded-md border border-slate-200 bg-white text-slate-600 transition-colors hover:border-nacs-green hover:text-nacs-green disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-slate-200 disabled:hover:text-slate-600 dark:border-[#5c5c5a] dark:bg-[#3e3e3d] dark:text-[#f2f2f0] dark:hover:border-[#8fd9b0] dark:hover:text-[#8fd9b0] dark:disabled:hover:border-[#5c5c5a] dark:disabled:hover:text-[#f2f2f0]"
                 >
                   <FiChevronRight size={18} className="rtl:rotate-180" />
                 </button>

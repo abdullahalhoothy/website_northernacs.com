@@ -93,10 +93,10 @@ const HomePage = () => {
 
         <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-0">
           <div className="max-w-2xl animate-fade-in-up">
-            <h1 className="mb-6 text-4xl font-black !leading-tight text-black md:text-5xl lg:text-6xl">
+            <h1 className="mb-6 text-4xl font-black !leading-tight text-black dark:text-[#0F732E] md:text-5xl lg:text-6xl">
               {t.home.title}
               <br />
-              <span className="text-[#08563D] dark:text-[#c5ead8]">{t.home.accent}</span>
+              <span className="text-[#0F732E] dark:text-white">{t.home.accent}</span>
             </h1>
 
             <div className="mt-10 flex flex-col items-start gap-2 sm:flex-row"></div>
