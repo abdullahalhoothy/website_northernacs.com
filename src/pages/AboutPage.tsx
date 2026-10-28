@@ -75,6 +75,8 @@ const AboutPage = () => {
         isAr={lang === 'ar'}
         title={t.overviewTitle}
         paragraphs={t.overviewParagraphs}
+        servicesIntro={t.overviewServicesIntro}
+        services={t.overviewServices}
         numbersTitle={t.numbersTitle}
         prevLabel={t.numbersPrev}
         nextLabel={t.numbersNext}
@@ -94,6 +96,7 @@ const AboutPage = () => {
         isAr={lang === 'ar'}
         title={t.clientsTitle}
         description={t.clientsDescription}
+        description2={t.clientsDescription2}
         buttonLabel={t.clientsButton}
         stories={t.stories}
       />
@@ -163,6 +166,8 @@ const OverviewSection = ({
   isAr,
   title,
   paragraphs,
+  servicesIntro,
+  services,
   numbersTitle,
   prevLabel,
   nextLabel,
@@ -171,6 +176,8 @@ const OverviewSection = ({
   isAr: boolean;
   title: string;
   paragraphs: readonly string[];
+  servicesIntro: string;
+  services: readonly string[];
   numbersTitle: string;
   prevLabel: string;
   nextLabel: string;
@@ -206,6 +213,12 @@ const OverviewSection = ({
           {paragraphs.map((paragraph) => (
             <p key={paragraph}>{renderHighlighted(paragraph)}</p>
           ))}
+          <p className="pt-2">{servicesIntro}</p>
+          <ul className="list-disc space-y-1.5 ps-5 marker:text-nacs-accent">
+            {services.map((service) => (
+              <li key={service}>{service}</li>
+            ))}
+          </ul>
         </div>
 
         <div className="mt-12 flex items-center justify-between gap-4 lg:mt-14">
@@ -586,12 +599,14 @@ const ClientsSection = ({
   isAr,
   title,
   description,
+  description2,
   buttonLabel,
   stories,
 }: {
   isAr: boolean;
   title: string;
   description: string;
+  description2: string;
   buttonLabel: string;
   stories: readonly Story[];
 }) => {
@@ -668,6 +683,11 @@ const ClientsSection = ({
               <p className="mt-8 max-w-[520px] text-[13px] font-normal leading-[18px] text-[#9da8b4]">
                 {description}
               </p>
+              <ul className="list-disc space-y-1.5 ps-5 marker:text-nacs-accent">
+                <li className="mt-8 max-w-[520px] text-[13px] font-normal leading-[18px] text-[#9da8b4]">
+                  {description2}
+                </li>
+              </ul>
             </div>
             <Link
               to="/contact"

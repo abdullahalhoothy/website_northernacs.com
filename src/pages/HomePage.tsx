@@ -93,7 +93,7 @@ const HomePage = () => {
 
         <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-0">
           <div className="max-w-2xl animate-fade-in-up">
-            <h1 className="mb-6 text-4xl font-black !leading-tight text-black dark:text-[#0F732E] md:text-5xl lg:text-6xl">
+            <h1 className="mb-6 !text-5xl font-black !leading-tight text-black dark:text-[#0F732E] md:text-5xl lg:text-6xl">
               {t.home.title}
               <br />
               <span className="text-[#0F732E] dark:text-white">{t.home.accent}</span>
@@ -121,7 +121,7 @@ const HomePage = () => {
                 {t.home.spotlightEyebrow}
               </span>
             </div>
-            <h2 className="mb-6 text-4xl font-black leading-[1.1] text-slate-900 md:text-5xl lg:text-[3.25rem] dark:text-white">
+            <h2 className="mb-6 !text-4xl font-black leading-[1.1] text-slate-900 md:text-5xl lg:text-[3.25rem] dark:text-white">
               {t.home.spotlightTitle}
               <br />
               {t.home.spotlightTitleLine}
