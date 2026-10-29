@@ -517,6 +517,27 @@
       "imageAlt": "تحسين المناطق على حاسوب محمول"
     }
   },
+  "calculator": {
+    "title": "احسب فائدتك من هنا",
+    "description": "مع حاسبة الربحية S-Route للمبيعات الميدانية:",
+    "routePlanner": "مخطط المسارات",
+    "territoryOptimization": "تحسين المناطق",
+    "industry": "الصناعة",
+    "selectIndustry": "اختر الصناعة",
+    "industries": {
+      "automotive": "صناعة السيارات",
+      "industryConstruction": "الصناعة والبناء",
+      "consumerGoods": "السلع الاستهلاكية",
+      "pharmaMedtech": "الأدوية والتكنولوجيا الطبية"
+    },
+    "people": "الأشخاص",
+    "fieldService": "المبيعات الميدانية",
+    "management": "الإدارة",
+    "currency": "ر.س",
+    "additionalSalesPotential": "إمكانات مبيعات إضافية",
+    "ctaText": "حدّد إمكانات مبيعاتك الخاصة الآن من خلال تحليل الربحية الكامل.",
+    "startAnalysis": "ابدأ التحليل"
+  },
   "customers": {
     "title": "عملاؤنا",
     "logos": [
