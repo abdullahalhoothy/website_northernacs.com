@@ -197,7 +197,7 @@ const OverviewSection = ({
     'flex h-10 w-10 items-center justify-center rounded-full border border-nacs-green bg-white text-nacs-green transition-colors hover:bg-nacs-green hover:text-white disabled:cursor-default disabled:border-[#d9e8e1] disabled:text-[#c3d9cf] disabled:hover:bg-white disabled:hover:text-[#c3d9cf] lg:h-[46px] lg:w-[46px] dark:border-emerald-400 dark:text-emerald-400 dark:hover:bg-emerald-400 dark:hover:text-[#343433] dark:disabled:border-[#484846] dark:disabled:text-[#5b5b59]';
 
   return (
-    <section className="relative overflow-hidden border-b-2 border-nacs-green bg-white dark:bg-[#343433]">
+    <section className="relative overflow-hidden border-b-2 border-nacs-green bg-white dark:bg-darkBg">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute end-0 top-0 h-full w-[9.2%] min-w-[44px] bg-[#f3f3f3] dark:bg-white/5 rtl:-scale-x-100"
@@ -350,7 +350,7 @@ const LeadershipSection = ({
     'flex h-[35px] w-[35px] items-center justify-center rounded-full border border-nacs-green bg-white text-nacs-green transition-colors hover:bg-nacs-green hover:text-white dark:border-emerald-400 dark:text-emerald-400 dark:hover:bg-emerald-400 dark:hover:text-[#343433]';
 
   return (
-    <section className="bg-white dark:bg-[#343433]">
+    <section className="bg-white dark:bg-darkBg">
       <div className="mx-auto max-w-[1440px] px-6 pb-14 pt-14 sm:px-10 lg:px-[13.5%] lg:pb-16 lg:pt-[72px]">
         <h2 className="text-3xl font-bold leading-[1.2] text-nacs-greenDeep dark:text-white">
           {title}
@@ -403,7 +403,7 @@ const LeadershipSection = ({
                 iconClassName="h-[88%] w-[88%] translate-y-[6%] text-[#dbe4df] dark:text-white/10"
                 imageClassName="h-full w-full object-contain object-bottom"
               />
-              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[26%] bg-gradient-to-t from-white via-white/70 to-transparent dark:from-[#343433] dark:via-[#343433]/70" />
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[26%] bg-gradient-to-t from-white via-white/70 to-transparent dark:from-darkBg dark:via-darkBg/70" />
             </div>
           </div>
         </div>
@@ -487,7 +487,7 @@ const TimelineSection = ({
     'flex h-9 w-9 items-center justify-center rounded-full border border-white/40 text-white transition-colors hover:bg-white/10 disabled:cursor-default disabled:opacity-35 disabled:hover:bg-transparent';
 
   return (
-    <section className="bg-[#0a3a2d] text-white">
+    <section className="bg-[#0a3a2d] text-white dark:bg-darkBg">
       <div className="mx-auto max-w-[1440px] px-6 pb-16 pt-12 sm:px-10 lg:px-[13.65%] lg:pb-[150px] lg:pt-[52px]">
         <div className="flex items-center justify-between gap-4">
           <h2 className="text-2xl font-black uppercase leading-9 text-white sm:text-3xl">
@@ -665,7 +665,7 @@ const ClientsSection = ({
   );
 
   return (
-    <section className="relative overflow-hidden bg-[#0a1411] text-white">
+    <section className="relative overflow-hidden bg-[#0a1411] text-white dark:bg-darkBg">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
@@ -809,7 +809,7 @@ const SuccessSection = ({
     'absolute top-1/2 z-10 flex h-[45px] w-[45px] -translate-y-1/2 items-center justify-center rounded-full border border-[#2f8f6c] bg-nacs-green text-white shadow-md transition-colors hover:bg-nacs-greenDark disabled:cursor-default disabled:opacity-40 disabled:hover:bg-nacs-green';
 
   return (
-    <section className="relative overflow-hidden bg-[#f1f4f3] dark:bg-[#2b2b2a]">
+    <section className="relative overflow-hidden bg-[#f1f4f3] dark:bg-darkBg">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"

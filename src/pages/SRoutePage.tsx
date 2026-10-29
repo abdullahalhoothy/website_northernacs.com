@@ -5,6 +5,7 @@ import { Customers } from '../components/solutions/Customers';
 import { FeaturesList } from '../components/solutions/FeaturesList';
 import { HeroSection } from '../components/solutions/HeroSection';
 import { ProductChooser } from '../components/solutions/ProductChooser';
+import Calculator from '../components/solutions/Calculator';
 
 const SRoutePage = () => {
   return (
@@ -15,6 +16,7 @@ const SRoutePage = () => {
       <Advantages />
       <FeaturesList />
       <About />
+      <Calculator />
       <Faq product="sRoute" />
     </>
   );

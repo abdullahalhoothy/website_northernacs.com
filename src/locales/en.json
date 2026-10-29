@@ -520,6 +520,27 @@
       "imageAlt": "Territory optimization on a laptop"
     }
   },
+  "calculator": {
+    "title": "Calculate your benefit right here",
+    "description": "with the S-Route Profitability Calculator for field service:",
+    "routePlanner": "Route Planner",
+    "territoryOptimization": "Territory Optimization",
+    "industry": "Industry",
+    "selectIndustry": "Select industry",
+    "industries": {
+      "automotive": "Automotive industry",
+      "industryConstruction": "Industry and construction",
+      "consumerGoods": "Consumer goods",
+      "pharmaMedtech": "Pharmaceutical and medical technology"
+    },
+    "people": "People",
+    "fieldService": "Field Service",
+    "management": "Management",
+    "currency": "SAR",
+    "additionalSalesPotential": "additional sales potential",
+    "ctaText": "Determine your individual sales potential now with the complete profitability analysis.",
+    "startAnalysis": "Start analysis"
+  },
   "customers": {
     "title": "Our Customers",
     "logos": [

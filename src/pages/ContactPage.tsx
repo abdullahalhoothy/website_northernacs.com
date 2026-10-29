@@ -37,7 +37,7 @@ const SOCIAL = {
 const emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const phoneRx = /^[0-9()#&+*\-=. ]+$/;
 const fieldBase =
-  'w-full rounded-md border border-nacs-line bg-white px-4 py-3 text-sm text-slate-800 placeholder:text-slate-400 transition-all focus:border-nacs-green focus:outline-none focus:ring-2 focus:ring-nacs-green/15';
+  'w-full rounded-md border border-nacs-line bg-white px-4 py-3 text-sm text-slate-800 placeholder:text-slate-400 transition-all focus:border-nacs-green focus:outline-none focus:ring-2 focus:ring-nacs-green/15 dark:border-[#5c5c5a] dark:bg-[#2b2b2a] dark:text-slate-100 dark:placeholder:text-slate-500 dark:focus:border-emerald-400 dark:focus:ring-emerald-400/20';
 
 const ContactPage = () => {
   const { lang } = useLanguage();
@@ -100,24 +100,26 @@ const ContactPage = () => {
 
   return (
     <>
-      <section className="bg-white pb-10 pt-6 md:pb-6 md:pt-12">
+      <section className="bg-white pb-10 pt-6 dark:bg-darkBg md:pb-6 md:pt-12">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-          <span className="inline-flex bg-[#7E5CAC]/10 text-[#7E5CAC] rounded-full bg-nacs-sandSoft px-4 py-2 text-sm font-bold">
+          <span className="inline-flex rounded-full bg-[#7E5CAC]/10 bg-nacs-sandSoft px-4 py-2 text-sm font-bold text-[#7E5CAC] dark:bg-[#7E5CAC]/20 dark:text-[#d4c4f0]">
             {t.eyebrow}
           </span>
 
-          <h1 className="mt-4 text-3xl font-medium text-[#08563D] leading-tightس md:text-4xl">
+          <h1 className="mt-4 text-3xl font-medium leading-tight text-[#08563D] dark:text-white md:text-4xl">
             {titleLead ? `${titleLead} ` : null}
-            <span className="text-[#7E5CAC]">{titleAccent}</span>
+            <span className="text-[#7E5CAC] dark:text-[#d4c4f0]">{titleAccent}</span>
           </h1>
 
-          <p className="mx-auto mt-3 max-w-2xl text-base leading-6 text-nacs-caption ">{t.intro}</p>
+          <p className="mx-auto mt-3 max-w-2xl text-base leading-6 text-nacs-caption dark:text-slate-300">
+            {t.intro}
+          </p>
         </div>
       </section>
 
-      <section className="bg-white py-10 md:py-14">
+      <section className="bg-white py-10 dark:bg-darkBg md:py-14">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="grid overflow-hidden rounded-[2rem] border border-nacs-line bg-white shadow-2xl shadow-slate-300/50 lg:grid-cols-2">
+          <div className="grid overflow-hidden rounded-[2rem] border border-nacs-line bg-white shadow-2xl shadow-slate-300/50 dark:border-[#484846] dark:bg-[#3e3e3d] dark:shadow-black/40 lg:grid-cols-2">
             <aside className="flex h-full flex-col bg-nacs-green p-8 text-white md:p-12">
               <h2 className="mb-8 text-2xl font-medium md:text-3xl">{t.infoTitle}</h2>
               <ul className="space-y-8">
@@ -188,8 +190,12 @@ const ContactPage = () => {
                   <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-nacs-mint text-nacs-green">
                     <FaCircleCheck size={32} />
                   </div>
-                  <h3 className="mb-2 text-2xl font-black text-slate-900">{t.successTitle}</h3>
-                  <p className="mx-auto mb-6 max-w-md text-nacs-muted">{t.successText}</p>
+                  <h3 className="mb-2 text-2xl font-black text-slate-900 dark:text-white">
+                    {t.successTitle}
+                  </h3>
+                  <p className="mx-auto mb-6 max-w-md text-nacs-muted dark:text-slate-300">
+                    {t.successText}
+                  </p>
                   <button
                     type="button"
                     onClick={() => setSubmitted(false)}
@@ -200,10 +206,15 @@ const ContactPage = () => {
                 </div>
               ) : (
                 <form noValidate onSubmit={onSubmit} className="space-y-5">
-                  <h2 className="text-2xl font-medium text-nacs-green">{t.formTitle}</h2>
+                  <h2 className="text-2xl font-medium text-nacs-green dark:text-white">
+                    {t.formTitle}
+                  </h2>
                   <div className="grid gap-5 md:grid-cols-2">
                     <div className="flex flex-col gap-2">
-                      <label htmlFor="firstName" className="text-sm font-medium text-nacs-green">
+                      <label
+                        htmlFor="firstName"
+                        className="text-sm font-medium text-nacs-green dark:text-white"
+                      >
                         {t.firstName}
                       </label>
                       <Field
@@ -217,7 +228,10 @@ const ContactPage = () => {
                       />
                     </div>
                     <div className="flex flex-col gap-2">
-                      <label htmlFor="lastName" className="text-sm font-medium text-nacs-green">
+                      <label
+                        htmlFor="lastName"
+                        className="text-sm font-medium text-nacs-green dark:text-white"
+                      >
                         {t.lastName}
                       </label>
                       <Field
@@ -233,7 +247,10 @@ const ContactPage = () => {
                   </div>
                   <div className="grid gap-5 md:grid-cols-2">
                     <div className="flex flex-col gap-2">
-                      <label htmlFor="email" className="text-sm font-medium text-nacs-green">
+                      <label
+                        htmlFor="email"
+                        className="text-sm font-medium text-nacs-green dark:text-white"
+                      >
                         {t.email}
                       </label>
                       <Field
@@ -248,7 +265,10 @@ const ContactPage = () => {
                       />
                     </div>
                     <div className="flex flex-col gap-2">
-                      <label htmlFor="phone" className="text-sm font-medium text-nacs-green">
+                      <label
+                        htmlFor="phone"
+                        className="text-sm font-medium text-nacs-green dark:text-white"
+                      >
                         {t.phone}
                       </label>
                       <Field
@@ -265,7 +285,10 @@ const ContactPage = () => {
                   </div>
                   <div className="grid gap-5 md:grid-cols-2">
                     <div className="flex flex-col gap-2">
-                      <label htmlFor="location" className="text-sm font-medium text-nacs-green">
+                      <label
+                        htmlFor="location"
+                        className="text-sm font-medium text-nacs-green dark:text-white"
+                      >
                         {t.location}
                       </label>
                       <Field
@@ -279,7 +302,10 @@ const ContactPage = () => {
                       />
                     </div>
                     <div className="flex flex-col gap-2">
-                      <label htmlFor="company" className="text-sm font-medium text-nacs-green">
+                      <label
+                        htmlFor="company"
+                        className="text-sm font-medium text-nacs-green dark:text-white"
+                      >
                         {t.company}
                       </label>
                       <Field
@@ -293,7 +319,10 @@ const ContactPage = () => {
                     </div>
                   </div>
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="comments" className="text-sm font-medium text-nacs-green">
+                    <label
+                      htmlFor="comments"
+                      className="text-sm font-medium text-nacs-green dark:text-white"
+                    >
                       {t.comments}
                     </label>
                     <textarea
