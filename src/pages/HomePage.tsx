@@ -59,6 +59,11 @@ const useScrollShrink = (ref: RefObject<HTMLElement>) => {
   }, [ref]);
 };
 
+const clientLogos = Array.from({ length: 18 }, (_, index) => {
+  const id = String(index + 1).padStart(2, '0');
+  return `/images/northernacs/clients/logo-${id}.svg`;
+});
+
 const HomePage = () => {
   const { lang } = useLanguage();
   const { theme } = useTheme();
@@ -100,6 +105,35 @@ const HomePage = () => {
             </h1>
 
             <div className="mt-10 flex flex-col items-start gap-2 sm:flex-row"></div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-14 md:py-20 dark:bg-[#343433]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-0">
+          <div className="mx-auto mb-8 max-w-3xl text-center md:mb-10">
+            <h2 className="mb-3 text-3xl font-black leading-[1.1]  md:text-[2.5rem] dark:text-white">
+              {t.home.clientsTitle}
+            </h2>
+            <p className="text-base leading-relaxed text-slate-600 md:text-[17px] dark:text-slate-300">
+              {t.home.clientsSentence}
+            </p>
+          </div>
+          <div className="rounded-[28px] bg-[#dbdbdb] px-6 py-10 sm:px-8 md:rounded-[32px] md:px-10 md:py-12">
+            <ul className="grid grid-cols-2 items-center gap-x-6 gap-y-8 sm:grid-cols-3 lg:grid-cols-6 lg:gap-x-8 lg:gap-y-12">
+              {clientLogos.map((src, index) => (
+                <li key={src} className="flex items-center justify-center">
+                  <img
+                    src={src}
+                    alt={`${t.home.clientsLogoAlt} ${index + 1}`}
+                    width={160}
+                    height={72}
+                    loading="lazy"
+                    className="h-12 w-full max-w-[140px] object-contain sm:h-14"
+                  />
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
