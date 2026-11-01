@@ -80,6 +80,9 @@
     "spotlightTitleLine": "And selecting the best websites",
     "spotlightBody": "Northern Analytics is a Saudi company based in Jeddah that helps businesses understand their data and turn it into clear decisions. We organize your data and use artificial intelligence to analyze it, provide insights into market conditions and the best locations for your business, and then help you implement the right solutions step by step.",
     "spotlightImageAlt": "Abstract glass form representing data and location intelligence",
+    "clientsSentence": "Leading companies across industries trust our data and location solutions.",
+    "clientsTitle": "Our Clients",
+    "clientsLogoAlt": "Client logo",
     "solutionsTitle": "Solutions",
     "solutionItems": [
       {
@@ -131,16 +134,16 @@
       }
     ],
     "offerStats": [
-      { "value": "3+", "label": "Solutions" },
-      { "value": "2+", "label": "Products" },
-      { "value": "3+", "label": "Practices" },
-      { "value": "1+", "label": "Market" },
-      { "value": "2+", "label": "Languages" },
-      { "value": "4+", "label": "Insights" },
-      { "value": "5+", "label": "Coverage" },
-      { "value": "6+", "label": "Programs" },
-      { "value": "7+", "label": "Teams" },
-      { "value": "8+", "label": "Locations" }
+      { "value": "7+", "label": "Years of experience" },
+      { "value": "25+", "label": "client" },
+      { "value": "15+", "label": "A sector we serve" },
+      { "value": "28", "label": "Saudi cities" },
+      { "value": "500K+", "label": "Businesses Analyzed" },
+      { "value": "20+", "label": "Partner" },
+      { "value": "10,000+", "label": "Employees Across the Organizations We Serve" },
+      { "value": "3", "label": "Core Services (Databricks · S-Locator · S-Route)" },
+      { "value": "60%", "label": "Increase in Operating Profits for One of Our Clients" },
+      { "value": "50%", "label": "Cost Reduction Opportunity for One of Our Clients" }
     ],
     "subtitle": "Featuring our flagship product:",
     "intro": "Northern Analytics bridges the gap between strategy and execution. We bring world-class North American data consulting and powerful location intelligence products directly to the Kingdom of Saudi Arabia.",
@@ -354,14 +357,14 @@
     "numbersPrev": "Previous",
     "numbersNext": "Next",
     "numbers": [
-      { "value": "4", "label": "Industry Sectors" },
-      { "value": "3", "label": "Solutions" },
-      { "value": "3", "label": "Core Services" },
-      { "value": "2", "label": "Digital Platforms" },
-      { "value": "60%", "label": "ROI Boost" },
-      { "value": "50%", "label": "Cost Saving Potential" },
-      { "value": "2", "label": "Maturity Tiers Gained" },
-      { "value": "4", "label": "Engagement Phases" }
+      { "value": "+15", "label": "Industries Served" },
+      { "value": "+7", "label": "Years of Experience" },
+      { "value": "+25", "label": "Client" },
+      { "value": "28", "label": "Saudi Cities" },
+      { "value": "+500k", "label": "Businesses Analyzed" },
+      { "value": "+20", "label": "Partner" },
+      { "value": "+10,000", "label": "Employees Across the Organizations We Serve" },
+      { "value": "2", "label": "Two Digital Platforms (S-Locator · S-Route)" }
     ],
     "welcomeKicker": "Welcome to Northern Analytics",
     "welcomeHeading": "Modern Infrastructure Solutions",
