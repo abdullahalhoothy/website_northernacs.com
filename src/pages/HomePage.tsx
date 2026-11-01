@@ -274,11 +274,11 @@ const HomePage = () => {
             paddingTop: offerOverlap + 64,
           }}
         >
-          <div className="mx-auto grid max-w-[760px] grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-3 lg:grid-cols-5 lg:gap-x-0">
+          <div className="mx-auto grid max-w-7xl grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-5 lg:gap-x-8 lg:gap-y-8">
             {t.home.offerStats.map((item) => (
-              <div key={item.label} className="text-start">
+              <div key={item.label} className="min-w-0 text-start">
                 <div
-                  className="whitespace-nowrap text-[60px] leading-[0.95]"
+                  className="text-[clamp(2.25rem,3.4vw,3.25rem)] leading-none tracking-tight"
                   style={{
                     fontWeight: 800,
                     color: 'transparent',
@@ -292,7 +292,7 @@ const HomePage = () => {
                   {item.value}
                 </div>
                 <p
-                  className="relative -mt-3.5 whitespace-nowrap text-[20px]"
+                  className="text-base leading-snug md:text-[17px]"
                   style={{ color: '#ffffff', fontWeight: 500 }}
                 >
                   {item.label}
