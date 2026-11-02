@@ -644,47 +644,48 @@ const ClientsSection = ({
   ].filter((item): item is MarqueeItem => Boolean(item));
 
   const renderCard = (item: MarqueeItem) => (
-    <li className="flex h-[103px] w-[190px] shrink-0 items-center justify-center rounded-md border border-white/[0.14] bg-white/[0.03]">
+    <li className="flex h-[103px] w-[190px] shrink-0 items-center justify-center rounded-md border border-[#dde5e1] bg-white dark:border-white/[0.14] dark:bg-white/[0.03]">
       {item.kind === 'logo' ? (
         <img
           src={item.src}
           alt={item.alt}
-          // Opaque white-background logos: invert -> black bg, then lift to pure white.
-          style={{ filter: 'invert(1) grayscale(1) brightness(2.5)' }}
-          className={`h-full w-full object-contain mix-blend-lighten ${item.scaleClass}`}
+          className={`h-full w-full object-contain mix-blend-multiply dark:mix-blend-lighten dark:[filter:invert(1)_grayscale(1)_brightness(2.5)] ${item.scaleClass}`}
           loading="lazy"
           draggable={false}
         />
       ) : (
         <span className="flex items-center gap-3 px-5 text-start" dir={isAr ? 'rtl' : 'ltr'}>
-          <item.Icon aria-hidden="true" className="shrink-0 text-[30px] text-white" />
-          <span className="text-[13px] font-semibold leading-[18px] text-white">{item.label}</span>
+          <item.Icon
+            aria-hidden="true"
+            className="shrink-0 text-[30px] text-nacs-green dark:text-white"
+          />
+          <span className="text-[13px] font-semibold leading-[18px] text-[#14231d] dark:text-white">
+            {item.label}
+          </span>
         </span>
       )}
     </li>
   );
 
   return (
-    <section className="relative overflow-hidden bg-[#0a1411] text-white dark:bg-darkBg">
+    <section className="relative overflow-hidden bg-[#f4f7f6] text-[#14231d] dark:bg-[#0a1411] dark:text-white">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            'radial-gradient(62% 72% at 18% 100%, rgba(12,122,84,0.5) 0%, rgba(8,86,61,0.2) 45%, rgba(8,86,61,0) 78%)',
-        }}
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(62%_72%_at_18%_100%,rgba(8,86,61,0.12)_0%,rgba(8,86,61,0)_72%)] dark:bg-[radial-gradient(62%_72%_at_18%_100%,rgba(12,122,84,0.5)_0%,rgba(8,86,61,0.2)_45%,rgba(8,86,61,0)_78%)]"
       />
 
       <div className="relative pb-16 pt-12 lg:pb-[170px]">
         <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-[15.35%]">
           <div className="flex items-start justify-between gap-6">
             <div>
-              <h2 className="text-3xl font-bold leading-[1.2] text-white">{title}</h2>
-              <p className="mt-8 max-w-[520px] text-[13px] font-normal leading-[18px] text-[#9da8b4]">
+              <h2 className="text-3xl font-bold leading-[1.2] text-nacs-greenDeep dark:text-white">
+                {title}
+              </h2>
+              <p className="mt-8 max-w-[520px] text-[13px] font-normal leading-[18px] text-[#5b6b64] dark:text-[#9da8b4]">
                 {description}
               </p>
               <ul className="list-disc space-y-1.5 ps-5 marker:text-nacs-accent">
-                <li className="mt-8 max-w-[520px] text-[13px] font-normal leading-[18px] text-[#9da8b4]">
+                <li className="mt-8 max-w-[520px] text-[13px] font-normal leading-[18px] text-[#5b6b64] dark:text-[#9da8b4]">
                   {description2}
                 </li>
               </ul>

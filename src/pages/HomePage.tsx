@@ -76,7 +76,6 @@ const HomePage = () => {
   useScrollShrink(techRef);
 
   const offerOverlap = 100;
-  const techTitleParts = t.home.techTitle.split(/\{(.*?)\}/g);
 
   return (
     <div className="bg-[#f8fafc] dark:bg-[#343433]">
@@ -98,10 +97,10 @@ const HomePage = () => {
 
         <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-0">
           <div className="max-w-2xl animate-fade-in-up">
-            <h1 className="mb-6 !text-5xl font-black !leading-tight text-black dark:text-[#0F732E] md:text-5xl lg:text-6xl">
+            <h1 className="mb-6 !text-5xl font-black !leading-tight text-black dark:text-white md:text-5xl lg:text-6xl">
               {t.home.title}
               <br />
-              <span className="text-[#0F732E] dark:text-white">{t.home.accent}</span>
+              <span className="text-[#0F732E] dark:text-[#44c96e]">{t.home.accent}</span>
             </h1>
 
             <div className="mt-10 flex flex-col items-start gap-2 sm:flex-row"></div>
@@ -268,110 +267,29 @@ const HomePage = () => {
         </div>
 
         <section
-          className="px-4 pb-20 md:px-8 my-10"
+          className="px-4 pb-10 md:px-8"
           style={{
-            backgroundColor: '#7E5CAC',
-            paddingTop: offerOverlap + 64,
+            backgroundColor: isDark ? '#4a336e' : '#7E5CAC',
+            paddingTop: offerOverlap + 36,
           }}
         >
-          <div className="mx-auto grid max-w-7xl grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-5 lg:gap-x-8 lg:gap-y-8">
+          <div className="mx-auto grid max-w-7xl w-fit  grid-cols-2 gap-x-4 gap-y-5 sm:grid-cols-3 lg:grid-cols-5 lg:gap-x-7 lg:gap-y-4">
             {t.home.offerStats.map((item) => (
-              <div key={item.label} className="min-w-0 text-start">
+              <div key={item.label} className="min-w-0 w-44 text-start">
                 <div
                   className="text-[clamp(2.25rem,3.4vw,3.25rem)] leading-none tracking-tight"
-                  style={{
-                    fontWeight: 800,
-                    color: 'transparent',
-                    WebkitTextStroke: '1.25px #08563D',
-                    WebkitMaskImage:
-                      'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.85) 45%, rgba(0,0,0,0.2) 100%)',
-                    maskImage:
-                      'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.85) 45%, rgba(0,0,0,0.2) 100%)',
-                  }}
+                  style={{ fontWeight: 700, color: '#ffffff' }}
                 >
                   {item.value}
                 </div>
                 <p
-                  className="text-base leading-snug md:text-[17px]"
-                  style={{ color: '#ffffff', fontWeight: 500 }}
+                  className="mt-1 text-sm leading-snug md:text-[15px]"
+                  style={{ color: isDark ? '#f7f2fc' : '#ffffff', fontWeight: 500 }}
                 >
                   {item.label}
                 </p>
               </div>
             ))}
-          </div>
-        </section>
-      </div>
-
-      <div ref={techRef}>
-        <section className="relative" style={{ backgroundColor: isDark ? '#343433' : '#f4f1f8' }}>
-          <div
-            aria-hidden
-            className="pointer-events-none absolute max-md:!left-0 max-md:!right-0"
-            style={{
-              top: 0,
-              bottom: 0,
-              left: 'calc(var(--p, 0) * 46px)',
-              right: 'calc(var(--p, 0) * 46px)',
-              borderRadius: '0 0 calc(var(--p, 0) * 12px) calc(var(--p, 0) * 12px)',
-              backgroundColor: isDark ? '#2b2b2a' : '#ffffff',
-            }}
-          />
-          <div className="relative mx-auto max-w-4xl px-6 py-16 text-center md:py-24">
-            <h2
-              className="text-3xl leading-[1.25] md:text-[40px]"
-              style={{ color: isDark ? '#ffffff' : '#241833', fontWeight: 400 }}
-            >
-              {techTitleParts.map((part, index) =>
-                index % 2 === 1 ? (
-                  <span
-                    key={`${part}-${index}`}
-                    style={{
-                      fontWeight: 700,
-                      backgroundImage: isDark
-                        ? 'linear-gradient(90deg, #2dd4bf, #6ee7b7)'
-                        : 'linear-gradient(90deg, #043222, #0A6F4C)',
-                      WebkitBackgroundClip: 'text',
-                      backgroundClip: 'text',
-                      color: 'transparent',
-                    }}
-                  >
-                    {part}
-                  </span>
-                ) : (
-                  <span key={`${part}-${index}`}>{part}</span>
-                ),
-              )}
-            </h2>
-          </div>
-        </section>
-
-        <section
-          className="px-4 py-12 md:py-16"
-          style={{ backgroundColor: isDark ? '#343433' : '#ffffff' }}
-        >
-          <div
-            className="mx-auto max-w-7xl rounded-[40px] px-6 py-10 md:px-10 md:py-12"
-            style={{ backgroundColor: isDark ? '#2b2b2a' : '#e6ebe8' }}
-          >
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-              {t.home.projectShots.map((shot) => (
-                <figure key={shot.src} className="overflow-hidden rounded-2xl">
-                  <img
-                    src={shot.src}
-                    alt={shot.alt}
-                    className="h-36 w-full object-cover sm:h-40"
-                    loading="lazy"
-                  />
-                  <figcaption
-                    className="px-1 pt-2 text-center text-xs font-medium"
-                    style={{ color: isDark ? '#cbd5e1' : '#334155' }}
-                  >
-                    {shot.label}
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
           </div>
         </section>
       </div>
