@@ -1,4 +1,4 @@
-import { useEffect, useRef, type RefObject } from 'react';
+import { useEffect, useMemo, useRef, useState, type CSSProperties, type RefObject } from 'react';
 import { FiArrowUpRight } from 'react-icons/fi';
 import { FaStar } from 'react-icons/fa6';
 import { translations } from '../i18n';
@@ -59,6 +59,86 @@ const useScrollShrink = (ref: RefObject<HTMLElement>) => {
   }, [ref]);
 };
 
+const useOnceInView = (ref: RefObject<HTMLElement | null>, threshold = 0.25) => {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setVisible(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        setVisible(true);
+        observer.disconnect();
+      },
+      { threshold },
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [ref, threshold]);
+
+  return visible;
+};
+
+const riseIn = (visible: boolean, delay: number): CSSProperties => ({
+  opacity: visible ? 1 : 0,
+  transform: visible ? 'translateY(0)' : 'translateY(22px)',
+  transitionProperty: 'opacity, transform',
+  transitionDuration: '650ms',
+  transitionTimingFunction: 'cubic-bezier(0.22, 1, 0.36, 1)',
+  transitionDelay: visible ? `${delay}ms` : '0ms',
+});
+
+const parseStatValue = (value: string) => {
+  const match = value.match(/^(\D*)(\d[\d,]*)(.*)$/);
+  if (!match) return null;
+  return {
+    prefix: match[1],
+    number: Number(match[2].replace(/,/g, '')),
+    suffix: match[3],
+    grouped: match[2].includes(','),
+  };
+};
+
+const CountStat = ({ value, active }: { value: string; active: boolean }) => {
+  const parsed = useMemo(() => parseStatValue(value), [value]);
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (!active || !parsed) return;
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setCurrent(parsed.number);
+      return;
+    }
+
+    const duration = 1500;
+    const start = performance.now();
+    let frame = 0;
+    const tick = (now: number) => {
+      const progress = Math.min(1, (now - start) / duration);
+      const eased = 1 - (1 - progress) ** 3;
+      setCurrent(Math.round(parsed.number * eased));
+      if (progress < 1) frame = requestAnimationFrame(tick);
+    };
+
+    setCurrent(0);
+    frame = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(frame);
+  }, [active, parsed]);
+
+  if (!parsed) return value;
+
+  const digits = parsed.grouped ? current.toLocaleString('en-US') : String(current);
+  return `${parsed.prefix}${digits}${parsed.suffix}`;
+};
+
 const clientLogos = Array.from({ length: 18 }, (_, index) => {
   const id = String(index + 1).padStart(2, '0');
   return `/images/northernacs/clients/logo-${id}.svg`;
@@ -72,8 +152,12 @@ const HomePage = () => {
   const isDark = theme === 'dark';
   const offerRef = useRef<HTMLDivElement>(null);
   const techRef = useRef<HTMLDivElement>(null);
+  const offerCopyRef = useRef<HTMLDivElement>(null);
+  const offerStatsRef = useRef<HTMLElement>(null);
   useScrollShrink(offerRef);
   useScrollShrink(techRef);
+  const offerCopySeen = useOnceInView(offerCopyRef, 0.3);
+  const offerStatsSeen = useOnceInView(offerStatsRef, 0.25);
 
   const offerOverlap = 100;
 
@@ -238,19 +322,23 @@ const HomePage = () => {
               backgroundColor: isDark ? '#2b2b2a' : '#f4f1f8',
             }}
           />
-          <div className="relative px-6 py-16 md:px-12 md:py-24">
+          <div ref={offerCopyRef} className="relative px-6 py-16 md:px-12 md:py-24">
             <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2 lg:gap-16">
               <div>
                 <h2
                   className="mb-8 max-w-xl text-4xl leading-[1.15] md:text-5xl"
-                  style={{ color: isDark ? '#ffffff' : '#241833', fontWeight: 650 }}
+                  style={{
+                    color: isDark ? '#ffffff' : '#241833',
+                    fontWeight: 650,
+                    ...riseIn(offerCopySeen, 0),
+                  }}
                 >
                   {t.home.offerTitle}
                 </h2>
                 <a
                   href="#solutions"
                   className="inline-flex items-center gap-2 rounded-xl bg-[#08563D] px-5 py-3 text-sm text-white transition-colors hover:bg-[#064531]"
-                  style={{ fontWeight: 600 }}
+                  style={{ fontWeight: 600, ...riseIn(offerCopySeen, 420) }}
                 >
                   {t.home.learnMore}
                   <FiArrowUpRight size={16} />
@@ -258,7 +346,11 @@ const HomePage = () => {
               </div>
               <p
                 className="max-w-xl text-base leading-relaxed"
-                style={{ color: isDark ? '#cbd5e1' : '#6b6478', fontWeight: 450 }}
+                style={{
+                  color: isDark ? '#cbd5e1' : '#6b6478',
+                  fontWeight: 450,
+                  ...riseIn(offerCopySeen, 840),
+                }}
               >
                 {t.home.offerText}
               </p>
@@ -267,23 +359,37 @@ const HomePage = () => {
         </div>
 
         <section
-          className="px-4 pb-10 md:px-8"
+          ref={offerStatsRef}
+          className="!mt-14 px-4 pb-20 md:px-8"
           style={{
             backgroundColor: isDark ? '#4a336e' : '#7E5CAC',
             paddingTop: offerOverlap + 36,
           }}
         >
-          <div className="mx-auto grid max-w-7xl w-fit  grid-cols-2 gap-x-4 gap-y-5 sm:grid-cols-3 lg:grid-cols-5 lg:gap-x-7 lg:gap-y-4">
+          <div className="mx-auto grid w-fit max-w-full grid-cols-[repeat(2,max-content)] gap-x-3 !gap-y-6 sm:grid-cols-[repeat(3,max-content)] lg:grid-cols-[repeat(5,max-content)] lg:gap-x-4 lg:gap-y-2">
             {t.home.offerStats.map((item) => (
-              <div key={item.label} className="min-w-0 w-44 text-start">
+              <div key={item.label} className="text-start">
                 <div
-                  className="text-[clamp(2.25rem,3.4vw,3.25rem)] leading-none tracking-tight"
-                  style={{ fontWeight: 700, color: '#ffffff' }}
+                  role="img"
+                  aria-label={item.value}
+                  className="whitespace-nowrap pe-1 text-[clamp(1.75rem,2.5vw,2.75rem)] leading-none tracking-tight"
+                  style={{
+                    fontWeight: 600,
+                    color: 'transparent',
+                    WebkitTextFillColor: 'transparent',
+                    WebkitTextStroke: '1.75px #ffffff',
+                    WebkitMaskImage:
+                      'linear-gradient(to bottom, #000 0%, rgba(0,0,0,0.88) 38%, rgba(0,0,0,0.12) 100%)',
+                    maskImage:
+                      'linear-gradient(to bottom, #000 0%, rgba(0,0,0,0.88) 38%, rgba(0,0,0,0.12) 100%)',
+                  }}
                 >
-                  {item.value}
+                  <span aria-hidden="true">
+                    <CountStat value={item.value} active={offerStatsSeen} />
+                  </span>
                 </div>
                 <p
-                  className="mt-1 text-sm leading-snug md:text-[15px]"
+                  className="mt-0.5 w-36 text-sm leading-snug sm:w-44 md:text-[15px]"
                   style={{ color: isDark ? '#f7f2fc' : '#ffffff', fontWeight: 500 }}
                 >
                   {item.label}

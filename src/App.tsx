@@ -5,9 +5,6 @@ import BlogDetailPage from './pages/BlogDetailPage';
 import BlogsPage from './pages/BlogsPage';
 import ContactPage from './pages/ContactPage';
 import HomePage from './pages/HomePage';
-import DatabricksConsultingPage from './pages/DatabricksConsultingPage';
-import SRoutePage from './pages/SRoutePage';
-import SLocatorPage from './pages/SLocatorPage';
 import SignUpPage from './pages/SignUpPage';
 
 function App() {
@@ -20,9 +17,7 @@ function App() {
         <Route path="blogs" element={<BlogsPage />} />
         <Route path="blogs/:slug" element={<BlogDetailPage />} />
         <Route path="en/blogs/:slug" element={<BlogDetailPage />} />
-        <Route path="solutions/consulting-databricks" element={<DatabricksConsultingPage />} />
-        <Route path="solutions/s-route" element={<SRoutePage />} />
-        <Route path="solutions/s-locator" element={<SLocatorPage />} />
+
         <Route path="signup" element={<SignUpPage />} />
       </Route>
       <Route path="*" element={<Navigate to="/" replace />} />
