@@ -66,7 +66,7 @@ const BlogDetailPage = () => {
         <time className="block text-xs font-bold uppercase tracking-[0.2em] text-nacs-green dark:text-[#c5ead8]">
           {post.date}
         </time>
-        <h1 className="mt-4 text-4xl font-black leading-tight text-slate-900 dark:text-[#f2f2f0] md:text-5xl">
+        <h1 className="mt-4 text-4xl font-black !leading-tight text-slate-900 dark:text-[#f2f2f0] md:text-5xl">
           {post.title[lang]}
         </h1>
         <div

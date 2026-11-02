@@ -205,6 +205,7 @@ const BlogsPage = () => {
 
           <form
             role="search"
+            dir={lang === 'ar' ? 'rtl' : 'ltr'}
             className="relative w-full lg:w-80"
             onSubmit={(event) => event.preventDefault()}
           >
@@ -215,6 +216,7 @@ const BlogsPage = () => {
             />
             <input
               type="search"
+              dir={lang === 'ar' ? 'rtl' : 'ltr'}
               value={query}
               onChange={(event) => {
                 setQuery(event.target.value);
@@ -222,7 +224,7 @@ const BlogsPage = () => {
               }}
               placeholder={t.searchPlaceholder}
               aria-label={t.searchLabel}
-              className="h-12 w-full rounded-xl border border-slate-200 bg-white ps-11 pe-11 text-sm text-slate-800 outline-none transition-all placeholder:text-slate-400 focus:border-nacs-green focus:ring-4 focus:ring-nacs-green/10 dark:border-[#5c5c5a] dark:bg-[#3e3e3d] dark:text-[#f2f2f0] dark:placeholder:text-slate-400 dark:focus:border-[#0F732E]/80 dark:focus:ring-[#0F732E]/15 [&::-webkit-search-cancel-button]:hidden"
+              className={`h-12 w-full rounded-xl border border-slate-200 bg-white ps-11 pe-11 text-sm text-slate-800 outline-none transition-all placeholder:text-slate-400 focus:border-nacs-green focus:ring-4 focus:ring-nacs-green/10 dark:border-[#5c5c5a] dark:bg-[#3e3e3d] dark:text-[#f2f2f0] dark:placeholder:text-slate-400 dark:focus:border-[#0F732E]/80 dark:focus:ring-[#0F732E]/15 [&::-webkit-search-cancel-button]:hidden ${lang === 'ar' ? 'text-right placeholder:text-right' : 'text-left placeholder:text-left'}`}
             />
             {query ? (
               <button
