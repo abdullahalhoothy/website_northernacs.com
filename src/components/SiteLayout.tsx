@@ -67,6 +67,14 @@ const SiteLayout = () => {
 
   const navItems: NavItem[] = [
     { label: t.nav.home, to: '/' },
+    {
+      label: t.nav.solution,
+      children: [
+        { label: t.nav.consultingDatabricks, to: '/solutions/consulting-databricks' },
+        { label: t.nav.sRoute, to: '/solutions/s-route' },
+        { label: t.nav.sLocator, to: 'https://s-locator.com' },
+      ],
+    },
     { label: t.nav.about, to: '/about' },
     { label: t.nav.contact, to: '/contact' },
     { label: t.nav.blog, to: '/blogs' },
@@ -306,6 +314,30 @@ const SiteLayout = () => {
                 {t.footer.solutions}
               </h4>
               <ul className="space-y-2.5 text-sm">
+                <li>
+                  <Link
+                    to="/solutions/consulting-databricks"
+                    className="transition-colors hover:underline dark:text-white font-medium hover:text-[#0F732E] dark:hover:text-[#0F732E]"
+                  >
+                    {t.footer.databricks}
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/solutions/s-route"
+                    className="transition-colors  hover:underline dark:text-white font-medium hover:text-[#0F732E] dark:hover:text-[#0F732E]"
+                  >
+                    {t.footer.sRoute}
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="https://s-locator.com/"
+                    className="transition-colors  hover:underline dark:text-white font-medium hover:text-[#0F732E] dark:hover:text-[#0F732E]"
+                  >
+                    {t.footer.sLocator}
+                  </Link>
+                </li>
                 <li>
                   <a
                     href="https://www.s-locator.com/"
