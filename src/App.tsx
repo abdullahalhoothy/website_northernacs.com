@@ -6,6 +6,8 @@ import BlogsPage from './pages/BlogsPage';
 import ContactPage from './pages/ContactPage';
 import HomePage from './pages/HomePage';
 import SignUpPage from './pages/SignUpPage';
+import DatabricksConsultingPage from './pages/DatabricksConsultingPage';
+import SRoutePage from './pages/SRoutePage';
 
 function App() {
   return (
@@ -19,6 +21,9 @@ function App() {
         <Route path="en/blogs/:slug" element={<BlogDetailPage />} />
 
         <Route path="signup" element={<SignUpPage />} />
+        <Route path="solutions/consulting-databricks" element={<DatabricksConsultingPage />} />
+        <Route path="solutions/s-route" element={<SRoutePage />} />
+        {/* <Route path="solutions/s-locator" element={<SLocatorPage />} /> */}
       </Route>
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
